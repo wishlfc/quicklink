@@ -1,0 +1,10 @@
+Release                                  =  TL18A
+System Module                            =  FSIH
+Owner                                    =  xxx@nokia-sbell.com
+KPI Setting                              =  kpi_oam_sr:100
+FIXED SCF                                =  TRUE
+SCF File Name                            =  BTS1434_BTS_OAM.xml
+TM500 Version                            =  L
+UE Count                                 =  0
+
+OAM Operations                           =  reset_bts/20

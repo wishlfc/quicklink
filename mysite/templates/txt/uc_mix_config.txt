@@ -1,0 +1,17 @@
+Release                                  =  TL18A
+Owner                                    =  xxx@nokia.com
+Team                                     =  PET2
+SCF File Name                            =  BTS530_cpv_sample_TL18A.xml
+SP SCF File Name                         =  BTS1396_cpv_sample_TL18A_SRAN.xml
+FIXED SCF                                =  true
+UE Test Plan                             =  {{
+                                            869247032427459,EE564568-38FD-411C-8827-E3458EB61323**seq:ftpdl_50M 
+                                            868930029328589,355848069726241**seq:http_1M
+                                            }}
+UC PA File                               = BPV_Scenario1_InterCellAB_8hours.xml
+PA Solution                              = SPV
+Handover Type                            = INTER
+Use PM Counter                           = TRUE
+Customer                                 = CMCC
+TM500 Script File                        = xxx.txt
+Case Duration                            =  1200

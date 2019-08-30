@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+
+.col-link {
+    width: 100px;
+    display:inline-block;
+}
+.box{
+    margin: 20px
+    width: 30%;
+
+    /*display:inline-block;    */
+}
+.box-bar{
+   width: 100%;
+   display:inline-block; 
+}
+.box-head{
+    /*margin: 20px*/
+    width: 100%; 
+}
+.box-logo{
+    /*margin: 20px*/
+    width: 30%;
+    float:left;
+    display:inline-block;    
+}
+.box-nav{
+    /*margin: 20px;*/
+    width: 60%;
+    float:left;
+    display:inline-block;  
+    vertical-align: middle;
+    text-align: center;  
+}
+.box-link{
+    width: 100%;
+    float:left;
+    overflow:hidden;
+}
+.tranf{
+    width: 8%;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.title{
+    font-size: 30px;
+    color: #000093;
+    font-weight: bold;
+    font-family: Arial;
+}
+.navdiv {
+    display:inline-block; 
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #CCC; 
+    width: 15%;
+    height:100%;
+    font-family: Arial;
+    font-size: 14px;
+}
+.navdiv:hover {
+    background-color: #E0E0E0;
+    color: #66B3FF;
+}
+p{
+    font-size: 14px;
+    color: #000093;
+    font-weight: bold;
+    font-family: Arial;
+}
+li{
+    /*display:inline-block; */
+    margin:6px auto
+}
+.remind{
+    color: #0066CC;
+}
+hr{
+    height: 1px;
+    width: 30%;
+    background:linear-gradient(to right,#FE0000,#0000FF);
+}
+a{
+    text-decoration:none;
+    color: #000093;
+
+}
+a:hover{
+    color: #66B3FF;
+}
+.button{
+    width:70px;
+    height:30px;
+}
+</style>
+<script type="text/javascript">
+var url = "/prdescription/";
+function sw_passed_fun() {
+    var swversion_passed = document.getElementById("swversion_passed").value;
+    console.log(swversion_passed);
+    var swversion_passed_value=document.getElementById('swversion_passed_value');
+    if (swversion_passed == "New scenario") {        
+        swversion_passed_value.style="display:none;";        
+    } else {
+        swversion_passed_value.style="display:inline;";
+    }
+}
+function changes_testline_fun() {
+    var changes_testline = document.getElementById("changes_testline").value;
+    console.log(changes_testline);
+    var changes_testline_value=document.getElementById('changes_testline_value');
+    if (changes_testline == "Yes,") {        
+        changes_testline_value.style="display:inline;";        
+    } else {
+        changes_testline_value.style="display:none;";
+    }
+}
+function changes_scenario_fun() {
+    var changes_scenario = document.getElementById("changes_scenario").value;
+    console.log(changes_scenario);
+    var changes_scenario_value=document.getElementById('changes_scenario_value');
+    if (changes_scenario == "Yes,") {        
+        changes_scenario_value.style="display:inline;";        
+    } else {
+        changes_scenario_value.style="display:none;";
+    }
+}
+function gethw() {
+    var btsid = document.getElementById("gethw_btsid").value; 
+    console.log(btsid);
+    if (btsid == " ") {
+        alert("Btsid is NULL!");
+        return
+    }
+    var wait=document.getElementById('wait_hw');      
+    wait.style="display:inline;";        
+    var form = new FormData();
+    form.append("btsid", btsid);  
+    form.append("gethw", 'ok');
+    outputkey = document.getElementById('hw_version');
+    outputkey.value = "";
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        outputkey = document.getElementById('hw_version');
+        if (status == "ok") {
+            alert("Get hw Done!");
+            wait.style="display:none;"; 
+            outputkey.value = info;
+        }
+        else {
+            alert("Get hw Fail!");
+            wait.style="display:none;"; 
+            outputkey.value =  info;
+        }
+    } 
+}
+function gethw_btsip() {
+    var btsip = document.getElementById("gethw_btsip").value;
+    var issran = document.getElementById("gethw_is_sran").checked; 
+    console.log(btsip);
+    if (btsid == " ") {
+        alert("Btsip is NULL!");
+        return
+    }
+    var wait=document.getElementById('wait_hw');      
+    wait.style="display:inline;";        
+    var form = new FormData();
+    form.append("gethw_btsip", 'ok');
+    form.append("btsip", btsip);      
+    form.append("issran", issran); 
+    console.log(issran);
+    outputkey = document.getElementById('hw_version');
+    outputkey.value = "";
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        outputkey = document.getElementById('hw_version');
+        if (status == "ok") {
+            alert("Get hw Done!");
+            wait.style="display:none;"; 
+            outputkey.value = info;
+        }
+        else {
+            alert("Get hw Fail!");
+            wait.style="display:none;"; 
+            outputkey.value =  info;
+        }
+    } 
+}
+function getflag() {
+    var btsid = document.getElementById("btsid").value; 
+    console.log(btsid);
+    if (btsid == " ") {
+        alert("Btsid is NULL!");
+        return
+    }
+    var wait=document.getElementById('wait_flags');      
+    wait.style="display:inline;";        
+    var form = new FormData();
+    form.append("btsid", btsid);  
+    form.append("getflag", 'ok');
+    outputkey = document.getElementById('flags');
+    outputkey.value = "";
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var flags = data.flags;
+        outputkey = document.getElementById('flags');
+        if (status == "ok") {
+            alert("Get flags Done!");
+            wait.style="display:none;"; 
+            outputkey.value = flags;
+        }
+        else {
+            alert("Get flags Fail!");
+            wait.style="display:none;"; 
+            outputkey.value =  flags;
+        }
+    } 
+}
+function getflag_btsip() {
+    var btsip = document.getElementById("btsip").value; 
+    // var issran = document.getElementById("is_sran").checked;
+    console.log(btsip);
+    if (btsip == " ") {
+        alert("Btsip is NULL!");
+        return
+    }
+    var wait=document.getElementById('wait_flags');      
+    wait.style="display:inline;";        
+    var form = new FormData();
+    form.append("getflag_btsip", 'ok');
+    form.append("btsip", btsip);     
+    // form.append("issran", issran); 
+    outputkey = document.getElementById('flags');
+    outputkey.value = "";
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var flags = data.flags;
+        outputkey = document.getElementById('flags');
+        if (status == "ok") {
+            alert("Get flags Done!");
+            wait.style="display:none;"; 
+            outputkey.value = flags;
+        }
+        else {
+            alert("Get flags Fail!");
+            wait.style="display:none;"; 
+            outputkey.value =  flags;
+        }
+    } 
+}
+function transf() {
+    var steps = document.getElementById("steps").value;
+    if (steps == "") {
+        alert("1. Detail Test Steps is NULL!");
+        return
+    }
+    var expected_result = document.getElementById("expected_result").value;
+    if (expected_result == "") {
+        alert("2. Expected Result is NULL!");
+        return
+    }
+    var actual_result = document.getElementById("actual_result").value;
+    if (actual_result == "") {
+        alert("3. Actual Result is NULL!");
+        return
+    }
+    var test_analysis = document.getElementById("test_analysis").value;
+    var swbot_info = document.getElementById("swbot_info").value;
+    if (test_analysis == "") {
+        alert("4. Tester analysis Analysis of Logs is NULL!");
+        return
+    }
+    if (swbot_info == "") {
+        alert("4. Tester analysis SWBOT information info is NULL!");
+        return
+    }
+    var logs = document.getElementById("logs").value;
+    if (logs == "") {
+        alert("5. Logs is NULL!");
+        return
+    }
+    var bbu_num = document.getElementById("bbu_num").value;
+    var bbu_hw = document.getElementById("bbu_hw").value;
+    var rru_hw = document.getElementById("rru_hw").value;
+    var sw_info = document.getElementById("sw_info").value;
+    var subframe_config1 = document.getElementById("subframe_config1").value;
+    var subframe_config2 = document.getElementById("subframe_config2").value;
+    var ue_type = document.getElementById("ue_type").value;
+    var cell_type = document.getElementById("cell_type").value;
+    // var mimo_mode = document.getElementById("mimo_mode").value;
+    // var deploy = document.getElementById("deploy").value;
+    var hw_version = document.getElementById("hw_version").value;
+    if (hw_version == "") {
+        alert("6. Test-Line hw version is NULL!");
+        return
+    }
+    var flags = document.getElementById("flags").value;
+    if (flags == "") {
+        alert("7. Used Flags is NULL!");
+        return
+    }
+    var scenario_times = document.getElementById("scenario_times").value;
+    var reproduced_times = document.getElementById("reproduced_times").value;
+    var same_sites = document.getElementById("same_sites").value;
+
+    var passed_info = document.getElementById("passed_info").value;
+    var swversion_passed = document.getElementById("swversion_passed").value;
+    var swversion_passed_value = document.getElementById("swversion_passed_value").value;
+    var changes_testline = document.getElementById("changes_testline").value;
+    var changes_testline_value = document.getElementById("changes_testline_value").value;
+    var changes_scenario = document.getElementById("changes_scenario").value;
+    var changes_scenario_value = document.getElementById("changes_scenario_value").value;
+    var reference = document.getElementById("reference").value;
+    if (reference == "") {
+        alert("10. Test Case Referenc is NULL!");
+        return
+    }
+    
+    hw_info = bbu_num + '*' + bbu_hw + '+' + rru_hw
+    subframe_config = subframe_config1 + '/' + subframe_config2
+    if  (swversion_passed == 'New scenario') {
+        swversion_passed_all = swversion_passed 
+    } else {
+        swversion_passed_all = swversion_passed_value
+    }
+    if (changes_testline == 'Yes,') {
+        changes_testline_all = changes_testline + changes_testline_value
+    } else {
+        changes_testline_all = changes_testline 
+    }
+    if (changes_scenario == 'Yes,') {
+        changes_scenario_all = changes_scenario + changes_scenario_value
+    } else {
+        changes_scenario_all = changes_scenario 
+    }
+    var form = new FormData(); 
+    form.append("steps", steps); 
+    form.append("expected_result", expected_result);
+    form.append("actual_result", actual_result); 
+    form.append("test_analysis", test_analysis);
+    form.append("swbot_info", swbot_info);     
+    form.append("logs", logs); 
+    form.append("hw_info", hw_info); 
+    form.append("sw_info", sw_info); 
+    form.append("subframe_config", subframe_config); 
+    form.append("ue_type", ue_type); 
+    form.append("cell_type", cell_type); 
+    // form.append("mimo_mode", mimo_mode); 
+    // form.append("deploy", deploy); 
+    form.append("hw_version", hw_version); 
+    form.append("flags", flags);
+    form.append("scenario_times", scenario_times); 
+    form.append("reproduced_times", reproduced_times); 
+    form.append("same_sites", same_sites); 
+    form.append("passed_info", passed_info);
+    form.append("swversion_passed", swversion_passed_all);
+    form.append("changes_testline", changes_testline_all);
+    form.append("changes_scenario", changes_scenario_all);
+    form.append("reference", reference);  
+
+    form.append("submit", 'ok');
+    outputkey = document.getElementById('output');
+    outputkey.value = "";
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        console.log(xhr);
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var output = data.output;
+        outputkey = document.getElementById('output');
+        if (status == "ok") {
+            // console.log(output);
+            outputkey.value = output;
+        }
+        else {
+            outputkey.value =  'No Result!'
+        }
+    } 
+}
+
+</script>
+<title> PR Description </title>
+</head>
+<body>
+{% load static %}
+<div class='box-head'>
+    <div class='box-logo'>
+    <img src="{% static "/pic/logo.jpg" %}" class = logo>
+    <l class='title'>PR Description</l>
+    </div>
+    {% include './base.html %} 
+    {% block navbar %}
+    {% endblock %}
+</div>
+<div class = 'box-link'>
+    <div class = 'box'>
+        <p>[1. Detail Test Steps:]</p>
+        <li>Scenario/Step:</li> 
+        <textarea id="steps" style="width:500px;height:60px;" value="I can line feed"></textarea>
+        
+        <p>[2. Expected Result:]</p>
+        <textarea id="expected_result" style="width:500px;height:60px;" value="I can line feed"></textarea>
+        
+        <p>[3. Actual Result:]</p>
+        <textarea id="actual_result" style="width:500px;height:60px;" value="I can line feed"></textarea>
+        
+        <p>[4. Tester analysis:]</p>
+        <li>Analysis of Logs:</li>
+        <textarea id="test_analysis" style="width:500px;height:60px;" value="I can line feed"></textarea>
+        <li>SWBOT information:</li>
+        <textarea id="swbot_info" style="width:500px;height:60px;" value="I can line feed"></textarea>
+        <p>[5. Log(s) file name containing a fault: (clear indication (exact file name) and timestamp where fault can be found in attached logs)]</p>
+        <textarea id="logs" style="width:500px;height:60px;" value="I can line feed"></textarea>
+        
+        <p>[6. Test-Line Reference/used HW/configuration/tools/SW version]</p>
+        <li>HW:
+        <input id="bbu_num" style="width:20px;" value=" ">
+        *
+        <select id="bbu_hw">
+          <option value ="ASIA">ASIA</option>
+          <option value ="ASIB">ASIB</option>
+          <option value ="FSIH">FSIH</option>
+          <option value="FSMF">FSMF</option>
+        </select>
+        +
+        <input id="rru_hw" style="width:100px;" value=" ">
+        </li> 
+      
+        <li>SW:
+        <input id="sw_info" style="width:200px;" value=" "></li>  
+        <li>UL/DL sub-Frame Configuration:
+        <select id="subframe_config1">
+          <option value ="2">2</option>
+          <option value ="1">1</option>
+        </select>
+        /
+        <select id="subframe_config2">
+          <option value ="7">7</option>
+          <option value ="6">6</option>
+          <option value="5">5</option>
+        </select></li>
+        <li>UE Type:
+        <!-- <input id="ue_type" style="width:100px;" value=" "> -->
+        <select id="ue_type">
+          <option value ="TM500">TM500</option>
+          <option value ="cellphone">cellphone</option>
+          <option value="CPE">CPE</option>
+          <option value="No UE">No UE</option>
+        </select></li>
+        <li>Cell Type:
+        <input id="cell_type" style="width:100px;" value=" "></li>
+<!--         <li>MIMO Mode:
+        <input id="mimo_mode" style="width:100px;" value=" "></li>
+        <li>Deploy:
+        <input id="deploy" style="width:100px;" value=" "></li> -->
+        <li>HW versions</li>
+        <li>Please input btsid:
+        <input id="gethw_btsid" style="width:50px;" >
+        <input type="submit" id="gethw" class='button' value="GetHw" onclick="gethw()"/>
+        <li>Please input btsip:
+        <input id="gethw_btsip" style="width:100px;" >
+        Is Sran:<input id="gethw_is_sran" name="sran" type="checkbox" ">
+        <input type="submit" id="gethw_btsip" class='button' value="GetHw" onclick="gethw_btsip()"/>
+        <l id ="wait_hw" class="remind" style="display:none;">please wait...</l>
+        </li>
+        <textarea id="hw_version" style="width:500px;height:160px;" value="I can line feed"></textarea>
+        
+        <p>[7. Used Flags: (list here used R&D flags)]</p>
+        <li>Please input btsid:
+        <input id="btsid" style="width:50px;" >
+        <input type="submit" id="getflag" class='button' value="GetFlags" onclick="getflag()"/>
+        <li>Please input btsip:
+        <input id="btsip" style="width:100px;" >
+        <input type="submit" id="getflag_btsip" class='button' value="GetFlags" onclick="getflag_btsip()"/>
+        <l id ="wait_flags" class="remind" style="display:none;">please wait...</l>
+        </li>
+        <textarea id="flags" style="width:500px;height:160px;" ></textarea>
+        
+        <p>[8. Fault Occurrence Rate:]</p>
+        <li>How many times Test Scenario was run?<input id="scenario_times" style="width:20px;" value=" " type= text></li>        
+        <li>How many times fault was reproduced?
+        <input id="reproduced_times" style="width:20px;" value=" "></li>  
+        <li>How many sites in the same live operation was run in case of customer fault?
+        <input id="same_sites" style="width:20px;" value=" "></li>
+        
+        <p>[9. Test Scenario History of Execution: (what was changed since it was tested successfully for the last time)]</p>
+        <li>Was Test Scenario passing before?
+        <select id="passed_info">
+          <option value ="Yes">Yes</option>
+          <option value ="No">No</option>
+          <option value ="New scenario">New scenario</option>
+        </select></li>        
+        <li>What was the last SW version Test Scenario was passing?
+        <select id="swversion_passed" onclick="sw_passed_fun()">
+          <option value ="New scenario">New scenario</option>
+          <option value =""></option>
+        </select>
+        <input id="swversion_passed_value" style="display:none;"  value=" ">
+        </li>  
+        <li>Were there any differences between test-lines since last time Test Scenario was passing?
+        <select id="changes_testline" onclick="changes_testline_fun()">
+          <option value ="Yes,">Yes,</option>
+          <option value ="No">No</option>
+          <option value ="New test-line">New test-line</option>
+        </select>
+        <input id="changes_testline_value" style="display:inline;" value=" ">
+        </li>
+        <li>Were there any changes in Test Scenario since last run it passed?
+        <select id="changes_scenario"  onclick="changes_scenario_fun()">
+          <option value ="Yes,">Yes,</option>
+          <option value ="No">No</option>
+          <option value ="New scenario">New scenario</option>
+        </select>
+        <input id="changes_scenario_value" style="display:inline;" value=" ">
+        </li>
+
+        <p>[10. Test Case Reference: (QC, RP or UTE link)]</p>
+        <textarea id="reference" style="width:500px;height:60px;" value="not needed in documentation, specification made fault reports and customer made tickets"></textarea>
+    </div>
+    <div class = 'tranf'>
+    <input type="submit" id="submit" class='button' value="Submit" onclick="transf()"/>
+    </div>
+    <div class = 'box'>
+        <p>Output</p>
+        <textarea id="output" style="width:1000px;height:800px;" value="I can line feed"></textarea>
+    </div>
+</div>
+</body>
+</html>

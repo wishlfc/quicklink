@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+
+.col-link {
+    width: 100px;
+    display:inline-block;
+}
+.box{
+    margin: 20px
+    width: 30%;
+    display:inline-block;    
+}
+.box-bar{
+   width: 100%;
+   display:inline-block; 
+}
+.box-head{
+    /*margin: 20px*/
+    width: 100%; 
+}
+.box-logo{
+    /*margin: 20px*/
+    width: 30%;
+    float:left;
+    display:inline-block;    
+}
+.box-link{
+    width: 60%;
+    float:left;
+    margin: 10px auto 0 auto;
+    /*overflow:hidden;*/
+}
+.tranf{
+    width: 8%;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.bts-logo{
+    width: 50px;
+    height: 50px;
+}
+.bts-lock{
+    width: 12px;
+    height: 12px;
+}
+.title{
+    font-size: 30px;
+    color: #000093;
+    font-weight: bold;
+    font-family: Arial;
+}
+.navdiv {
+    display:inline-block; 
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #CCC; 
+    width: 15%;
+    height:100%;
+    font-family: Arial;
+    font-size: 14px;
+}
+.navdiv:hover {
+    background-color: #E0E0E0;
+    color: #66B3FF;
+}
+.btsNameLabel{
+    text-decoration:none;
+    color: #000093;
+}
+.btsNameLabel:hover{
+    color: #66B3FF;
+}
+.btsArea{
+    display: inline-block;
+    width: 110px;
+    height: 120px;
+    margin: 2px;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.btsIdArea {
+    width: 110px;
+    height: 80px;
+}
+.btsLockArea {
+    height: 30px;
+}
+.lockArea{
+    width: 20px;
+    height: 120px;
+}
+.btsArea:hover{
+    background-color: #E0E0E0;
+    color: #66B3FF;
+}
+.thumbnail {
+    line-height: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+p{
+    font-size: 14px;
+    color: #000093;
+    /*font-weight: bold;*/
+    font-family: Serif, Arial;
+}
+hr{
+    height: 1px;
+    width: 30%;
+    background:linear-gradient(to right,#FE0000,#0000FF);
+}
+a{
+    text-decoration:none;
+    color: #000093;
+
+}
+a:hover{
+    color: #66B3FF;
+}
+.dialog {
+    /*margin: 0 auto*/
+    width: 500px;
+    height: 400px;
+    margin: 4px;
+    position: absolute;
+    background-color: #FFFFFF;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 6px;
+    outline: 0;
+    /*-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);*/
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    bottom:10%
+
+}
+.btn_group {
+    width: 120px;
+    height: 20px;
+    margin: 2px;
+/*    color: #fff;
+    background-color: #0072E3;
+    border-color: #2e6da4;*/
+
+}
+.btn_red {
+    color: #EA0000;
+    /*background-color: #0072E3;*/
+}
+.btn_blue {
+    color: #000093;
+    /*background-color: #0072E3;*/
+}
+.btn_close {
+    align: right;
+    margin: 6px;
+}
+.dialog_head {
+    height: 40px;
+    display: inline-block;
+}
+.dialog_head_title {
+    width: 420px;
+    display: inline-block;
+}
+.dialog_head_close {
+    width: 60px;
+    display: inline-block;
+}
+.dialog_body {
+    height: 260px; 
+    display: inline-block; 
+}
+.dialog_btn {
+    width: 160px;
+    height: 260px;
+    display: inline-block;
+    float:left;
+}
+.box_info {
+    position:relative;
+}
+.dialog_info {
+    width: 320px;
+    height: 260px;
+    display: inline-block;
+    float:left;
+    padding-top:60px;
+    text-align: left;
+    color:#000093;
+    line-height: 30px;
+    position:absolute
+}
+.modify_info {
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    float:left;
+    padding-top:60px;
+    text-align: left;
+    color:#000093;
+    line-height: 30px;
+    position:absolute
+}
+.new_hr{
+    height: 1px;
+    width: 480px;
+    border:none;
+    background:#7B7B7B;
+}
+.container {
+    height: 50px;
+    width: 100%;
+}
+.new_search {
+    height: 30px;
+    width: 50%;
+    margin: 10px auto 0 auto;
+    display: inline-block;
+    float:left; 
+}
+.night {
+    height: 30px;
+    width: 10%;
+    margin: 10px auto 0 auto;
+    display: inline-block;
+    float:left;
+}
+.creat_box {
+    position:fixed;
+    top:30%;
+    left:30%;
+    width:260px;
+    height:160px;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    border-radius: 6px;
+    color: #000093;
+    line-height:26px;
+}
+</style>
+<script type="text/javascript">
+{% load static %}
+var url = "/btsmgmt/";
+function creat() {
+    var creat = document.getElementById("creat") 
+    creat.style="display:inline;"
+}
+function creat_bts() {
+    var btsid = document.getElementById("creat_btsid").value
+    var btsip = document.getElementById("creat_btsip").value
+    var pbinfo = document.getElementById("creat_pbinfo").value
+    var is_sran = document.getElementById("creat_is_sran").checked;
+    var group = document.getElementById("creat_group").value;
+    var creat = document.getElementById("creat") 
+    creat.style="display:none;"
+    var form = new FormData(); 
+    form.append("add", 'ok');
+    form.append("btsid", btsid);
+    form.append("btsip", btsip);
+    form.append("pbinfo", pbinfo);   
+    form.append("issran", is_sran); 
+    form.append("group", group);
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        if (status == "ok") {           
+            alert("add BTS Success!")
+            location.reload() 
+        }
+        else if (status == "exist") {
+            alert("BTS ID already exist!")
+        } 
+        else {
+            alert("BTS Fail!")
+        }
+    } 
+}
+
+function cancel() {
+    var creat = document.getElementById("creat") 
+    creat.style="display:none;"
+}
+function cancel_modify(btsid) {
+    var modify_info = document.getElementById("modify_info"+btsid);
+    modify_info.style="display:none;";
+    var dialog_info = document.getElementById("dialog_info" + btsid);
+    dialog_info.style="display:inline;";
+    dialog_info.innerHTML = "Cancel modify!"
+}
+function search() {
+    // var searchid=document.getElementById("searchid").value; 
+    // console.log(searchid);            
+    // var form = new FormData(); 
+    // form.append("search", 'ok');
+    // form.append("btsid", searchid); 
+    // var xhr = new XMLHttpRequest(); 
+    // xhr.open("GET", url, true); 
+    // xhr.send(form);
+    // var xhr = new XMLHttpRequest(); 
+    // var form = new FormData(); 
+    // form.append("search", 'ok');
+    // form.append("btsid", searchid); 
+    // url = url +'?search=ok&btsid=' + searchid
+    // xhr.open("GET", url, true); 
+    // xhr.send(form);
+    // url = url.concat('?search=ok&btsid=');
+    var searchid = document.getElementById("searchid").value;
+    url = url.concat(searchid);
+    console.log(url);
+    location.href=url;
+    console.log(window.location.href)
+    
+}
+
+function delete_bts(btsid) {
+    if (confirm("Do you want to delete your BTS?") == false) {
+        return
+    }
+    var btsid = btsid
+    var btschild=document.getElementById("bts"+btsid);
+    btschild.parentNode.removeChild(btschild);
+    var dialogchild=document.getElementById("dialog"+btsid);
+    dialogchild.parentNode.removeChild(dialogchild);
+    var form = new FormData(); 
+    form.append("delete", 'ok');
+    form.append("btsid", btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+}
+function modify_btn(btsid){
+    var dialog_info = document.getElementById("dialog_info" + btsid);
+    dialog_info.style="display:none;";
+    var modify_info = document.getElementById("modify_info"+btsid);
+    modify_info.style="display:inline;";  
+    var form = new FormData(); 
+    form.append("query", 'ok');
+    form.append("btsid", btsid);
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+    var data = JSON.parse(xhr.responseText);
+    var status = data.status;
+    var query_ip = data.btsip;
+    var query_pbinfo = data.pbinfo;
+    var query_issran = data.issran;
+    var query_group = data.group;
+    console.log(data);
+    if (status == "ok") {            
+        var query_modify_ip = document.getElementById("modify_btsip"+btsid);
+        query_modify_ip.value = query_ip;
+        var query_modify_is_sran = document.getElementById("is_sran"+btsid);
+        query_modify_is_sran.checked = query_issran;
+        var query_modify_pbinfo = document.getElementById("modify_pbinfo"+btsid);
+        query_modify_pbinfo.value = query_pbinfo;
+        var query_modify_group = document.getElementById("modify_group"+btsid);
+        query_modify_group.value = query_group;       
+    }
+    else {
+            alert("Get BTS Original Info Fail!")
+        }
+    }
+}
+
+function modify_bts(btsid) {
+    var modify_info = document.getElementById("modify_info"+btsid);
+    modify_info.style="display:none;"; 
+    var modify_ip = document.getElementById("modify_btsip"+btsid).value;
+    var modify_is_sran = document.getElementById("is_sran"+btsid).checked;
+    var modify_pbinfo = document.getElementById("modify_pbinfo"+btsid).value;
+    var modify_group = document.getElementById("modify_group"+btsid).value;
+    var form = new FormData(); 
+    form.append("modify", 'ok');
+    form.append("btsid", btsid);
+    form.append("btsip", modify_ip); 
+    form.append("issran", modify_is_sran);
+    form.append("pbinfo", modify_pbinfo);
+    form.append("group", modify_group); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var dialog_info_id = "dialog_info" + btsid
+        var dialog_info = document.getElementById(dialog_info_id);
+        dialog_info.style="display:inline;"; 
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = "Modify BTS Info Success!"
+        }
+        else {
+            dialog_info.innerHTML = "Modify BTS Info Fail!"
+        }
+    }    
+}
+function bts_operation(info) {
+     id = "dialog"+info.btsid;
+     var dialog = document.getElementById(id);
+     dialog.style="display:inline;";
+     var dialog_info_id = "dialog_info" + info.btsid
+     var dialog_info = document.getElementById(dialog_info_id);
+     dialog_info.innerHTML = "Status:" + info.status + "<br>" + "Version:" + info.version
+    check_powerstatus(info.powerstatus, info.btsid)
+}
+function close_dialog(btsid) {
+    id = "dialog"+btsid
+    var dialog = document.getElementById(id);
+     dialog.style="display:none;";
+
+}
+function get_lock(btsid) {
+    var btslockinfo = document.getElementById("btslock" + btsid).innerHTML;
+    console.log(btslockinfo);
+    if (btslockinfo.search("/unlock.png") != -1) {
+        var lock = "off"
+    } else {
+        var lock = "on"
+    }
+    console.log(lock);
+    return lock
+}
+function check_bts_lock(btsid) {
+    if (get_lock(btsid) == "on") {
+        var dialog_info_id = "dialog_info" + btsid
+        var dialog_info = document.getElementById(dialog_info_id);
+        dialog_info.innerHTML = "BTS is locked!!!"
+        return 0
+    }
+}
+function check_powerstatus(powerstatus, btsid) {
+    var btsstatus = document.getElementById("btsstatus" + btsid);
+    if (powerstatus == 'on') {
+        var pic ="{% static "/pic/bts_green.png" %}";
+    } 
+    else {
+        var pic ="{% static "/pic/bts_gray.png" %}";
+    }
+    btsstatus.innerHTML = "<img class = bts-logo src="+ pic + ">"
+}
+function get_bts_status(btsinfo) {
+    var form = new FormData(); 
+    form.append("getstatus", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var btsstatus = data.btsstatus;
+        var powerstatus = data.powerstatus;
+        var version = data.version;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = "Status:" + btsstatus + "<br>" + "Version:" + version
+            check_powerstatus(powerstatus, btsinfo.btsid)
+        }
+        else {
+            dialog_info.innerHTML = "Get BTS Status Fail!"
+        }
+    } 
+}
+function get_bts_snapshot(btsinfo) {
+    var form = new FormData(); 
+    form.append("savesnapshot", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip);
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        console.log(info);
+        if (status == "ok") {            
+            dialog_info.innerHTML = '<a target="_blank" href ="' + info +'">' + info + '</a>'
+        }
+        else {
+            dialog_info.innerHTML = "Get BTS Snapshot Fail!"
+        }
+    } 
+}
+function get_bts_scf(btsinfo) {
+    var form = new FormData(); 
+    form.append("savescf", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        console.log(info);
+        if (status == "ok") {            
+            dialog_info.innerHTML = '<a target="_blank" href ="' + info +'">' + info + '</a>'
+        }
+        else {
+            dialog_info.innerHTML = "Get BTS SCF Fail!"
+        }
+    } 
+}
+function get_bts_swconfig(btsinfo) {
+    var form = new FormData(); 
+    form.append("saveswconfig", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid;
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        console.log(info);
+        if (status == "ok") {            
+            dialog_info.innerHTML = '<a target="_blank" href ="' + info +'">' + info + '</a>'
+        }
+        else {
+            dialog_info.innerHTML = "Get BTS SCF Fail!"
+        }
+    } 
+}
+function block_all_rru(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("block_all_rru", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+        }
+        else {
+            dialog_info.innerHTML = "Block RRU Fail!"
+        }
+    } 
+}
+function block_all_cell(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("block_all_cell", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+        }
+        else {
+            dialog_info.innerHTML = "Block CELL Fail!"
+        }
+    } 
+}
+function unblock_all_cell(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("unblock_all_cell", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+        }
+        else {
+            dialog_info.innerHTML = "UnBlock CELL Fail!"
+        }
+    } 
+}
+function unblock_all_rru(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("unblock_all_rru", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+        }
+        else {
+            dialog_info.innerHTML = "UnBlock RRU Fail!"
+        }
+    } 
+}
+function reboot_bts(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("reboot", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+        }
+        else {
+            dialog_info.innerHTML = "Reboot BTS Fail!"
+        }
+    } 
+}
+function power_off_bts(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("poweroff", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+            var btsstatus = document.getElementById("btsstatus" + btsinfo.btsid);
+            var pic ="{% static "/pic/bts_gray.png" %}";
+            btsstatus.innerHTML = "<img class = bts-logo src="+ pic + ">"
+        }
+        else {
+            dialog_info.innerHTML = "Power Off BTS Fail!"
+        }
+    } 
+}
+function power_on_bts(btsinfo) {
+    if (check_bts_lock(btsinfo.btsid) == 0) {
+        return
+    }
+    var form = new FormData(); 
+    form.append("poweron", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var info = data.info;
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            dialog_info.innerHTML = info
+            var btsstatus = document.getElementById("btsstatus" + btsinfo.btsid);
+            var pic ="{% static "/pic/bts_green.png" %}";
+            btsstatus.innerHTML = "<img class = bts-logo src="+ pic + ">"
+        }
+        else {
+            dialog_info.innerHTML = "Power On BTS Fail!"
+        }
+    } 
+}
+function good_night() {
+    var btsid_group=prompt("Please enter shut down btsid Seperate with ','","")
+    if (btsid_group==null || btsid_group=="") {
+        alert("please input btsid")
+    }
+    console.log(btsid_group);
+    var form = new FormData(); 
+    form.append("good_night", 'ok');
+    form.append("btsid_group", btsid_group); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var success_btslist = data.success_btslist;
+        var fail_btslist = data.fail_btslist;
+        var locked_btslist = data.locked_btslist;      
+        // console.log(dialog_info.innerHTML);
+        if (status == "ok") {            
+            alert("Power Off Success Btslist is " + success_btslist + "!\n" + "Power Off Fail Btslist is " + fail_btslist + "!\n" + "Locked Btslist is " + locked_btslist + "!")
+        }
+        else {
+            alert("Power Off BTS Group Fail!")
+        }
+    } 
+}
+function lock(btsid) {
+    console.log('lock '+btsid);
+    var form = new FormData(); 
+    form.append("lock", 'ok');
+    form.append("btsid", btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        if (status == "ok") {            
+            alert(btsid + " is lock!");
+            var btslock = document.getElementById("btslock" + btsid);
+            var pic ="{% static "/pic/lock.png" %}";
+            var fun = "unlock(" +btsid +")";
+            btslock.innerHTML = "<img class = bts-lock src="+ pic + " onclick=" + fun + ">"
+        }
+        else {
+            alert(btsid + " lock fail!")
+        }
+    }
+}
+function unlock(btsid) {
+    console.log('unlock '+btsid);
+    var form = new FormData(); 
+    form.append("unlock", 'ok');
+    form.append("btsid", btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        if (status == "ok") {            
+            alert(btsid + " is unlock!")
+            var btslock = document.getElementById("btslock" + btsid);
+            var pic ="{% static "/pic/unlock.png" %}"
+            var fun = "lock(" +btsid +")";
+            btslock.innerHTML = "<img class = bts-lock src="+ pic + " onclick=" + fun + ">"
+
+        }
+        else {
+            alert(btsid + " unlock fail!")
+        }
+    }
+
+}
+function run_project(info) {
+    var dialog_info = document.getElementById("dialog_info" + info.btsid);
+    dialog_info.style="display:none;";
+    var modify_info = document.getElementById("modify_info" + info.btsid);
+    modify_info.style="display:none;";
+    var project_info = document.getElementById("project_info"+ info.btsid);
+    project_info.style="display:inline;"; 
+    var form = new FormData();  
+    form.append("get_project", 'ok');
+    form.append("btsid", info.btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var joblist = data.joblist;
+        if (status == "ok") {            
+          var value = '';
+          for (var i=joblist.length-1; i>=0; i--){
+              value += '<option>' + joblist[i] + '</option>';
+          }
+          document.getElementById('joblist'+info.btsid).innerHTML = "Joblist: " + value;
+        }
+        else {
+           document.getElementById('joblist'+info.btsid).innerHTML = "Get Fail!";
+        }
+    }   
+}
+function run(btsid) {
+    var project_info = document.getElementById("project_info"+btsid);
+    project_info.style="display:none;"; 
+    var select_job = document.getElementById("joblist"+btsid).value;
+    var custome_job = document.getElementById("project_name"+btsid).value;
+    var dialog_info = document.getElementById("dialog_info" + btsid);
+    dialog_info.style="display:inline;"; 
+    dialog_info.innerHTML = "Please wait..."
+    if (custome_job != "") {
+        var project_name = custome_job;
+    }
+    else  {
+        var project_name = select_job;
+    }
+    console.log(project_name);
+    var form = new FormData(); 
+    form.append("run_project", 'ok');
+    form.append("project_name", project_name);
+    form.append("btsid", btsid); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var project_url = data.url;
+        if (status == "ok") {            
+            dialog_info.innerHTML = "Project is started!  " + '<a target="_blank" href ="' + project_url +'">' + project_url + '</a>'
+        }
+        else if (status == "blocked") {
+            dialog_info.innerHTML = "Project is blocked!  " + project_url
+        }
+        else {
+            dialog_info.innerHTML = "Run Project Fail!  " + project_url
+        }
+    }   
+
+}
+function cancel_run(btsid) {
+    var project_info = document.getElementById("project_info"+btsid);
+    project_info.style="display:none;";
+    var dialog_info = document.getElementById("dialog_info" + btsid);
+    dialog_info.style="display:inline;";
+    dialog_info.innerHTML = "Cancel Run!"
+}
+</script>
+<title> Quick Links </title>
+</head>
+<body>
+{% load static %}
+<div class='box-head'>
+    <div class='box-logo'>
+    <img src="{% static "/pic/logo.jpg" %}" class = logo>
+    <l class='title'>Bts Mgmt</l>
+    </div>
+    {% include './base.html %} 
+    {% block navbar %}
+    {% endblock %}
+</div>
+<div class = "container">
+    <div class="new_search">
+        <form action="" class="parent">
+            <input type="button" align='left' value ="Creat New BTS" onclick="creat()"/ >
+            <form id="search_bar" method="get" action="">
+            <input type="text" id="searchid" class="search" name="searchid" placeholder="BtsId or GroupName">
+            <input type="submit" class="query" value="search" onclick="search()"/> 
+            </form>
+        </form>
+    </div>
+    <div class="night">
+        <input type="button"  class='btn_red' align='right' value ="Good Night" onclick="good_night()"/ >
+    </div>
+</div>
+<div id="creat" class="creat_box" style="display:none;">
+    BTS Id<input type="text" id="creat_btsid" placeholder="btsid">
+    <br>
+    BTS Ip<input type="text" id="creat_btsip" placeholder="btsip">
+    <br>
+    Is Sran<input id="creat_is_sran" name="sran" type="checkbox" ">
+    <br>
+    PB Info<input type="text" id="creat_pbinfo" placeholder="pbip:pbport">
+    <br>
+    Group<input type="text" id="creat_group" placeholder="group">
+    <br>
+    <button class='btn' onclick="creat_bts()">Submit</button>
+    <button class='btn' onclick="cancel()">Cancel</button>
+</div>
+<div id="divs" class='box-link'>
+    {% for info in bts_info %}
+    <div id="bts{{info.btsid}}" class="btsArea thumbnail">
+        <div class="btsIdArea" onclick="bts_operation({{info}})">
+        <p class="btsNameLabel">BTS{{info.btsid}}</p>
+        <!-- <p id="btsip{{info.btsid}}">{{info.btsip}}</p>   -->
+            <div id="btsstatus{{info.btsid}}">     
+            {% if info.powerstatus == 'on' %}       
+            <img class = bts-logo src="{% static "/pic/bts_green.png" %}">
+            {% else %}
+            <img class = bts-logo src="{% static "/pic/bts_gray.png" %}">
+            {% endif %} 
+            </div>      
+        </div>
+        <div class="btsLockArea" id="btslock{{info.btsid}}">
+            {% if info.lock == 'on' %}
+            <img class = bts-lock src="{% static "/pic/lock.png" %}" onclick="unlock({{info.btsid}})">
+            {% else %}
+            <img class = bts-lock src="{% static "/pic/unlock.png" %}" onclick="lock({{info.btsid}})">
+            {% endif %}
+        </div>
+        
+    </div>
+    <div class="dialog" id ="dialog{{info.btsid}}" style="display:none;">   
+        <div class='dialog_head' id ="dialog_head{{info.btsid}}" >
+            <div class='dialog_head_title' align="center">BTS{{info.btsid}}-{{info.group}}</div>
+            <div class='dialog_head_close' align="right">
+            <button  id = "close btn-primary" class='btn_close' onclick="close_dialog({{info.btsid}})">close</button> 
+            </div>
+            <hr class="new_hr" align="center"/> 
+        </div>
+        <div class='dialog_body' id ="dialog_body{{info.btsid}}">
+            <div class='dialog_btn' id ="dialog_btn{{info.btsid}}">
+                <button class='btn_group' id = "status" onclick="get_bts_status({{info}})">Get status</button>
+                <button class='btn_group' id = "blockcell" onclick="block_all_cell({{info}})">Block All CELL</button>
+                <button class='btn_group' id = "unblockcell" onclick="unblock_all_cell({{info}})">Unblock All CELL</button>
+                <button class='btn_group' id = "blockrru" onclick="block_all_rru({{info}})">Block All RRU</button>
+                <button class='btn_group' id = "unblockrru" onclick="unblock_all_rru({{info}})">Unblock All RRU</button>
+                <button class='btn_group' id = "reboot"  onclick="reboot_bts({{info}})">Reboot BTS</button>
+                <button class='btn_group' id = "poweroff"  onclick="power_off_bts({{info}})">Power Off BTS</button>
+                <button class='btn_group' id = "poweron"  onclick="power_on_bts({{info}})">Power On BTS</button>   
+                <button class='btn_group' id = "scf" onclick="get_bts_scf({{info}})">Save SCF</button>
+<!--                 <button class='btn_group' id = "snapshot" onclick="get_bts_snapshot({{info}})">Save Snapshot</button> -->
+                <button class='btn_group' id = "swconfig" onclick="get_bts_swconfig({{info}})">Save Swconfig</button><button class='btn_group btn_blue' id = "swconfig" onclick="run_project({{info}})">Run Project</button>
+                <button class='btn_group btn_red' id = "modify" onclick="modify_btn({{info.btsid}})">Modify BTS</button>
+                <button class='btn_group btn_red' id = "delete" onclick="delete_bts({{info.btsid}})">Delete BTS</button  
+                >
+            </div>
+            <div class='box_info'>
+                <div class='dialog_info' id="dialog_info{{info.btsid}}" >
+                </div>
+                <div class='modify_info' id="modify_info{{info.btsid}}" style="display:none">
+                    BTS Ip<input type="text" id="modify_btsip{{info.btsid}}" placeholder="btsip">
+                    <br>
+                    Is Sran<input id="is_sran{{info.btsid}}" type="checkbox" ">
+                    <br>
+                    PB Info<input type="text" id="modify_pbinfo{{info.btsid}}" placeholder="pbip:pbport">
+                    <br>
+                    Group<input type="text" id="modify_group{{info.btsid}}" placeholder="group">
+                    <br>
+                    <button class='btn' onclick="modify_bts({{info.btsid}})">Modify</button>
+                    <button class='btn' onclick="cancel_modify({{info.btsid}})">Cancel</button>
+                </div>
+                <div class='modify_info' id="project_info{{info.btsid}}" style="display:none">
+<!--                     <button class='btn' id="get_joblist{{info.btsid}}" onclick="get({{info.btsid}})">Get Joblist</button> -->
+                    Joblist:<select id="joblist{{info.btsid}}">
+                        <option value =""></option>
+                    </select>
+                    <br>
+                    Custom Job Name<input type="text" id="project_name{{info.btsid}}" placeholder="Project Name">
+                    <br>
+                    <button class='btn' onclick="run({{info.btsid}})">Run</button>
+                    <button class='btn' onclick="cancel_run({{info.btsid}})">Cancel</button>
+                </div>
+            </div>
+         </div>
+    </div>    
+    {% endfor %}
+
+    <div id='div_last'>
+        <p></p>
+    </div>
+</div>
+</body>
+</html>

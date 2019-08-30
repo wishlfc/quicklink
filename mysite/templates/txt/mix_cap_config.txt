@@ -1,0 +1,15 @@
+Release                                  =  TL17A 
+Owner                                    =  xxx@nokia.com
+FIXED SCF                                =  FALSE
+SCF File Name                            =  scfc_M082.xml
+TM500 Script File                        =  M082.txt
+System Module                            =  ASMI
+KPI Setting                              =  kpi_dl_tput:300;kpi_ul_tput:10;kpi_errlog_ratio:60 
+
+ULDL                                     =  2
+SSF                                      =  7
+TM Mode                                  =  TM3-TM3-TM3
+Band                                     =  20M-20M-20M
+CA Type                                  =  3CC
+Pipe                                     =  0
+FEATURE 2912                             =  ON

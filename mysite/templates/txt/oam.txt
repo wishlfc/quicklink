@@ -1,0 +1,17 @@
+
+Case Name                                =  OAM_STA
+Release                                  =  TL18A
+System Module                            =  FSIH
+Owner                                    =  xxx@nokia-sbell.com
+Team                                     =  PET2
+Domain                                   =  OAM
+Case Type                                =  OAM
+RF Mode Interface                        =  CPRI
+KPI Setting                              =  kpi_oam_sr:100
+
+FIXED SCF                                =  TRUE
+SCF File Name                            =  BTS1434_BTS_OAM.xml
+TM500 Version                            =  L
+UE Count                                 =  0
+Tags                                     =  BTS1434_OAM
+OAM Operations                           =  reset_bts/20
