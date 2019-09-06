@@ -277,6 +277,7 @@ def load_config(btsip, sran):
     bts.bts_ip = btsip
     bts.workcell = 1
     bts.airscale = 1
+    bts.is5g = 0
     # bts.sran = bts.airscale == '1'
     bts.bts_fcm_ip = '192.168.255.1'
     bts.bts_fcm_username = 'toor4nsn'
