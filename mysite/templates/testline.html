@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+.box2{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border:1px solid #ccc;
+    border-radius: 2px;
+}
+.table-box{
+    width: 90%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    width: 100%;
+}
+table{
+    table-layout: auto;
+}
+.title{
+    margin-top: 30px;
+}
+.table-btn{
+    display: inline-block;
+}
+.png{
+   width: 18px;
+   height: 18px;
+}
+.power{
+   width: 48px;
+   height: 18px;
+}
+</style>
+<title> Quick Link </title>
+{% load static %}
+<link href="{% static "/css/bootstrap.min.css" %}" rel="stylesheet">
+</head>
+<script type="text/javascript">
+    var url = "/testline/";
+    function search() {
+        var searchid = document.getElementById("searchid").value;
+        url = url.concat(searchid);
+        console.log(url);
+        location.href=url;
+        console.log(window.location.href)   
+    }
+    function rowdelete(btsid) {
+        console.log('delete '+btsid);
+        alert('Will delete BTS'+btsid+'!')
+        var form = new FormData(); 
+        form.append("delete", 'ok');
+        form.append("btsid", btsid); 
+        console.log(form);
+        var xhr = new XMLHttpRequest(); 
+        xhr.open("POST", url, true); 
+        xhr.send(form);
+        xhr.onload = function(evt) {       
+            var data = JSON.parse(xhr.responseText);
+            var status = data.status;
+            if (status == "ok") {            
+                window.location.href='/testline/'; 
+            }
+            else {
+                alert("BTS" + btsid + " delete fail!")
+            }
+        }
+    }
+    function power_off_bts(btsinfo) {
+        var form = new FormData(); 
+        form.append("poweroff", 'ok');
+        form.append("btsid", btsinfo.btsid); 
+        form.append("pbinfo", btsinfo.pbinfo); 
+        var xhr = new XMLHttpRequest(); 
+        xhr.open("POST", url, true); 
+        xhr.send(form);
+        xhr.onload = function(evt) {       
+            var data = JSON.parse(xhr.responseText);
+            var status = data.status;
+            var info = data.info;
+            // console.log(dialog_info.innerHTML);
+            if (status == "ok") {            
+                alert("Power Off BTS" + btsinfo.btsid+ " Successful!")
+                }
+            else {
+                alert("Power Off BTS" + btsinfo.btsid+ " Fail!" + info)
+                }
+            } 
+    }
+    function power_on_bts(btsinfo) {
+        var form = new FormData(); 
+        form.append("poweron", 'ok');
+        form.append("btsid", btsinfo.btsid); 
+        form.append("pbinfo", btsinfo.pbinfo); 
+        var xhr = new XMLHttpRequest(); 
+        xhr.open("POST", url, true); 
+        xhr.send(form);
+        xhr.onload = function(evt) {       
+            var data = JSON.parse(xhr.responseText);
+            var status = data.status;
+            var info = data.info;
+            // console.log(dialog_info.innerHTML);
+            if (status == "ok") {            
+                alert("Power On BTS" + btsinfo.btsid + " Successful!")
+                }
+            else {
+                alert("Power On BTS" + btsinfo.btsid + " Fail!" + info)
+                }
+            } 
+    } 
+</script>
+<body>
+{% load static %}
+<div class='box-head'>
+    <div class='box-logo'>
+    <img src="{% static "/pic/logo.jpg" %}" class = logo>
+    <l class='title'>Test Line</l>
+    </div>
+    {% include './base.html %} 
+    {% block navbar %}
+    {% endblock %}
+</div>
+<div class="htmleaf-container">
+        <div class="table-box">
+            <div class="row">
+                <form id="search_bar" method="get" action="">
+                    <input type="text" id="searchid" class="search" name="searchid" placeholder="BtsId">
+                    <input type="submit" class="query" value="search" onclick="search()"/>
+                </form>
+                <div class="col-md-12" style="padding:2em 0;">
+                    <p>Click<img src="{% static "/pic/pencil.png" %}" class = png>can edit table&nbsp<img src="{% static "/pic/trash.png" %}" class = png>can delete row. </p>
+                    Total testline number is {{testline_num}}
+            </form>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table2excel" id="mytable">
+                            <thead>
+                              <tr>
+                                <th>Test Line</th>
+                                <th>BTS ID</th>
+                                <th>4/5G Flag</th>
+                                <th>Test Entity</th>
+                                <th>Owner</th>
+                                <th>BTS s1 IP</th>
+                                <th>BTS PC IP</th>
+                                <th>Hw Info</th>
+                                <th>PB</th>
+                                <th>PA</th>
+                                <th>PA PC</th>
+                                <th>MCS</th>
+                                <th>MCS PC</th>
+                                <th>UE Type</th>
+                                <th>UE List</th>
+                                <th>UE PC</th>
+                                <!-- <th>Owner</th> -->
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            {% for info in testline_info %}
+                              <tr>
+<!--                                 <td>{{info.testlineid}}</td>
+                                <td><a href="/topo/?testlineid={{info.testlineid}}&btsid={{info.btsid}}&btspc={{info.btspc}}&btss1ip={{info.btss1ip}}&pbinfo={{info.pbinfo}}&painfo={{info.painfo}}&papc={{info.papc}}&uetype={{info.uetype}}&uelist={{info.uelist}}&uepc={{info.uepc}}&hwinfo={{info.hwinfo}}&mcsinfo={{info.mcsinfo}}&mcspc={{info.mcspc}}&">{{info.btsid}}</a></td> -->
+                                <td><a href="/topo/?testlineid={{info.testlineid}}&btsid={{info.btsid}}&flag={{info.flag}}&btspc={{info.btspc}}&btss1ip={{info.btss1ip}}&pbinfo={{info.pbinfo}}&painfo={{info.painfo}}&papc={{info.papc}}&uetype={{info.uetype}}&uelist={{info.uelist}}&uepc={{info.uepc}}&hwinfo={{info.hwinfo}}&mcsinfo={{info.mcsinfo}}&mcspc={{info.mcspc}}&">{{info.testlineid}}</a></td>
+                                <td><a href="/testlinechange/?btsid={{info.btsid}}&">{{info.btsid}}</a></td>
+                                <td>{{info.flag}}</td>
+                                <td>{{info.entity}}</td>
+                                <td>{{info.owner}}</td>
+                                <td><a href="https://{{info.btss1ip}}" target="_blank">{{info.btss1ip}}</a></td>
+                                <td>{{info.btspc}}</td>
+                                <td>{{info.hwinfo}}</td>
+                                <td>{{info.pbinfo}}
+                                    <button id="poweron" type="button" class="btn btn-sm btn-default" onclick="power_on_bts({{info}})">
+                                    <img src="{% static "/pic/on.svg" %}" class= power>  
+                                    </button>  
+                                    <button id="poweron" type="button" class="btn btn-sm btn-default" onclick="power_off_bts({{info}})">
+                                    <img src="{% static "/pic/off.svg" %}" class=power>
+                                    </button>
+                                </td>
+                                <td>{{info.painfo}}</td>
+                                <td>{{info.papc}}</td>
+                                <td>{{info.mcsinfo}}</td>
+                                <td>{{info.mcspc}}</td>
+                                <td>{{info.uetype}}</td>
+                                <td>{{info.uelist}}</td>
+                                <td>{{info.uepc}}</td>
+                                <!-- <td>{{info.owner}}</td> -->
+                                <td>
+                                <div class="btn-group">
+                                    <div class='table-btn'>
+                                    <a href="/testlinechange/?btsid={{info.btsid}}&">
+                                    <button id="bedit" type="button" class="btn btn-sm btn-default">
+                                    <img src="{% static "/pic/pencil.png" %}" class = png>    
+                                    </button>
+                                    </a>
+                                    </div>
+                                    <div class='table-btn'>
+                                    <button id="bdelete" type="button" class="btn btn-sm btn-default" onclick="rowdelete({{info.btsid}})"><!-- <span class="glyphicon glyphicon-trash" > </span> -->
+                                    <img src="{% static "/pic/trash.png" %}" class = png>
+                                    </button>
+                                    </div>
+                                </div>
+                                </td>
+                              </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-12"  style="padding-bottom:2em;">
+                    <a href="/testlinechange/?btsid=&">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>Creat New</button></a>
+                    <input type="button" value="export to excel" class="btn btn-primary" onclick="table2Excel('testline.xls')"/>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% load static %}
+<script type="text/javascript" src="{% static "/js/jquery.js" %}" ></script> 
+<script type="text/javascript" src="{% static "/js/jquery.table2excel.js" %}" ></script>  
+<script>
+function table2Excel(filename){
+    $(".table2excel").table2excel({
+        exclude: ".noExl",
+        name: "Excel Document Name",
+        filename: filename,
+        fileext: ".xls",
+        exclude_img: true,
+        exclude_links: true,
+        exclude_inputs: true
+    });
+}
+</script>
+</body>
+</html>

@@ -17,6 +17,8 @@ def pr_description(request):
     print('pr description init...')
     if 'submit' in request.POST:
         return transf(request)
+    elif 'goldencheck' in request.POST:
+        return goldencheck(request)
     elif 'getflag' in request.POST:
         return getflag(request)
     elif 'getflag_btsip' in request.POST:
@@ -96,7 +98,7 @@ def gethw(request):
     if btsid == "":
         info = "Not found btsid!"
         return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")   
-    from lib_bts import c_pet_bts
+    from lib_bts.pet_bts_c import c_pet_bts
     bts = c_pet_bts(btsid)
     bts.load_config()
     info = hw_version(bts)
@@ -106,14 +108,15 @@ def gethw(request):
 def gethw_btsip(request):
     print('gethw init...')
     btsip = str(request.POST['btsip']).strip()
-    issran = str(request.POST['issran']).strip()
+    # issran = str(request.POST['issran']).strip()
     if btsip == "":
         info = "Not found btsip!"
         return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
     if not ping_s1(btsip):
         info = "S1 is not Reachable!"
         return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
-    sran = 1 if issran == 'true' else 0
+    # sran = 1 if issran == 'true' else 0
+    sran = 1
     bts = load_config(btsip, sran)
     info = hw_version(bts)
     print(info)
@@ -121,7 +124,7 @@ def gethw_btsip(request):
 
 
 def getflag_btsip(request):
-    from lib_bts import c_pet_bts_s1
+    from lib_bts.pet_bts_s1_c import c_pet_bts_s1
     print('getflag init...')
     btsip = str(request.POST['btsip']).strip()
     # issran = str(request.POST['issran']).strip()
@@ -154,8 +157,8 @@ def getflag(request):
     if btsid == "":
         flags = "Not found btsid!"
         return HttpResponse(json.dumps({"status": "ok", "flags": flags}), content_type="application/json")   
-    from lib_bts import c_pet_bts_s1
-    from pet_bts_c import c_pet_bts
+    from lib_bts.pet_bts_s1_c import c_pet_bts_s1
+    from lib_bts.pet_bts_c import c_pet_bts
     try:
         bts = c_pet_bts(btsid)
         bts.load_config()
@@ -181,8 +184,8 @@ def getflag(request):
 
 def transf(request):
     print('transf init...')
-    reload(sys)
-    sys.setdefaultencoding("utf8")
+    import importlib
+    importlib.reload(sys)
     steps = str(request.POST['steps'])
     expected_result = str(request.POST['expected_result'])
     actual_result = str(request.POST['actual_result'])
@@ -258,7 +261,7 @@ def transf(request):
     output += '\n'
     output += "[10. Test Case Reference: (QC, RP or UTE link)]\n"
     output += reference + "\n"
-    print output
+    print(output)
     return HttpResponse(json.dumps({"status": "ok", "output": output}), content_type="application/json")
 
 def load_config(btsip, sran):
@@ -320,4 +323,27 @@ def load_config(btsip, sran):
     bts.admin_port = 3600 if bts.sran == 1 else 443
     return bts
 
-
+def goldencheck(request):
+    import requests
+    import lib_common
+    print('golden check init...')
+    description = str(request.POST['description'])
+    valid_url = 'https://golden-standard.dynamic.nsn-net.net/api/validator#description'
+    payload = {"type": "internal", 'description': description}
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+               "Content-Type": "application/json"}
+    from requests.packages import urllib3
+    urllib3.disable_warnings()
+    rn = requests.post(url=valid_url, data=json.dumps(payload), verify=False, headers=headers)
+    if rn.status_code == 200:
+        # print(rn.text)
+        response = lib_common.json_to_ipammlitem(json.loads(rn.text))
+        result = response.messages
+        # result = rn.text.messages
+        alert_list = [line.alert for line in result]
+        info_list = [line.info for line in result]
+        print(alert_list)
+        print(info_list)
+        return HttpResponse(json.dumps({"status": "ok", "alert_list": alert_list, "info_list": info_list}), content_type="application/json")
+    else:
+        return HttpResponse(json.dumps({"status": "nok", "alert_list": [], "info_list": []}), content_type="application/json")

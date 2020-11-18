@@ -12,7 +12,9 @@ import time
 
 sys.path.append('/home/work/tacase_dev/Resource')
 filename_dir = './templates/txt/'
-remote_ip = '10.106.214.206'
+master_ta_server = '10.69.82.130'
+jenkins_server = '10.69.82.129'
+remote_ip = '10.69.68.42'
 remote_folder = '/home/amy/temp/'
 
 def view_bts(request):
@@ -31,12 +33,14 @@ def view_bts(request):
         return search(request)
     elif 'getstatus' in request.POST:
         return getstatus(request)
-    elif 'savescf' in request.POST:
-        return save_scf(request)
-    elif 'savesnapshot' in request.POST:
-        return save_snapshot(request)
-    elif 'saveswconfig' in request.POST:
-        return save_swconfig(request)
+    elif 'hwinfo' in request.POST:
+        return get_hwinfo(request)
+    # elif 'savescf' in request.POST:
+    #     return save_scf(request)
+    # elif 'savesnapshot' in request.POST:
+    #     return save_snapshot(request)
+    # elif 'saveswconfig' in request.POST:
+    #     return save_swconfig(request)
     elif 'block' in request.POST:
         return block(request)
     elif 'unblock' in request.POST:
@@ -65,20 +69,22 @@ def view_bts(request):
         return get_project(request)
     elif 'run_project' in request.POST:
         return run_project(request)
+    elif 'topo' in request.POST:
+        return get_topo_info(request)
     else:
         return HttpResponse(json.dumps({"status": "nok"}), content_type="application/json")
 
 def get_job_bts():
     import requests
     cmd = "ls /home/jenkins/home/jobs/"
-    remote_cmd = 'sshpass -p root ssh root@10.69.82.130 "{}"'.format(cmd)
+    remote_cmd = 'sshpass -p root ssh root@{} "{}"'.format(master_ta_server, cmd)
     out = os.popen(remote_cmd).read()
     # print(out)
     jobdict = {}
     for job in out.split('\n'):
         if job == "":
             continue
-        url = "http://10.69.82.129/job/{}/config.xml".format(job)
+        url = "http://{}/job/{}/config.xml".format(jenkins_server, job)
         print(url)
         headers = {'User-Agent':
                    'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'}
@@ -99,7 +105,7 @@ def get_job_bts():
         else:
             jobdict[bts] = job
         change_joblist(bts, jobdict[bts])
-    print jobdict
+    print(jobdict)
     return jobdict
 
 def insert_btsinfo(btsid, btsip, issran, pbinfo, group, lock, powerstatus):
@@ -353,7 +359,7 @@ def query(request):
     version = bts_info['version']
     status = bts_info['status']
     group = bts_info['group']
-    bts_info['hwtype'] = line.hwtype
+    hwtype = bts_info['hwtype']
     # print('query bts ip {} sran {}'.format(btsid, sran))
     issran = True if int(sran) == 1 else False
     return HttpResponse(json.dumps({"status": "ok", 'btsip': btsip, 'issran': issran,
@@ -433,8 +439,60 @@ def getstatus(request):
     finally:
         if bts and bts.admin_api != None:
             bts.admin_api.teardown()
-        change_refresh_info(btsid, powerstatus, version, status)
+        change_refresh_info(btsid, powerstatus, version, btsstatus)
     return HttpResponse(json.dumps({"status": "ok", "btsstatus": btsstatus, "version":version, "powerstatus":powerstatus}), content_type="application/json")
+
+def get_hwinfo(request):    
+    btsid = str(request.POST['btsid'])
+    btsip = str(request.POST['btsip'])
+    powerstatus = "on"
+    if not ping_s1(btsip):
+        btsstatus = "S1 is not Reachable!"
+        powerstatus = "off"
+        version = "S1 is not Reachable!"
+        change_refresh_info(btsid, powerstatus, version, btsstatus)
+        return HttpResponse(json.dumps({"status": "nok"}), content_type="application/json")
+    print('get bts hw info...{}'.format(btsid))
+    bts = None
+    pnlist = []
+    snlist = []
+    statuslist = []
+    ownerlist = []
+    # try:
+    from lib_bts.pet_bts_c import c_pet_bts
+    from view_prdescription import hw_version
+    from onelab import OneLabC
+    import re
+    bts = c_pet_bts(btsid)
+    bts.load_config()
+    hw_info = str(hw_version(bts))
+    for info in hw_info.split('id:'):
+        for line in info.split('\n'):
+            if 'productName' in line:
+                pn = re.search('productName:(.*)', line).group(1)
+                if 'Flexi System Module Indoor' in pn:
+                    pn = pn.replace('Flexi System Module Indoor', '')
+                if 'BB Extension Indoor Sub-Module' in pn:
+                    pn = pn.replace('BB Extension Indoor Sub-Module', '')
+                pnlist.append(pn)
+            if 'serialNumber' in line:
+                sn = re.search('serialNumber:(.*)', line).group(1)
+                snlist.append(sn)
+    print('snlist:{},pnlist:{},btsid:{}'.format(snlist, pnlist, btsid))
+    # print('statuslist:{},ownerlist:{}'.format(statuslist, ownerlist))
+    # if len(snlist) > 0:
+    #     olc = OneLabC()
+    #     olc.login()
+    #     for sn in snlist:
+    #         olc.search(sn)
+    #         statuslist.append(olc.status)
+    #         ownerlist.append(olc.owner)
+    #         print('sn:{},status:{},owner:{}'.format(sn, olc.status, olc.owner))
+    # except Exception as E:
+    #     print('Error: {}'.format(E))
+    #     btsstatus = "Cannot get info!"
+    #     version = "Cannot get info!"
+    return HttpResponse(json.dumps({"status": "ok", "pnlist": pnlist, "snlist": snlist, "statuslist": statuslist, "ownerlist":ownerlist}), content_type="application/json")
 
 def refresh_bts_info():
     bts_info_list = get_btsinfo()
@@ -459,10 +517,10 @@ def refresh_bts_info():
 
 
 def refresh_status(btsid, btsip):    
-    print('get bts status...{}'.format(btsid))  
+    print('get bts status...{}'.format(btsid))
     if not ping_s1(btsip):
         btsstatus = version = "S1 is not Reachable!"
-        return btsstatus, version    
+        return btsstatus, version
     bts = None
     try:
         bts = admin_api_setup(btsid)
@@ -579,32 +637,32 @@ def get_alarm(request):
             bts.admin_api.teardown()
     return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
 
-def save_snapshot(request):
-    btsid = str(request.POST['btsid'])
-    btsip = str(request.POST['btsip'])
-    if not ping_s1(btsip):
-        info = "S1 is not Reachable!"
-        change_powerstatus(btsid, "off")
-        return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
-    timestamp = get_time()
-    local_filename = '/home/quicklink/mysite/temp/snapshot_bts{}_{}.zip'.format(btsid, timestamp)
-    bts = None
-    try:
-        bts = admin_api_setup(btsid)
-        bts.admin_api.capture_snapshot(local_filename)
-        # bts.admin_api.teardown()
-        remote_file = remote_folder + local_filename.split('/')[-1]
-        os.system('sshpass -p root scp {} root@{}:{}'.format(local_filename, remote_ip, remote_file))
-        info = 'http://{}/file/{}'.format(remote_ip, local_filename.split('/')[-1])
-        print(local_filename)
-        print(remote_file)
-    except Exception as E:
-        print('Error: {}'.format(E))
-        info = "Cannot save snapshot!"
-    finally:
-        if bts and bts.admin_api != None:
-            bts.admin_api.teardown()
-    return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
+# def save_snapshot(request):
+#     btsid = str(request.POST['btsid'])
+#     btsip = str(request.POST['btsip'])
+#     if not ping_s1(btsip):
+#         info = "S1 is not Reachable!"
+#         change_powerstatus(btsid, "off")
+#         return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
+#     timestamp = get_time()
+#     local_filename = '/home/quicklink/mysite/temp/snapshot_bts{}_{}.zip'.format(btsid, timestamp)
+#     bts = None
+#     try:
+#         bts = admin_api_setup(btsid)
+#         bts.admin_api.capture_snapshot(local_filename)
+#         # bts.admin_api.teardown()
+#         remote_file = remote_folder + local_filename.split('/')[-1]
+#         os.system('sshpass -p root scp {} root@{}:{}'.format(local_filename, remote_ip, remote_file))
+#         info = 'http://{}/file/{}'.format(remote_ip, local_filename.split('/')[-1])
+#         print(local_filename)
+#         print(remote_file)
+#     except Exception as E:
+#         print('Error: {}'.format(E))
+#         info = "Cannot save snapshot!"
+#     finally:
+#         if bts and bts.admin_api != None:
+#             bts.admin_api.teardown()
+#     return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
 
 def save_swconfig(request):   
     btsid = str(request.POST['btsid'])
@@ -798,8 +856,8 @@ def good_night(request):
 def run_project(request):
     project_name = str(request.POST['project_name'])
     print('run paroject name...{}'.format(project_name))
-    cmd = 'curl -i -X POST "http://10.69.82.129/job/{}/build" -u admin:admin123'.format(project_name)
-    remote_cmd = 'sshpass -p root ssh root@10.69.82.130 "{}"'.format(cmd)
+    cmd = 'curl -i -X POST "http://{}/job/{}/build" -u admin:admin123'.format(jenkins_server, project_name)
+    remote_cmd = 'sshpass -p root ssh root@{} "{}"'.format(master_ta_server, cmd)
     out = os.popen(remote_cmd).read()
     location_info = [x for x in out.splitlines() if x.startswith('Location:')]
     if location_info:
@@ -808,9 +866,9 @@ def run_project(request):
         instanceid = location_info[0].split('/')[-2]
         print('Instance ID for the job: {}'.format(instanceid))
         time.sleep(10)
-        baseurl = 'http://operator:btstest1234@10.69.82.129/queue/item'
+        baseurl = 'http://operator:btstest1234@{}queue/item'.format(jenkins_server)
         cmd2 = 'curl -X GET "{}/{}/api/json?pretty=true"'.format(baseurl, instanceid)
-        remote_cmd2 = 'sshpass -p root ssh root@10.69.82.130 "{}"'.format(cmd2)
+        remote_cmd2 = 'sshpass -p root ssh root@{} "{}"'.format(master_ta_server, cmd2)
         out2 = os.popen(remote_cmd2).read()
         response = json.loads(out2)
         if response['blocked']:
@@ -909,7 +967,10 @@ def admin_api_setup(btsid):
 if __name__ == '__main__':
     sys.path.append('/home/quicklink/mysite/')
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
-    while(1):
-        refresh_bts_info()
-        get_job_bts()
-        time.sleep(900)
+    refresh_bts_info()
+    get_job_bts()
+    # while(1):
+        # refresh_bts_info()
+        # get_job_bts()
+        # time.sleep(900)
+    pass

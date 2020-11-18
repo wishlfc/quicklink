@@ -1,1 +1,1 @@
-nohup python manage.py runserver 10.69.68.42:80 &
+nohup python manage.py runserver 10.69.68.42:80  --noreload --nothreading &

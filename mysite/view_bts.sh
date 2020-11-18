@@ -1,2 +1,3 @@
 #! /bin/bash
-nohup python /home/quicklink/mysite/gencase/view_bts.py > view_bts.log 2>&1 & 
+cat /dev/null  > /home/quicklink/mysite/view_bts.log
+nohup python /home/quicklink/mysite/gencase/view_bts.py > /home/quicklink/mysite/view_bts.log 2>&1 & 

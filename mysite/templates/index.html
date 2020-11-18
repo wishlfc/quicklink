@@ -32,24 +32,17 @@ a {
 }
 
 .src-link-size {
-    width : 30px;
-    height: 20px;
+    width : 24px;
+    height: 24px;
 }
 .box-bar{
    width: 100%;
    display:inline-block; 
 }
-.box-link{
+.box-link2{
    width: 45%;
+   top:5%;
    display:inline-block; 
-}
-.box-head{
-    width: 100%; 
-}
-.box-logo{
-    width: 30%;
-    float:left;
-    display:inline-block;    
 }
 .box-nav{
     width: 60%;
@@ -82,44 +75,33 @@ a {
 .navdiv:hover {
     background-color: #E0E0E0;
 }
-a:hover{
+/*a:hover{
     color: #66B3FF;
-}
+}*/
 a:link{
     text-decoration:none ; 
 }
 .logo{
-   width: 50px;
-   height: 50px;
+   width: 60px;
+   height: 60px;
 
 }
-.title{
-    font-size: 30px;
-    color: #000093;
-    font-weight: bold;
-    font-family: Arial;
-}
-hr{
-    height: 1px;
-    width: 300px;
-    background:linear-gradient(to right,#FE0000,#0000FF);
-}
 </style>
-<title> Quick Links </title>
+<title> Quick Link </title>
 </head>
 <body>
 {% load static %}
 <div class='box-head'>
     <div class='box-logo'>
     <img src="{% static "/pic/logo.jpg" %}" class = logo>
-    <l class='title'>Quick Links</l>
+    <l class='title'>Quick Link</l>
     </div>
     {% include './base.html %} 
     {% block navbar %}
     {% endblock %}
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title' >Release</h2>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://coop.int.net.nokia.com/html/dashboard/global/PCIDashboard.html?pci_db_url=lte-n%3Btdd-sran%3Btrunk">
@@ -127,41 +109,49 @@ hr{
         {% load static %}        
         <p><img src="{% static "/pic/coop.jpg" %}" class = src-link-size></p>
         </div>
-        Coop
+        COOP
         </a>
    </div>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://wft.int.net.nokia.com/">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/wft.jpg" %}" class = src-link-size></p>
+        <p><img src="{% static "/pic/wft.png" %}" class = src-link-size></p>
         </div>
-        Wft
+        WFT
         </a>
     </div>
-    <div class = 'col-link link-list-a'>
+<!--     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "http://tc1.eecloud.dynamic.nsn-net.net/sw_targets/release/L18">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/pts.jpg" %}" class = src-link-size></p>
+        <p><img src="http://tc1.eecloud.dynamic.nsn-net.net/favicon.ico" class = src-link-size></p>
         </div>
         Push To Start
         </a>
-    </div>
+    </div> -->
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://online.networks.nokia.com/SWD/">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/sst.jpg" %}" class = src-link-size></p>
+        <p><img src="{% static "/pic/ss.png" %}" class = src-link-size></p>
         </div>
         Software Supply
         </a>
     </div>
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://sfekpipc001.hz.nsn-rdnet.net/flame5/swlist/">
+        <div class = 'radius'> 
+        <p><img src="{% static "/pic/config.jpg" %}" class = src-link-size></p>
+        </div>
+        SW Download
+        </a>
+    </div>
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>Pronto</h2>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://pronto.int.net.nokia.com/pronto/fetchReports.html?viewType=0&viewsOrStatisticsId=VIEW084170NGIT&parentTab=pr_report_list&viewState=&parentTab=pr_report_list&view=Reported+by+me&viewName=Reported+by+me&HomeFlag=true">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/pr.jpg" %}" class = src-link-size></p>
+        <p><img src="https://pronto.int.net.nokia.com/favicon.ico" class = src-link-size></p>
         </div>
         Pronto
         </a>
@@ -175,25 +165,33 @@ hr{
         Workflow Tool
         </a>
     </div>
-        <div class = 'col-link link-list-a'>
+<!--     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "http://10.157.86.113:7777/predictionsyslog">
         <div class = 'radius'> 
             <p><img src="{% static "/pic/ps.jpg" %}" class = src-link-size></p>
         </div>
         Prediction Syslog
-        </a>
-    </div>
-    <div class = 'col-link link-list-a'>
+        </a> -->
+    <!-- </div> -->
+<!--     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://swbot.dynamic.nsn-net.net/">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/sw.jpg" %}" class = src-link-size></p>
+            <p><img src="https://swbot.dynamic.nsn-net.net/favicon.ico" class = src-link-size></p>
         </div>
         SWBot
+        </a>
+    </div> -->
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "https://rep-portal.wroclaw.nsn-rdnet.net/pci/">
+        <div class = 'radius'> 
+            <p><img src="{% static "/pic/rp.jpg" %}" class = src-link-size></p>
+        </div>
+        PCI
         </a>
     </div>
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>BTS</h2>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "http://csrd.srnhz.nsn-rdnet.net/controltool/PBList/">
@@ -214,7 +212,7 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://onelab.eecloud.dynamic.nsn-net.net/">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/onelab.jpg" %}" class = src-link-size></p>
+        <p><img src="https://onelab.eecloud.dynamic.nsn-net.net/favicon.ico" class = src-link-size></p>
         </div>
         Onelab
         </a>
@@ -228,26 +226,26 @@ hr{
         </a>
     </div>
     <div class = 'col-link link-list-a'>
-        <a target="_blank" href = "http://sfekpipc001.hz.nsn-rdnet.net/flame5/swlist/">
+        <a target="_blank" href = "http://wsa.dynamic.nsn-net.net/sae/tdd_cfid/">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/config.jpg" %}" class = src-link-size></p>
+        <p><img src="http://wsa.dynamic.nsn-net.net/favicon.ico" %}" class = src-link-size></p>
         </div>
-        SW Download
+        TDD CFID
+        </a>
+    </div>
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://wsa.dynamic.nsn-net.net/sae/cfid/">
+        <div class = 'radius'> 
+        <p><img src="http://wsa.dynamic.nsn-net.net/favicon.ico" %}" class = src-link-size></p>
+        </div>
+        CFID
         </a>
     </div>
 </div>
 
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>Tools</h2>
-    <div class = 'col-link link-list-a'>
-        <a target="_blank" href = "https://4g-rep-portal.wroclaw.nsn-rdnet.net/">
-        <div class = 'radius'> 
-            <p><img src="{% static "/pic/rp.jpg" %}" class = src-link-size></p>
-        </div>
-        Report Portal
-        </a>
-    </div>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://qc12-prod.int.net.nokia.com/qcbin/">
         <div class = 'radius'> 
@@ -267,7 +265,7 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://esnidd054.emea.nsn-net.net/NIDD/">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/nidd.jpg" %}" class = src-link-size></p>
+        <p><img src="{% static "/pic/nidd.png" %}" class = src-link-size></p>
         </div>
         NIDD
         </a>
@@ -275,20 +273,35 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://srvjira.int.net.nokia.com/projects">
         <div class = 'radius'> 
-        <p><img src="{% static "/pic/jira.jpg" %}" class = src-link-size></p>
+        <p><img src="https://srvjira.int.net.nokia.com/favicon.ico" class = src-link-size></p>
         </div>
         JIRA
         </a>
     </div>
-    
+<!--     <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "https://srvjira.ext.net.nokia.com/">
+        <div class = 'radius'> 
+        <p><img src="https://srvjira.int.net.nokia.com/favicon.ico" class = src-link-size></p>
+        </div>
+        SRAN JIRA
+        </a>
+    </div> -->
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "https://collab.int.net.nokia.com/ui">
+        <div class = 'radius'> 
+            <p><img src="{% static "/pic/collab.png" %}" class = src-link-size></p>
+        </div>
+        Collab
+        </a>
+    </div> 
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>TA</h2>    
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "http://10.69.82.129/">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/jk.png" %}" class = src-link-size></p>
+            <p><img src="http://10.69.82.129/favicon.ico" class = src-link-size></p>
         </div>
         Jenkins
         </a>
@@ -304,7 +317,7 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "http://kpi1.eecloud.dynamic.nsn-net.net/">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/kpi.jpg" %}" class = src-link-size></p>
+            <p><img src="http://kpi1.eecloud.dynamic.nsn-net.net/favicon.ico" class = src-link-size></p>
         </div>
         Kpi Center
         </a>
@@ -312,19 +325,55 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://confluence.int.net.nokia.com/pages/viewpage.action?pageId=527009861">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/doc.jpg" %}" class = src-link-size></p>
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
         </div>
         TA Doc
         </a>
     </div>
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
+    <h2 class = 'link-list-title'>TA Tools</h2>    
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://10.69.82.129/job/TA_Windows10_Setup/">
+        <div class = 'radius'> 
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
+        </div>
+        ENV Setup
+        </a>
+    </div>
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://10.69.82.129/job/TA_Helper_R2/">
+        <div class = 'radius'> 
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
+        </div>
+        Update SW
+        </a>
+    </div>
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://10.69.82.129/view/Pet2_Tools/job/TA_bts_pb_tool/">
+        <div class = 'radius'> 
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
+        </div>
+        PB Control
+        </a>
+    </div>
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://10.69.82.129/job/TA_Get_RF_LOG/">
+        <div class = 'radius'> 
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
+        </div>
+        RF log
+        </a>
+    </div>
+</div>
+
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>Material</h2>    
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://webnei.emea.nsn-net.net/">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/webnei.jpg" %}" class = src-link-size></p>
+            <p><img src="{% static "/pic/webnei.png" %}" class = src-link-size></p>
         </div>
         WebNEI
         </a>
@@ -332,7 +381,7 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://citrixapps.int.net.nokia.com/Citrix/XenApp/auth/login.aspx">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/cfam.jpg" %}" class = src-link-size></p>
+            <p><img src="{% static "/pic/cfam.png" %}" class = src-link-size></p>
         </div>
         CFAM
         </a>
@@ -344,15 +393,24 @@ hr{
         </div>
         DOORS
         </a>
-    </div>
+    </div>  
+    <div class = 'col-link link-list-a'>
+        <a target="_blank" href = "http://ltepat.eecloud.dynamic.nsn-net.net/LTEPAT_WEB/">
+        <div class = 'radius'> 
+            <p><img src="{% static "/pic/doors.png" %}" class = src-link-size></p>
+        </div>
+        LTEPAT
+        </a>
+    </div>  
+    
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>CoDe</h2>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://teams.microsoft.com/_#/files/02%20CoDe?threadId=19%3Ab8ea0289a24848f9be383bf52ffd0144%40thread.skype&ctx=channel">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/code.jpg" %}" class = src-link-size></p>
+            <p><img src="https://teams.microsoft.com/favicon.ico" class = src-link-size></p>
         </div>
         CoDe
         </a>
@@ -375,7 +433,7 @@ hr{
     </div>
 </div>
 
-<div class = 'box-link'>
+<div class = 'box-link2'>
     <h2 class = 'link-list-title'>ENV</h2>
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "http://10.69.69.6/uc/login.php">
@@ -388,7 +446,7 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://confluence.int.net.nokia.com/display/TDDNVPET2/Test+Lines">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/tl.png" %}" class = src-link-size></p>
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
         </div>
         Test Lines
         </a>
@@ -396,7 +454,7 @@ hr{
     <div class = 'col-link link-list-a'>
         <a target="_blank" href = "https://confluence.int.net.nokia.com/display/TDDNVPET2/PA">
         <div class = 'radius'> 
-            <p><img src="{% static "/pic/tl.png" %}" class = src-link-size></p>
+            <p><img src="https://confluence.int.net.nokia.com/favicon.ico" class = src-link-size></p>
         </div>
         PA
         </a>

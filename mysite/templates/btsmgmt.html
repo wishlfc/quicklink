@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <style>
 
-.col-link {
+/*.col-link {
     width: 100px;
     display:inline-block;
-}
+}*/
 .box{
     margin: 20px
     width: 30%;
-    display:inline-block;    
+    display:inline-block; 
 }
 .box-bar{
    width: 100%;
@@ -27,7 +27,7 @@
     float:left;
     display:inline-block;    
 }
-.box-link{
+.box-link2{
     width: 60%;
     float:left;
     margin: 10px auto 0 auto;
@@ -85,8 +85,10 @@
     text-align: center;  
 }
 .btsNameLabel{
+    font-size: 14px;
     text-decoration:none;
     color: #000093;
+    font-weight: normal;
 }
 .btsNameLabel:hover{
     color: #66B3FF;
@@ -128,21 +130,7 @@
 p{
     font-size: 14px;
     color: #000093;
-    /*font-weight: bold;*/
     font-family: Serif, Arial;
-}
-hr{
-    height: 1px;
-    width: 30%;
-    background:linear-gradient(to right,#FE0000,#0000FF);
-}
-a{
-    text-decoration:none;
-    color: #000093;
-
-}
-a:hover{
-    color: #66B3FF;
 }
 t{
     color: #000093;
@@ -154,8 +142,8 @@ t:hover{
 }
 .dialog {
     /*margin: 0 auto*/
-    width: 500px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     margin: 4px;
     position: absolute;
     background-color: #FFFFFF;
@@ -196,7 +184,7 @@ t:hover{
     display: inline-block;
 }
 .dialog_head_title {
-    width: 420px;
+    width: 500px;
     display: inline-block;
 }
 .dialog_head_close {
@@ -209,7 +197,7 @@ t:hover{
 }
 .dialog_btn {
     width: 160px;
-    height: 260px;
+    height: 360px;
     display: inline-block;
     float:left;
 }
@@ -217,8 +205,8 @@ t:hover{
     position:relative;
 }
 .dialog_info {
-    width: 320px;
-    height: 260px;
+    width: 460px;
+    height: 360px;
     display: inline-block;
     float:left;
     padding-top:60px;
@@ -240,7 +228,7 @@ t:hover{
 }
 .new_hr{
     height: 1px;
-    width: 480px;
+    width: 500px;
     border:none;
     background:#7B7B7B;
 }
@@ -540,6 +528,37 @@ function get_bts_status(btsinfo) {
         }
         else {
             dialog_info.innerHTML = "Get BTS Status Fail!"
+        }
+    } 
+}
+function get_hw_info(btsinfo) {
+    var form = new FormData(); 
+    form.append("hwinfo", 'ok');
+    form.append("btsid", btsinfo.btsid); 
+    form.append("btsip", btsinfo.btsip); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    var dialog_info_id = "dialog_info" + btsinfo.btsid
+    var dialog_info = document.getElementById(dialog_info_id);
+    dialog_info.innerHTML = "Please wait..."
+    xhr.onload = function(evt) {       
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var pn = data.pnlist;
+        var sn = data.snlist;
+        var hwstatus = data.statuslist;
+        var owner = data.ownerlist;
+        console.log(data);
+        if (status == "ok") {    
+            dialog_info.innerHTML = "PN" + "|" + "SN"  + "|" + "Status"  + "|" + "Owner" + "<br>"  
+            for(i=0;i<sn.length;i++){  
+                 line = pn[i] + "|" + sn[i] + "|" + hwstatus[i] + "|"+ owner[i] + "<br>"
+                 dialog_info.innerHTML += line
+            }
+        }
+        else {
+            dialog_info.innerHTML = "Get BTS Hw Info Fail!"
         }
     } 
 }
@@ -958,7 +977,7 @@ function cancel_run(btsid) {
     dialog_info.innerHTML = "Cancel Run!"
 }
 </script>
-<title> Quick Links </title>
+<title> Quick Link </title>
 </head>
 <body>
 {% load static %}
@@ -1011,7 +1030,7 @@ function cancel_run(btsid) {
     <button class='btn' onclick="cancel_rru()">Cancel</button>
 </div>
 
-<div id="divs" class='box-link'>
+<div id="divs" class='box-link2'>
     {% for info in bts_info %}
     <div id="bts{{info.btsid}}" class="btsArea thumbnail">
         <div class="btsIdArea" onclick="bts_operation({{info}})">
@@ -1046,6 +1065,7 @@ function cancel_run(btsid) {
             <div class='dialog_btn' id ="dialog_btn{{info.btsid}}">
                 {% if info.hwtype == 'BTS' %}
                 <button class='btn_group' id = "status" onclick="get_bts_status({{info}})">Get status</button>
+<!--                 <button class='btn_group' id = "status" onclick="get_topo_info({{info}})">Topo Info</button> -->
                 <button class='btn_group' id = "blockcell" onclick="block_all_cell({{info}})">Block All CELL</button>
                 <button class='btn_group' id = "unblockcell" onclick="unblock_all_cell({{info}})">Unblock All CELL</button>
                 <button class='btn_group' id = "blockrru" onclick="block_all_rru({{info}})">Block All RRU</button>
@@ -1053,9 +1073,10 @@ function cancel_run(btsid) {
                 <button class='btn_group' id = "reboot"  onclick="reboot_bts({{info}})">Reboot BTS</button>
                 <button class='btn_group' id = "poweroff"  onclick="power_off_bts({{info}})">Power Off BTS</button>
                 <button class='btn_group' id = "poweron"  onclick="power_on_bts({{info}})">Power On BTS</button>  
-                <button class='btn_group' id = "scf" onclick="get_bts_scf({{info}})">Save SCF</button>
-<!--                 <button class='btn_group' id = "snapshot" onclick="get_bts_snapshot({{info}})">Save Snapshot</button> -->
-                <button class='btn_group' id = "swconfig" onclick="get_bts_swconfig({{info}})">Save Swconfig</button><button class='btn_group btn_blue' id = "swconfig" onclick="run_project({{info}})">Run Project</button>
+<!--                 <button class='btn_group' id = "scf" onclick="get_bts_scf({{info}})">Save SCF</button>
+                <button class='btn_group' id = "snapshot" onclick="get_bts_snapshot({{info}})">Save Snapshot</button>
+                <button class='btn_group' id = "swconfig" onclick="get_bts_swconfig({{info}})">Save Swconfig</button> -->
+                <button class='btn_group btn_blue' id = "swconfig" onclick="run_project({{info}})">Run Project</button>
                 <button class='btn_group btn_red' id = "modify" onclick="modify_btn({{info.btsid}})">Modify BTS</button>
                 <button class='btn_group btn_red' id = "delete" onclick="delete_bts({{info.btsid}})">Delete BTS</button
                 >

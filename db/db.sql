@@ -1,0 +1,452 @@
+-- MySQL dump 10.13  Distrib 5.7.28, for Linux (x86_64)
+--
+-- Host: 10.69.68.42    Database: quicklink
+-- ------------------------------------------------------
+-- Server version	5.7.29
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `auth_group`
+--
+
+DROP TABLE IF EXISTS `auth_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group`
+--
+
+LOCK TABLES `auth_group` WRITE;
+/*!40000 ALTER TABLE `auth_group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_group_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_group_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `auth_group_permissions_group_id_permission_id_0cd325b0_uniq` (`group_id`,`permission_id`),
+  KEY `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` (`permission_id`),
+  CONSTRAINT `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
+  CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group_permissions`
+--
+
+LOCK TABLES `auth_group_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_group_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_permission`
+--
+
+DROP TABLE IF EXISTS `auth_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `content_type_id` int(11) NOT NULL,
+  `codename` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `auth_permission_content_type_id_codename_01ab375a_uniq` (`content_type_id`,`codename`),
+  CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_permission`
+--
+
+LOCK TABLES `auth_permission` WRITE;
+/*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
+INSERT INTO `auth_permission` VALUES (1,'Can add log entry',1,'add_logentry'),(2,'Can change log entry',1,'change_logentry'),(3,'Can delete log entry',1,'delete_logentry'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add permission',3,'add_permission'),(8,'Can change permission',3,'change_permission'),(9,'Can delete permission',3,'delete_permission'),(10,'Can add user',4,'add_user'),(11,'Can change user',4,'change_user'),(12,'Can delete user',4,'delete_user'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add question',7,'add_question'),(20,'Can change question',7,'change_question'),(21,'Can delete question',7,'delete_question'),(22,'Can add choice',8,'add_choice'),(23,'Can change choice',8,'change_choice'),(24,'Can delete choice',8,'delete_choice'),(25,'Can view log entry',1,'view_logentry'),(26,'Can view permission',3,'view_permission'),(27,'Can view group',2,'view_group'),(28,'Can view user',4,'view_user'),(29,'Can view content type',5,'view_contenttype'),(30,'Can view session',6,'view_session'),(31,'Can view choice',8,'view_choice'),(32,'Can view question',7,'view_question');
+/*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user`
+--
+
+DROP TABLE IF EXISTS `auth_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `password` varchar(128) NOT NULL,
+  `last_login` datetime(6) DEFAULT NULL,
+  `is_superuser` tinyint(1) NOT NULL,
+  `username` varchar(150) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(150) NOT NULL,
+  `email` varchar(254) NOT NULL,
+  `is_staff` tinyint(1) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `date_joined` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user`
+--
+
+LOCK TABLES `auth_user` WRITE;
+/*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_groups`
+--
+
+DROP TABLE IF EXISTS `auth_user_groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `auth_user_groups_user_id_group_id_94350c0c_uniq` (`user_id`,`group_id`),
+  KEY `auth_user_groups_group_id_97559544_fk_auth_group_id` (`group_id`),
+  CONSTRAINT `auth_user_groups_group_id_97559544_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`),
+  CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_groups`
+--
+
+LOCK TABLES `auth_user_groups` WRITE;
+/*!40000 ALTER TABLE `auth_user_groups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_user_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_user_user_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_user_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `auth_user_user_permissions_user_id_permission_id_14a6b632_uniq` (`user_id`,`permission_id`),
+  KEY `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` (`permission_id`),
+  CONSTRAINT `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
+  CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_user_permissions`
+--
+
+LOCK TABLES `auth_user_user_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_user_user_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_user_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `btstable`
+--
+
+DROP TABLE IF EXISTS `btstable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `btstable` (
+  `btsid` int(11) NOT NULL,
+  `btsip` varchar(45) DEFAULT NULL,
+  `sran` int(1) DEFAULT NULL,
+  `pbinfo` varchar(45) DEFAULT NULL,
+  `version` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `powerstatus` varchar(45) DEFAULT NULL,
+  `lock` varchar(45) DEFAULT NULL,
+  `group` varchar(45) DEFAULT NULL,
+  `joblist` varchar(255) DEFAULT NULL,
+  `hwtype` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`btsid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `btstable`
+--
+
+LOCK TABLES `btstable` WRITE;
+/*!40000 ALTER TABLE `btstable` DISABLE KEYS */;
+INSERT INTO `btstable` VALUES (13,'10.69.66.149',1,'10.69.67.181:1','Cannot get info!','Cannot get info!','off','off','CSV6','PET2_SRAN_13_ly,PET2_TL17_13','BTS'),(22,'10.69.66.129',0,'','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_BTS22_LPV,PET2_BTS22_OAM,PET2_TL17_22,PET2_TL17_22_34','BTS'),(47,'10.69.66.131',0,'10.69.67.182:5','Cannot get info!','Cannot get info!','off','on','CSV6','BTS47_OAM,PET2_TL17_47,PET2_TL17_47_34','BTS'),(57,'10.69.68.11',0,'10.69.69.23:1','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1396_CPV_B,PET2_BTS530_CPV_B,PET2_BTS57_CPV_C,PET2_BTS57_OAM,PET2_L18_57','BTS'),(136,'10.69.68.4',0,'10.69.69.22:4','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_BTS136_CPV_A,PET2_BTS57_CPV_B,PET2_TL17_136','BTS'),(144,'10.69.68.12',1,'10.69.69.22:3','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS144_CPV_A,PET2_TL17_144','BTS'),(529,'10.69.66.154',0,'10.69.67.181:5','Cannot get info!','Cannot get info!','off','on','CSV6','CMY_kpi_test,PET2_BTS529_HPV,PET2_BTS529_OAM,PET2_shenick_TL18SP_529,TA_UT_4321_MIX_STA_PET2','BTS'),(530,'10.69.68.10',1,'10.69.69.22:1','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_BTS1396_CPV_A,PET2_BTS530_CPV,PET2_BTS530_CPV_A,PET2_BTS530_CPV_C,PET2_BTS530_OAM,PET2_BTS530_SPV,PET2_BTS530_TDD_NRSA,PET2_SRAN_530,PET2_TL17A_530','BTS'),(621,'10.69.66.136',0,'10.69.67.184:2','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET_NBIoT_621','BTS'),(648,'10.69.68.14',0,'10.69.69.23:2','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_TL17_648,PET2_TL17_648_204','BTS'),(1324,'10.69.66.151',0,'10.69.67.182:6','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1324_OAM','BTS'),(1387,'10.69.66.142',0,'10.69.67.182:1','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1387_LPV','BTS'),(1396,'10.69.68.19',0,'10.69.69.22:5','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1396_CPV_C,PET2_BTS1396_OAM,PET2_BTS57_CPV_A,PET2_TL19A_1396','BTS'),(1399,'10.69.66.144',1,'10.69.67.183:2','Cannot get info!','Cannot get info!','off','off','CSV6','PET2_BTS1399_CPV_B,PET2_TL18A_1399','BTS'),(1434,'10.69.66.145',1,'10.69.67.184:6','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1434_OAM,PET2_shenick_TL17_1434','BTS'),(1450,'10.69.66.146',1,'10.69.67.181:5','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1450_OAM,PET2_TL17_1450_qfp,PET2_TL19A_1450_sta','BTS'),(1491,'10.69.66.147',0,'10.69.67.182:2','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_BTS1491_FDD_NRSA,PET2_TL17_1491,PET2_TL17_1491_ixia,PET2_TL17_1491_mk41','BTS'),(1676,'10.69.66.186',0,'10.69.67.181:2','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_BTS1676_OAM,PET2_TL17_1676','BTS'),(1755,'10.69.69.55',1,'10.69.69.24:6','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_BTS1755_529_HPV,PET2_BTS1755_CPV_C,PET2_BTS1755_OAM,PET2_FL18_1755,PET2_shenick_TL18_1755','BTS'),(1780,'10.69.69.27',0,'10.69.67.183:6','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','BTS1780_debug','BTS'),(2165,'10.69.66.156',1,'10.69.67.181:6','Cannot get info!','Cannot get info!','off','off','CSV6','PET2_TL18SP_2165','BTS'),(2188,'10.106.210.70',0,'10.69.67.184:5','Cannot get info!','Cannot get info!','off','on','CSV6','PET2_BTS2188_OAM,PET2_TL17_2188_ixia','BTS'),(2193,'10.106.210.89',1,'10.69.67.184:4','S1 is not Reachable!','S1 is not Reachable!','off','off','CSV6','PET2_TL18A_2193_ly','BTS'),(2240,'10.106.210.90',0,'10.69.67.182:3','S1 is not Reachable!','S1 is not Reachable!','off','on','CSV6','PET2_FL18_2240','BTS');
+/*!40000 ALTER TABLE `btstable` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_admin_log`
+--
+
+DROP TABLE IF EXISTS `django_admin_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_admin_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action_time` datetime(6) NOT NULL,
+  `object_id` longtext,
+  `object_repr` varchar(200) NOT NULL,
+  `action_flag` smallint(5) unsigned NOT NULL,
+  `change_message` longtext NOT NULL,
+  `content_type_id` int(11) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `django_admin_log_content_type_id_c4bce8eb_fk_django_co` (`content_type_id`),
+  KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id` (`user_id`),
+  CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
+  CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_admin_log`
+--
+
+LOCK TABLES `django_admin_log` WRITE;
+/*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+/*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_content_type`
+--
+
+DROP TABLE IF EXISTS `django_content_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_content_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `app_label` varchar(100) NOT NULL,
+  `model` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_content_type`
+--
+
+LOCK TABLES `django_content_type` WRITE;
+/*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
+INSERT INTO `django_content_type` VALUES (1,'admin','logentry'),(2,'auth','group'),(3,'auth','permission'),(4,'auth','user'),(5,'contenttypes','contenttype'),(8,'gencase','choice'),(7,'gencase','question'),(6,'sessions','session');
+/*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_migrations`
+--
+
+DROP TABLE IF EXISTS `django_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_migrations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `app` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `applied` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_migrations`
+--
+
+LOCK TABLES `django_migrations` WRITE;
+/*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2019-09-10 07:24:06.284335'),(2,'auth','0001_initial','2019-09-10 07:24:09.702504'),(3,'admin','0001_initial','2019-09-10 07:24:10.265265'),(4,'admin','0002_logentry_remove_auto_add','2019-09-10 07:24:10.355294'),(5,'contenttypes','0002_remove_content_type_name','2019-09-10 07:24:10.724663'),(6,'auth','0002_alter_permission_name_max_length','2019-09-10 07:24:10.770310'),(7,'auth','0003_alter_user_email_max_length','2019-09-10 07:24:10.810576'),(8,'auth','0004_alter_user_username_opts','2019-09-10 07:24:10.829911'),(9,'auth','0005_alter_user_last_login_null','2019-09-10 07:24:11.000007'),(10,'auth','0006_require_contenttypes_0002','2019-09-10 07:24:11.011327'),(11,'auth','0007_alter_validators_add_error_messages','2019-09-10 07:24:11.030441'),(12,'auth','0008_alter_user_username_max_length','2019-09-10 07:24:11.069101'),(13,'sessions','0001_initial','2019-09-10 07:24:11.229796'),(14,'gencase','0001_initial','2019-09-11 08:43:31.061806'),(15,'admin','0003_logentry_add_action_flag_choices','2020-02-17 01:54:16.171933'),(16,'auth','0009_alter_user_last_name_max_length','2020-02-17 01:54:16.271389'),(17,'auth','0010_alter_group_name_max_length','2020-02-17 01:54:16.314051'),(18,'auth','0011_update_proxy_permissions','2020-02-17 01:54:16.333547');
+/*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_session`
+--
+
+DROP TABLE IF EXISTS `django_session`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_session` (
+  `session_key` varchar(40) NOT NULL,
+  `session_data` longtext NOT NULL,
+  `expire_date` datetime(6) NOT NULL,
+  PRIMARY KEY (`session_key`),
+  KEY `django_session_expire_date_a5c62663` (`expire_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_session`
+--
+
+LOCK TABLES `django_session` WRITE;
+/*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
+/*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gencase_choice`
+--
+
+DROP TABLE IF EXISTS `gencase_choice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gencase_choice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `choice_text` varchar(200) NOT NULL,
+  `votes` int(11) NOT NULL,
+  `question_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `gencase_choice_question_id_6d5e24f6_fk_gencase_question_id` (`question_id`),
+  CONSTRAINT `gencase_choice_question_id_6d5e24f6_fk_gencase_question_id` FOREIGN KEY (`question_id`) REFERENCES `gencase_question` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gencase_choice`
+--
+
+LOCK TABLES `gencase_choice` WRITE;
+/*!40000 ALTER TABLE `gencase_choice` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gencase_choice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gencase_question`
+--
+
+DROP TABLE IF EXISTS `gencase_question`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gencase_question` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_text` varchar(200) NOT NULL,
+  `pub_date` datetime(6) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gencase_question`
+--
+
+LOCK TABLES `gencase_question` WRITE;
+/*!40000 ALTER TABLE `gencase_question` DISABLE KEYS */;
+/*!40000 ALTER TABLE `gencase_question` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `snstatus`
+--
+
+DROP TABLE IF EXISTS `snstatus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `snstatus` (
+  `sn` varchar(45) NOT NULL,
+  `pn` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `owner` varchar(45) DEFAULT NULL,
+  `btsid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`sn`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `snstatus`
+--
+
+LOCK TABLES `snstatus` WRITE;
+/*!40000 ALTER TABLE `snstatus` DISABLE KEYS */;
+/*!40000 ALTER TABLE `snstatus` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `testlinetopo`
+--
+
+DROP TABLE IF EXISTS `testlinetopo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `testlinetopo` (
+  `btsid` varchar(45) NOT NULL,
+  `testlineid` varchar(45) DEFAULT NULL,
+  `btspc` varchar(45) DEFAULT NULL,
+  `btss1ip` varchar(45) DEFAULT NULL,
+  `pbinfo` varchar(45) DEFAULT NULL,
+  `painfo` varchar(45) DEFAULT NULL,
+  `papc` varchar(45) DEFAULT NULL,
+  `uetype` varchar(45) DEFAULT NULL,
+  `uelist` varchar(45) DEFAULT NULL,
+  `uepc` varchar(45) DEFAULT NULL,
+  `mcsinfo` varchar(45) DEFAULT NULL,
+  `mcspc` varchar(45) DEFAULT NULL,
+  `hwinfo` varchar(45) DEFAULT NULL,
+  `owner` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`btsid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `testlinetopo`
+--
+
+LOCK TABLES `testlinetopo` WRITE;
+/*!40000 ALTER TABLE `testlinetopo` DISABLE KEYS */;
+INSERT INTO `testlinetopo` VALUES ('1001','9','10.108.183.117','10.108.231.17','10.69.67.185:2','','','qualcom','Qualcomm SDM8250','10.69.69.19','','','ASIK+ABIL+AEQA','Liu An\'an'),('13','3','10.108.183.122','10.69.66.149','10.69.67.181:1','A3,A11,A4,A12;B1,B2','10.106.210.86','qualcom','Qualcomm SDM8150','10.69.67.138','','','FSIH+FBIH+2*FZHJ','Zhang Dacheng'),('5197','5','10.108.183.115','10.69.67.138','10.69.67.183:1','A2,A10;B1,B2','10.106.210.77','qualcom','Qualcomm SDM8250','10.69.69.19','','','FSIH+FBIH+UZFA','Zhang Dacheng'),('529','4','10.108.183.123','10.69.66.154','10.69.67.183:6','A2,A10;B1,B2','10.106.210.86	','qualcom','Qualcomm SDM8150','10.69.67.138','','','ASIA+ABIA+2*FZHM','Zhang Dacheng'),('530','2','10.108.183.132','10.69.68.10','10.69.69.22:1','A5,A6;B1,B2','10.69.69.5','tm500+qualcomm','TM500-35 + 3*Qualcomm SDM8150','10.69.68.35   10.69.69.10','','','ASIB+ABIC+AANB','Zhang Dacheng'),('6076','6','10.108.183.121','10.108.233.3','10.69.67.181:7','A5,A13;B1,B2','10.106.210.86','qualcom','Qualcomm SDM8150','10.69.67.138','','','ASIK+ABIL+AAHF','Zhang Dacheng'),('648','8','10.108.183.133','10.69.68.14','10.69.69.22:6','','','cpe','8*ZT621','10.108.183.134','RFLight','10.108.183.134','ASIB+ABIC+AAHB+AAHF','Liu An\'an');
+/*!40000 ALTER TABLE `testlinetopo` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-07-20 13:39:58

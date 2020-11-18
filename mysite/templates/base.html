@@ -1,9 +1,131 @@
 {% block navbar %}
+<style type="text/css">
+.col-link {
+    width: 100px;
+    display:inline-block;
+}
+.box{
+    margin: 20px
+    width: 30%;
+    display:inline-block;    
+}
+.box-bar{
+   width: 100%;
+   display:inline-block; 
+}
+.box-head{
+    /*margin: 20px*/
+    width: 100%; 
+}
+.box-logo{
+    /*margin: 20px*/
+    width: 30%;
+    float:left;
+    display:inline-block;    
+}
+.box-nav{
+    margin: 10px;
+    width: 60%;
+    float:left;
+    display:inline-block;  
+    vertical-align: middle;
+    text-align: center;  
+}
+.box-link{
+    width: 100%;
+    float:left;
+    overflow:hidden;
+}
+.tranf{
+    width: 8%;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.title{
+    font-size: 30px;
+    color: #000093;
+    font-weight: bold;
+    font-family: Arial;
+}
+.navdiv {
+    display:inline-block; 
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #CCC; 
+    width: 15%;
+    height:100%;
+    font-family: Arial;
+    font-size: 14px;
+}
+.navdiv:hover {
+    background-color: #E0E0E0;
+    color: #66B3FF;
+}
+.box-bar{
+   width: 100%;
+   display:inline-block; 
+}
+p{
+    font-size: 16px;
+    color: #000093;
+    font-weight: bold;
+    font-family: Arial;
+}
+hr{
+    height: 1px;
+    width: 30%;
+    background:linear-gradient(to right,#FE0000,#0000FF);
+}
+a{
+    text-decoration:none;
+    color: #000093;
+
+}
+a:hover{
+    color: #66B3FF;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+</style>
 <div class="box-nav">
     <a href="/"><div class="navdiv">QuickLink</div></a>
     <a  href="/prdescription/"><div class="navdiv">PrDescription</div></a>
-    <a href="/btsmgmt/"><div class="navdiv">BtsMgmt</div></a>
-    <a href="/gencase/"><div class="navdiv">GenCase</div></a>   
+    <a href="/whitelist/"><div class="navdiv">Whitelist</div></a>  
+    <a href="/testline/"><div class="navdiv">Testline</div></a>  
+    <a href="/btsmgmt/"><div class="navdiv">BtsMgmt</div></a>    
     <a  href="mailto:amy.c.liu@nokia-sbell.com"><div class="navdiv">Help</div></a>
 </div>
 <div class = 'box-bar'>

@@ -3,102 +3,56 @@
 <head>
 <meta charset="utf-8">
 <style>
-
-.col-link {
-    width: 100px;
-    display:inline-block;
-}
-.box{
-    margin: 20px
-    width: 30%;
-
-    /*display:inline-block;    */
-}
-.box-bar{
-   width: 100%;
-   display:inline-block; 
-}
-.box-head{
-    /*margin: 20px*/
-    width: 100%; 
-}
-.box-logo{
-    /*margin: 20px*/
-    width: 30%;
-    float:left;
-    display:inline-block;    
-}
-.box-nav{
-    /*margin: 20px;*/
-    width: 60%;
-    float:left;
-    display:inline-block;  
-    vertical-align: middle;
-    text-align: center;  
-}
-.box-link{
-    width: 100%;
-    float:left;
-    overflow:hidden;
-}
-.tranf{
-    width: 8%;
-    display:inline-block;
-    vertical-align: middle;
-    text-align: center;
-}
-.logo{
-    width: 50px;
-    height: 50px;
-}
-.title{
-    font-size: 30px;
-    color: #000093;
-    font-weight: bold;
-    font-family: Arial;
-}
-.navdiv {
-    display:inline-block; 
-    border-radius: 4px 4px 0 0;
-    border: 1px solid #CCC; 
-    width: 15%;
-    height:100%;
-    font-family: Arial;
-    font-size: 14px;
-}
-.navdiv:hover {
-    background-color: #E0E0E0;
-    color: #66B3FF;
-}
 p{
     font-size: 14px;
     color: #000093;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Arial;
+}
+.pb{
+    font-size: 16px;
+    color: #000093;
+    font-weight: normal;
     font-family: Arial;
 }
 li{
-    /*display:inline-block; */
-    margin:6px auto
+    margin:auto;
+    font-size: 16px;
+    line-height:30px;
 }
 .remind{
     color: #0066CC;
 }
-hr{
-    height: 1px;
-    width: 30%;
-    background:linear-gradient(to right,#FE0000,#0000FF);
-}
-a{
-    text-decoration:none;
-    color: #000093;
-
-}
-a:hover{
-    color: #66B3FF;
-}
 .button{
     width:70px;
     height:30px;
+}
+.output{
+    width:1000px;
+    height:800px;
+}
+.check{ 
+    border:1px solid #9D9D9D;
+    width:1000px;
+}
+.box-block{
+    display:block;
+}
+.box-link{
+    margin:20px;
+    width: 100%;
+    float:left;
+    overflow:hidden;
+}
+input{
+    height:20px;
+}
+select{
+    height:20px;
+}
+button{
+    height:28px;
+    font-size: 16px;
 }
 </style>
 <script type="text/javascript">
@@ -169,7 +123,7 @@ function gethw() {
 }
 function gethw_btsip() {
     var btsip = document.getElementById("gethw_btsip").value;
-    var issran = document.getElementById("gethw_is_sran").checked; 
+    // var issran = document.getElementById("gethw_is_sran").checked; 
     console.log(btsip);
     if (btsid == " ") {
         alert("Btsip is NULL!");
@@ -180,8 +134,8 @@ function gethw_btsip() {
     var form = new FormData();
     form.append("gethw_btsip", 'ok');
     form.append("btsip", btsip);      
-    form.append("issran", issran); 
-    console.log(issran);
+    // form.append("issran", issran); 
+    // console.log(issran);
     outputkey = document.getElementById('hw_version');
     outputkey.value = "";
     var xhr = new XMLHttpRequest(); 
@@ -405,9 +359,41 @@ function transf() {
         }
     } 
 }
-
+function check() {
+    var description = document.getElementById("output").value;
+    var form = new FormData(); 
+    form.append("description", description); 
+    form.append("goldencheck", 'ok');
+    console.log(form);
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        var data = JSON.parse(xhr.responseText);
+        console.log(data);
+        var status = data.status;
+        var alert_list = data.alert_list;
+        var info_list = data.info_list;
+        check_result = document.getElementById('check_result');
+        if (status == "ok") { 
+            for(i=0;i<alert_list.length;i++){
+                index = i+1
+                check_result.innerHTML += "<span style=" + "color:black;font-size:10px" + ">" + index + '.' + "</span>"
+                if (alert_list[i] == 'error') {
+                check_result.innerHTML += "<span style=" + "color:red;font-size:10px" + ">" + '['+ alert_list[i] + '] ' + "</span>"
+                } else {
+                check_result.innerHTML += "<span style="+ "color:blue;font-size:10px" +">" + '['+  alert_list[i] + '] '+ "</span>"
+                }
+                check_result.innerHTML += "<span style=" + "color:black;font-size:10px" + ">" + info_list[i] +"</span><br>"
+            }
+        }
+        else {
+            check_result.innerHTML = "<span style=" + "color:red;font-size:10px" + ">" + " Golden check error!" + "</span>"
+        }
+    } 
+}
 </script>
-<title> PR Description </title>
+<title> Quick Link </title>
 </head>
 <body>
 {% load static %}
@@ -421,7 +407,7 @@ function transf() {
     {% endblock %}
 </div>
 <div class = 'box-link'>
-    <div class = 'box'>
+    <div class = 'box-block'>
         <p>[1. Detail Test Steps:]</p>
         <li>Scenario/Step:</li> 
         <textarea id="steps" style="width:500px;height:60px;" value="I can line feed"></textarea>
@@ -477,18 +463,14 @@ function transf() {
         </select></li>
         <li>Cell Type:
         <input id="cell_type" style="width:100px;" value=" "></li>
-<!--         <li>MIMO Mode:
-        <input id="mimo_mode" style="width:100px;" value=" "></li>
-        <li>Deploy:
-        <input id="deploy" style="width:100px;" value=" "></li> -->
-        <li>HW versions</li>
+        <li>HW versions:</li>
         <li>Please input btsid:
         <input id="gethw_btsid" style="width:50px;" >
-        <input type="submit" id="gethw" class='button' value="GetHw" onclick="gethw()"/>
+        <button class="btn btn-info" id="gethw" onclick="gethw()">GetHw</button>
         <li>Please input btsip:
         <input id="gethw_btsip" style="width:100px;" >
-        Is Sran:<input id="gethw_is_sran" name="sran" type="checkbox" ">
-        <input type="submit" id="gethw_btsip" class='button' value="GetHw" onclick="gethw_btsip()"/>
+        <!-- Is Sran:<input id="gethw_is_sran" name="sran" type="checkbox"/> -->
+        <button class="btn btn-info" id="gethw_btsip" onclick="gethw_btsip()">GetHw</button>
         <l id ="wait_hw" class="remind" style="display:none;">please wait...</l>
         </li>
         <textarea id="hw_version" style="width:500px;height:160px;" value="I can line feed"></textarea>
@@ -496,10 +478,10 @@ function transf() {
         <p>[7. Used Flags: (list here used R&D flags)]</p>
         <li>Please input btsid:
         <input id="btsid" style="width:50px;" >
-        <input type="submit" id="getflag" class='button' value="GetFlags" onclick="getflag()"/>
+        <button class="btn btn-info" id="getflag" onclick="getflag()">GetFlags</button>
         <li>Please input btsip:
         <input id="btsip" style="width:100px;" >
-        <input type="submit" id="getflag_btsip" class='button' value="GetFlags" onclick="getflag_btsip()"/>
+        <button class="btn btn-info" id="getflag_btsip" onclick="getflag_btsip()">GetFlags</button>
         <l id ="wait_flags" class="remind" style="display:none;">please wait...</l>
         </li>
         <textarea id="flags" style="width:500px;height:160px;" ></textarea>
@@ -545,12 +527,22 @@ function transf() {
         <p>[10. Test Case Reference: (QC, RP or UTE link)]</p>
         <textarea id="reference" style="width:500px;height:60px;" value="not needed in documentation, specification made fault reports and customer made tickets"></textarea>
     </div>
-    <div class = 'tranf'>
-    <input type="submit" id="submit" class='button' value="Submit" onclick="transf()"/>
+    <div class = 'box-block'>
+     <button class="btn btn-primary" id="submit" onclick="transf()">Submit</button>
     </div>
-    <div class = 'box'>
-        <p>Output</p>
-        <textarea id="output" style="width:1000px;height:800px;" value="I can line feed"></textarea>
+
+    <div class = 'box-block'>
+        <p class='pb'>Description:</p>
+        <textarea id="output" class="output" value="I can line feed"></textarea>
+    </div>
+
+    <div class = 'box-block'>
+    <button class="btn btn-primary" id="check" onclick="check()">Golden Check</button>
+    </div>
+
+    <div class = 'box block' style="padding-bottom:40px;">
+        <p class='pb'>Golden Check Result:</p>
+        <div id="check_result" class="check">
     </div>
 </div>
 </body>

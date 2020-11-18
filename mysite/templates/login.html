@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<style type='text/css'>
+body{   
+    width: 100%;   
+    height: 100%;   
+    font-family: 'Open Sans',sans-serif;   
+    margin: 0;   
+    /*background-color: #E0E0E0;   */
+} 
+.form-row {
+    padding: 10px 0;
+    float: left;
+    width: 100%;
+    border-bottom: none;
+}
+.submit-row {
+    clear: both;
+    padding: 1em 0 0 9.4em;
+    margin: 0;
+    border: none;
+    background: none;
+    text-align: left;
+}
+.container {
+    position: absolute;   
+    top: 50%;   
+    left:50%;   
+    margin: -150px 0 0 -150px;   
+    width: 300px;   
+    height: 150px;  
+    /*background-color: #FFF;   */
+}
+</style>
+<script>
+	var url = "/login/";
+	console.log("{{back}}")
+	function submit() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+    	var form = new FormData(); 
+    	form.append("username", username); 
+    	form.append("password", password);
+    	form.append("login", 'ok');
+    	var xhr = new XMLHttpRequest(); 
+    	xhr.open("POST", url, true); 
+    	xhr.send(form);
+    	xhr.onload = function(evt) {
+	        console.log(xhr);
+	        var data = JSON.parse(xhr.responseText);
+	        console.log(data);
+	        var code = data.code;
+	        if (code == "0000") {
+	            alert("Login success!")
+	        }
+	        else if (code == "0002") {
+                alert("Auth Error!")
+            }
+            else if (code == "0004") {
+                alert("Select a team!")
+                select_team()
+            }
+            else if(code == "0001") {
+            	alert("Missing username or password!")
+            }
+            else {
+            	alert("Unknown Error!")
+            }
+        }
+	}
+	function select_team() {
+		var userbox = document.getElementById("userbox")
+    	userbox.style="display:none;";
+    	var teambox = document.getElementById("teambox")
+    	teambox.style="display:inline;";
+    	var team = document.getElementById("team").value;
+    	var form = new FormData(); 
+    	form.append("team", team); 
+    	var xhr = new XMLHttpRequest(); 
+    	xhr.open("POST", url, true); 
+    	xhr.send(form);
+    	xhr.onload = function(evt) {
+	        console.log(xhr);
+	        var data = JSON.parse(xhr.responseText);
+	        console.log(data);
+	        var code = data.code;
+	        if (code == "0000") {
+	            // console.log(output);
+	            alert("Add team success!")
+	        }
+	        else if (code == "0001") {
+                alert("Add team fail!")
+            }
+            else {
+            	alert("Unknown Error!")
+            }
+        }
+	}
+</script>
+<body>
+{% load static %}
+<div class='box-head'>
+{% block navbar %}
+{% endblock %}
+</div>
+<div class="container" id="userbox">
+	<div class="form-row">
+		<label for="username">UserName</label>
+		<input type="text" class="form-control" id="username" placeholder="Nokia account">
+	</div>
+	<div class="form-row">
+		<label for="password">Password</label>
+		<input type="password" class="form-control" id="password" placeholder="Password">
+	</div>
+	<div class="submit-row">
+	<button class="btn btn-primary" id="submit" onclick="submit()">Log in</button>
+	</div>
+</div>
+<div class="container benchbox" id="benchbox" style= "display:none;">
+		<div class="input-group" style="margin-bottom:50px;">
+			<div class="input-group-addon">Bench</div>
+			<select class="form-control" id="bench">
+				<option value="0">select bench</option>
+			</select>
+		</div>
+		<button class="btn btn-primary" id="submitbench" style="width:100%;">Submit</button>
+	</div>
+	<div class="container teambox" style="display:none;">
+		<div class="input-group">
+			<div class="input-group-addon">Team</div>
+			<select class="form-control" id="team">
+				<option value='CSV1'>CSV1</option>
+				<option value='CSV2'>CSV2</option>
+				<option value='CSV3'>CSV3</option>
+				<option value='CSV4'>CSV4</option>
+				<option value='CSV5'>CSV5</option>
+				<option value='CSV6'>CSV6</option>
+				<option value='SISO1'>SISO1</option>
+				<option value='SISO2'>SISO2</option>
+				<option value='SISO3'>SISO3</option>
+				<option value='T&P'>T&P</option>
+				<option value='other'>other</option>
+			</select>
+		</div>
+		<button class="btn btn-primary" id="submitteam" onclick="select_team()">Submit</button>
+	</div>
+</body>
+</html>

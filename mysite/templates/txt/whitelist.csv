@@ -1,0 +1,8 @@
+﻿Regular expression  ,Example print  ,Reason  
+"AaSyslog buffer \d+ \(\w+\) reached LoadLevel2 , Info, Warning, Error and Vip logs will be accepted  ","WRN/CCS(MCU) /AaSysLog, AaSyslog buffer 3 (BTSOM) reached LoadLevel2 , Info, Warning, Error and Vip logs will be accepted  ",valid prints – appear due to extensive logging  
+dhcpd:.*  ,"ERR/LFS /LinuxSyslog, dhcpd: in your dhcpd.conf file for the network segment  ",Pronto agreed as CNN  
+"AaSyslog buffer \d+ \(\w+\) reached LoadLevel3 , Error and Vip logs will be accepted  ","AaSyslog buffer 3 (BTSOM) reached LoadLevel3 , Error and Vip logs will be accepted  ",valid prints – appear due to extensive logging  
+buffer LoadLevel3 : ERR and VIP logs will be accepted  ,WRN/LTEL2 buffer LoadLevel3 : ERR and VIP logs will be accepted.  ,valid prints – appear due to extensive logging  
+"kernel: \[\s*\d+\.\d+\] EXT4-fs \(sda\d\): warning: maximal mount count reached, running e2fsck is recommended  ","WRN/LFS /LinuxSyslog, kernel: [ 5213.392876] EXT4-fs (sda2): warning: maximal mount count reached, running e2fsck is recommended  ",Standard linux check  
+extSrioPortStateControl:.*SFP absent  ,"WRN/HWA/SRIO, extSrioPortStateControl: board 0x10 portId 0 sfpId 0x10006, SFP absent  ",OAM periodically tries to open connection to other SM in if no SRIO SFP present this warning occurs.  
+rsyslogd: * try http://www.rsyslog.com/e/2027  ,rsyslogd: file '8' write error: Read-only file system [v8.29.0 try http://www.rsyslog.com/e/2027 ]  ,valid prints – appear due to RAM access error  

@@ -18,13 +18,19 @@ from django.contrib import admin
 
 # from django.urls import path
 from gencase import views
+# from gencase.admin import admin_site
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     # new
     url('btsmgmt/', views.btsmgmt),
-    url('gencase/', views.gencase),
+    url('whitelist/', views.whitelist),
     url('prdescription/', views.prdescription),
+    url('login/', views.login),
+    url('topo/', views.topo),
+    url('testline/', views.testline),
+    url('testlinechange/', views.testlinechange),
     # url(r'^index/', views.index),
     url(r'', views.index),
+    # url(r'/qladmin/', admin_site.urls),
 ]

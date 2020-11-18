@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+.output{ 
+    border:1px solid #9D9D9D;
+    width:1000px;
+    padding-bottom:40px;
+}
+</style>
+<script type="text/javascript">
+var url = "/whitelist/";
+function check() {
+    var input = document.getElementById("input").value;
+    console.log(input);
+    var form = new FormData(); 
+    form.append("input", input); 
+    form.append("check", 'ok');
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", url, true); 
+    xhr.send(form);
+    xhr.onload = function(evt) {
+        console.log(xhr);
+        var data = JSON.parse(xhr.responseText);
+        var status = data.status;
+        var output = data.output;
+        var linelist = data.linelist;
+        var whiteprint = data.whiteprint;
+        outputkey = document.getElementById('output');
+        if (status == "ok") { 
+            // outputkey.value = output;
+            if(linelist.length == 0){
+                outputkey.innerHTML = "<span style=" + "color:black;font-size:10px" +">Not appear in Whitelist!</span><br>"
+            }
+            else{
+                for(i=0;i<linelist.length;i++){
+                    outputkey.innerHTML += "<span style=" + "color:blue;font-size:10px" + ">" + linelist[i] +";</span>"
+                    outputkey.innerHTML += "<span style="+ "color:red;font-size:10px" +">" + "------" + whiteprint[i]  +";</span><br>"
+                }
+            }
+
+        }
+        else {
+            outputkey.value =  'No Result!'
+        }
+    } 
+}
+</script>
+<title> Quick Link </title>
+</head>
+<body>
+{% load static %}
+<div class='box-head'>
+    <div class='box-logo'>
+    <img src="{% static "/pic/logo.jpg" %}" class = logo>
+    <l class='title'>Whitelist</l>
+    </div>
+    {% include './base.html %} 
+    {% block navbar %}
+    {% endblock %}
+</div>
+<div class = 'box-link'>
+    <div class = 'box'>
+        <p>BTS log input:</p>
+        <textarea id="input" style="width:1000px;height:400px;" value="I can line feed"></textarea>
+        <p>
+            <button class="btn btn-primary" id="check" onclick="check()">Check</button>
+        </p>
+        <p>Result:</p>
+        <div id="output" class="output">
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+/*.col-link {
+    width: 100px;
+    display:inline-block;
+}*/
+.box2{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border:1px solid #ccc;
+    border-radius: 2px;
+}
+.form-row {
+    overflow: hidden;
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+}
+label {
+    font-weight: normal;
+    color: #666;
+    font-size: 13px;
+}
+label.required {
+    font-weight: bold;
+    color: #333;
+}
+.module h2, .module caption, .inline-group h2 {
+    /*margin: 0;*/
+    padding: 8px;
+    width:80%;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    margin: 20px;
+    background-image: linear-gradient(-90deg, #29bdd9 0%, #276ace 60%);
+    color: #fff;
+}
+.vIntegerField {
+    width: 6em;
+}
+.vTextField {
+    width: 18em;
+}
+.vLargeTextField, .vXMLLargeTextField {
+    width: 60em;
+}
+.submit-row {
+    padding: 12px 14px;
+    margin: 0 0 20px;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: left;
+    overflow: hidden;
+}
+.form-row {
+    overflow: hidden;
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    margin: 20px;
+}
+.aligned label {
+    display: block;
+    padding: 4px 10px 0 0;
+    float: left;
+    width: 100px;
+    word-wrap: break-word;
+    line-height: 1;
+}
+table{
+    table-layout: auto;
+}
+fieldset {
+    border-width: 0px;
+}
+.png{
+   width: 18px;
+   height: 18px;
+}
+</style>
+<title> Quick Link </title>
+</head>
+<script type="text/javascript">
+    var url = "/testlinechange/"; 
+    function save() {
+        var testlineid = document.getElementById("testlineid").value;
+        var btsid = document.getElementById("btsid").value;
+        console.log(btsid);
+        if (isNaN(Number(btsid))) {
+            alert('Please fill number in BTS ID!'); 
+            return
+        }
+        var flag = document.getElementById("flag").value;
+        var entity = document.getElementById("entity").value;
+        var btss1ip = document.getElementById("btss1ip").value;
+        var btspc = document.getElementById("btspc").value;
+        var hwinfo = document.getElementById("hwinfo").value;
+        var pbinfo = document.getElementById("pbinfo").value;
+        var painfo = document.getElementById("painfo").value;
+        var papc = document.getElementById("papc").value;
+        var mcsinfo = document.getElementById("mcsinfo").value;
+        var mcspc = document.getElementById("mcspc").value;
+        var uetype = document.getElementById("uetype").value;
+        var uelist = document.getElementById("uelist").value;
+        var uepc = document.getElementById("uepc").value;
+        var owner = document.getElementById("owner").value;
+        if (uetype == "other"){
+            var other_uetype =document.getElementById('other_uetype').value
+            uetype = "other:" + other_uetype
+        }
+        // var url = "/testlinechange/";
+        console.log('update '+ btsid);
+        var form = new FormData(); 
+        form.append("update", "ok"); 
+        form.append("testlineid", testlineid); 
+        form.append("btsid", btsid);
+        form.append("flag", flag); 
+        form.append("entity", entity);
+        form.append("btss1ip", btss1ip); 
+        form.append("btspc", btspc); 
+        form.append("hwinfo", hwinfo); 
+        form.append("pbinfo", pbinfo); 
+        form.append("painfo", painfo); 
+        form.append("papc", papc); 
+        form.append("mcsinfo", mcsinfo); 
+        form.append("mcspc", mcspc); 
+        form.append("uetype", uetype); 
+        form.append("uelist", uelist);
+        form.append("uepc", uepc); 
+        form.append("owner", owner);  
+        console.log(flag);
+        console.log(form);
+        var xhr = new XMLHttpRequest(); 
+        var urlb = document.URL;
+        console.log(urlb);
+        xhr.open("POST", urlb, true); 
+        xhr.send(form);
+        xhr.onload = function(evt) {       
+            var data = JSON.parse(xhr.responseText);
+            var status = data.status;
+            if (status == "ok") {   
+                window.location.href='/testline/';         
+                // alert("BTS" + btsid + " update info ok!")
+            }
+            else {
+                alert("BTS" + btsid + " update info fail!")
+            }
+        }
+    }
+    function cancel(btsid) {
+        alert("Update cancel!")
+    }
+    function changes_uetype() {
+        var uetype = document.getElementById("uetype").value;
+        console.log(uetype);
+        var other_uetype =document.getElementById('other_uetype');
+        if (uetype == "other") {       
+            other_uetype.style="display:inline;";        
+        } else {
+            other_uetype.style="display:none;";
+        }
+}
+</script>
+<body>
+{% load static %}
+<div class='box-head'>
+    <div class='box-logo'>
+    <img src="{% static "/pic/logo.jpg" %}" class = logo>
+    <l class='title'>Test Line</l>
+    </div>
+    {% include './base.html %} 
+    {% block navbar %}
+    {% endblock %}
+</div>
+<div class="htmleaf-container">
+    <fieldset class="module aligned ">
+    <h2>BTS Info:</h2>
+    <div class="form-row">                       
+        <label class="required" for="testlineid">Test Line:</label>
+        <input class="vIntegerField" id="testlineid" name="testlineid" type="text" value="{{info.testlineid}}">  
+    </div>
+    <div class="form-row">                       
+        <label class="required" for="btsid">BTS ID:</label>
+        <input class="vIntegerField" id="btsid" name="btsid" type="text" value="{{info.btsid}}">           
+    </div>
+    <div class="form-row">                       
+        <label class="required" for="flag">4/5G Flag:</label>
+<!--         <input class="vIntegerField" id="entity" name="entity" type="text" value="{{info.entity}}">   -->
+        <select id="flag" name="flag">
+        {% if info.flag == '4g' %} 
+        <option value="4g" selected="selected">4g</option>
+        <option value="5g">5g</option>
+        {% elif info.flag == '5g' %} 
+        <option value="5g" selected="selected">5g</option>
+        <option value="4g">4g</option>
+        {% else%} 
+        <option value="" selected="selected">------</option>
+        <option value="4g">4g</option>
+        <option value="5g">5g</option>
+        {% endif %}
+         </select>
+    </div>
+    <div class="form-row">                       
+        <label class="required" for="entity">Test Entity:</label>
+<!--         <input class="vIntegerField" id="entity" name="entity" type="text" value="{{info.entity}}">   -->
+        <select id="entity" name="entity">
+        {% if info.entity == 'CIT' %} 
+        <option value="CIT" selected="selected">CIT</option>
+        <option value="CRT">CRT</option>
+        <option value="MRT">MRT</option>
+        <option value="NF">NF</option>
+        {% elif info.entity == 'CRT' %} 
+        <option value="CRT" selected="selected">CRT</option>
+        <option value="CIT">CIT</option>
+        <option value="MRT">MRT</option>
+        <option value="NF">NF</option>
+        {% elif info.entity == 'MRT' %} 
+        <option value="MRT" selected="selected">MRT</option>
+        <option value="CIT">CIT</option>
+        <option value="CRT">CRT</option>
+        <option value="NF">NF</option>
+        {% elif info.entity == 'NF' %} 
+        <option value="NF" selected="selected">NF</option>
+        <option value="CIT">CIT</option>
+        <option value="CRT">CRT</option>
+        <option value="MRT">MRT</option>
+        {% else%} 
+        <option value="" selected="selected">------</option>
+        <option value="CIT">CIT</option>
+        <option value="CRT">CRT</option>
+        <option value="MRT">MRT</option>
+        <option value="NF">NF</option>
+        {% endif %}
+         </select>
+    </div>
+    <div class="form-row">                       
+        <label for="btss1ip">BTS S1 IP:</label>
+        <input class="vTextField" id="btss1ip" name="btss1ip" type="text" value="{{info.btss1ip}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="btspc">BTS PC IP:</label>
+        <input class="vTextField" id="btspc" name="btspc" type="text" value="{{info.btspc}}">           
+    </div>
+
+    <div class="form-row">                       
+        <label for="hwinfo">HW Info:</label>
+        <input class="vLargeTextField" id="hwinfo" name="hwinfo" type="text" value="{{info.hwinfo}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="owner">Owner:</label>
+        <input class="vTextField" id="owner" name="owner" type="text" value="{{info.owner}}">           
+    </div>
+    </fieldset>
+    <fieldset class="module aligned ">
+    <h2>Dev Info:</h2>
+    <div class="form-row">                       
+        <label for="pbinfo">PB Info:</label>
+        <input class="vLargeTextField" id="pbinfo" name="pbinfo" type="text" value="{{info.pbinfo}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="painfo">PA Info:</label>
+        <input class="vLargeTextField" id="painfo" name="painfo" type="text" value="{{info.painfo}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="papc">PA PC:</label>
+        <input class="vTextField" id="papc" name="papc" type="text" value="{{info.papc}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="mcsinfo">MCS Info:</label>
+        <input class="vLargeTextField" id="mcsinfo" name="mcsinfo" type="text" value="{{info.mcsinfo}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="mcspc">MCS PC:</label>
+        <input class="vTextField" id="mcspc" name="mcspc" type="text" value="{{info.mcspc}}">           
+    </div>
+    </fieldset>
+    <fieldset class="module aligned ">
+    <h2>UE Info:</h2>
+    <div class="form-row">                       
+        <label for="uetype">UE Type:</label>
+        <select id="uetype" name="uetype" onclick="changes_uetype()">
+        {% if info.uetype == '' %} 
+            <option value="" selected="selected">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'tm500'%} 
+            <option value="">---------</option>
+            <option value="tm500" selected="selected">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'cpe'%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe" selected="selected">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'qualcom'%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom" selected="selected">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'tm500+cpe'%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe" selected="selected">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'tm500+qualcomm'%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm" selected="selected">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'cpe+qualcomm'%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom" selected="selected">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {% elif info.uetype == 'other'%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other" selected="selected">OTHER</option>
+        {% elif 'other:' in info.uetype%} 
+            <option value="">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other" selected="selected">OTHER</option>
+        {% else %}
+            <option value="" selected="selected">---------</option>
+            <option value="tm500">TM500</option>
+            <option value="cpe">CPE</option>
+            <option value="qualcom">QUALCOMM</option>
+            <option value="tm500+cpe">TM500+CEP</option>
+            <option value="tm500+qualcomm">TM500+QUALCOMM</option>
+            <option value="cpe+qualcom">CEP+QUALCOMM</option>
+            <option value="other">OTHER</option>
+        {%endif%}
+        </select> 
+        {% if 'other:' in info.uetype %}   
+            <input id="other_uetype" style="display:inline;" value="{{info.other_uetype}}">
+        {%else %}
+            <input id="other_uetype" style="display:none;" value="      ">
+        {%endif%}      
+    </div>
+    <div class="form-row">                       
+        <label for="uelist">UE List:</label>
+        <input class="vLargeTextField" id="uelist" name="uelist" type="text" value="{{info.uelist}}">           
+    </div>
+    <div class="form-row">                       
+        <label for="uepc">UE PC:</label>
+        <input class="vTextField" id="uepc" name="uepc" type="text" value="{{info.uepc}}">           
+    </div>
+    </fieldset>
+</div>
+<div class="submit-row">
+    <button class="btn btn-primary" id="add" onclick="save()">Save</button>
+</div>   
+</body>
+</html>

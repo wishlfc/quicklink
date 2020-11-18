@@ -7,7 +7,7 @@ from view_gencase import gencase_url
 
 
 urlpatterns = [
-    url('', views.gencase, name='gencase'),
+    # url('', views.gencase, name='gencase'),
     url('', views.btsmgmt, name='btsmgmt'),
     url('', views.prdescription, name='prdescription'),
 ]
