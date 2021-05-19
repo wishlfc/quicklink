@@ -134,8 +134,26 @@ table{
                     <input type="submit" class="query" value="search" onclick="search()"/>
                 </form>
                 <div class="col-md-12" style="padding:2em 0;">
-                    <p>Click<img src="{% static "/pic/pencil.png" %}" class = png>can edit table&nbsp<img src="{% static "/pic/trash.png" %}" class = png>can delete row. </p>
-                    Total testline number is {{testline_num}}
+                    <p>Click<img src="{% static "/pic/pencil.png" %}" class = png>can edit table&nbsp<img src="{% static "/pic/trash.png" %}" class = png>can delete row. Total testline number is {{testline_num}}.</p>
+                <div  style="padding-bottom:1em;">
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7BE0215CE0-1FA5-4992-A7EA-EC97FC8CEAA2%7D&file=PA%20information.xlsx&action=default&mobileredirect=true">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>PA Info</button></a>
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7B3EFFA1FB-0656-4746-8E17-360D759DD6A1%7D&file=PB%20information.xlsx&action=default&mobileredirect=true">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>PB Info</button></a>
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7B7519BAB8-090A-4580-A01D-DB1ED61CD685%7D&file=PC%20information.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>PC Info</button></a>
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7B6AC2C604-A07C-426B-B2E7-2ED6775F0DB2%7D&file=Log%20server%20information.xlsx&action=default&mobileredirect=true">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>Log Server</button></a>
+
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7B626B1F6C-8BD2-4C2E-8E2D-0D987A02C97D%7D&file=MCS%20information.xlsx&action=default&mobileredirect=true">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>MCS Info</button></a>
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7B504539EA-FC3D-4914-9B01-A77BFA6DE39A%7D&file=TM500_information.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>TM500 Info</button></a>
+                    <a target="_blank" href="https://nokia.sharepoint.com/:x:/r/sites/CSVPZCSV6/_layouts/15/Doc.aspx?sourcedoc=%7BA790BC00-DE9F-45A0-910B-895C7536F509%7D&file=UE%20information.xlsx&action=default&mobileredirect=true">
+                    <button class="btn btn-info" id="add"><i class="fa fa-plus"></i>UE Info</button></a>
+
+
+                </div>
             </form>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table2excel" id="mytable">
@@ -149,6 +167,7 @@ table{
                                 <th>BTS s1 IP</th>
                                 <th>BTS PC IP</th>
                                 <th>Hw Info</th>
+                                <th>Version</th>
                                 <th>PB</th>
                                 <th>PA</th>
                                 <th>PA PC</th>
@@ -164,16 +183,16 @@ table{
                             <tbody>
                             {% for info in testline_info %}
                               <tr>
-<!--                                 <td>{{info.testlineid}}</td>
-                                <td><a href="/topo/?testlineid={{info.testlineid}}&btsid={{info.btsid}}&btspc={{info.btspc}}&btss1ip={{info.btss1ip}}&pbinfo={{info.pbinfo}}&painfo={{info.painfo}}&papc={{info.papc}}&uetype={{info.uetype}}&uelist={{info.uelist}}&uepc={{info.uepc}}&hwinfo={{info.hwinfo}}&mcsinfo={{info.mcsinfo}}&mcspc={{info.mcspc}}&">{{info.btsid}}</a></td> -->
-                                <td><a href="/topo/?testlineid={{info.testlineid}}&btsid={{info.btsid}}&flag={{info.flag}}&btspc={{info.btspc}}&btss1ip={{info.btss1ip}}&pbinfo={{info.pbinfo}}&painfo={{info.painfo}}&papc={{info.papc}}&uetype={{info.uetype}}&uelist={{info.uelist}}&uepc={{info.uepc}}&hwinfo={{info.hwinfo}}&mcsinfo={{info.mcsinfo}}&mcspc={{info.mcspc}}&">{{info.testlineid}}</a></td>
-                                <td><a href="/testlinechange/?btsid={{info.btsid}}&">{{info.btsid}}</a></td>
+                                <td><a href="/topo/?testlineid={{info.testlineid}}&btsid={{info.btsid}}&flag={{info.flag}}&btspc={{info.btspc}}&btss1ip={{info.btss1ip}}&pbinfo={{info.pbinfo}}&painfo={{info.painfo}}&papc={{info.papc}}&uetype={{info.uetype}}&uelist={{info.uelist}}&uepc={{info.uepc}}&mcsinfo={{info.mcsinfo}}&mcspc={{info.mcspc}}&">{{info.testlineid}}</a></td>
+<!--                                 <td><a href="/testlinechange/?btsid={{info.btsid}}&">{{info.btsid}}</a></td> -->
+                                <td><a href="/testlinechange/?testlineid={{info.testlineid}}&">{{info.btsid}}</a></td>
                                 <td>{{info.flag}}</td>
                                 <td>{{info.entity}}</td>
                                 <td>{{info.owner}}</td>
                                 <td><a href="https://{{info.btss1ip}}" target="_blank">{{info.btss1ip}}</a></td>
                                 <td>{{info.btspc}}</td>
                                 <td>{{info.hwinfo}}</td>
+                                <td>{{info.version}}</td>
                                 <td>{{info.pbinfo}}
                                     <button id="poweron" type="button" class="btn btn-sm btn-default" onclick="power_on_bts({{info}})">
                                     <img src="{% static "/pic/on.svg" %}" class= power>  
@@ -193,7 +212,8 @@ table{
                                 <td>
                                 <div class="btn-group">
                                     <div class='table-btn'>
-                                    <a href="/testlinechange/?btsid={{info.btsid}}&">
+                                    <!-- <a href="/testlinechange/?btsid={{info.btsid}}&"> -->
+                                    <a href="/testlinechange/?testlineid={{info.testlineid}}&">
                                     <button id="bedit" type="button" class="btn btn-sm btn-default">
                                     <img src="{% static "/pic/pencil.png" %}" class = png>    
                                     </button>

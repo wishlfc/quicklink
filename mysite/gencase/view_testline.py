@@ -40,8 +40,10 @@ def get_testline():
         testline_info['uepc'] = info.uepc if info.uepc or info.uepc != 'None' else ""
         testline_info['mcsinfo'] = info.mcsinfo if info.mcsinfo or info.mcsinfo != 'None' else ""
         testline_info['mcspc'] = info.mcspc if info.mcspc or info.mcspc != 'None' else ""
-        testline_info['hwinfo'] = info.hwinfo if info.hwinfo or info.hwinfo != 'None' else ""
+        # testline_info['hwinfo'] = info.hwinfo if info.hwinfo or info.hwinfo != 'None' else ""
+        testline_info['hwinfo'] = info.hw_info if info.hw_info != '' else info.hwinfo
         testline_info['owner'] = info.owner if info.owner or info.owner != 'None' else ""
+        testline_info['version'] = info.version if info.version or info.version != 'None' else ""
         testline_info_list.append(testline_info)
     return testline_info_list
 
@@ -69,8 +71,46 @@ def search_testline(searchid):
             testline_info['uepc'] = info.uepc
             testline_info['mcsinfo'] = info.mcsinfo
             testline_info['mcspc'] = info.mcspc
-            testline_info['hwinfo'] = info.hwinfo
+            # testline_info['hwinfo'] = info.hwinfo
+            testline_info['hwinfo'] = info.hw_info if info.hw_info != '' else info.hwinfo
             testline_info['owner'] = info.owner
+            testline_info['version'] = info.version
+            if "other:"in info.uetype:
+                testline_info['other_uetype'] = info.uetype.split(":")[1]
+            else:
+                testline_info['other_uetype'] = ""
+            testline_info_list.append(testline_info)
+    return testline_info_list
+
+def search_testline2(searchid):
+    from getdata import get_data_by_sql
+    print('search testline {}'.format(searchid))
+    if searchid.isdigit():
+        testlineid = searchid
+        field, result = get_data_by_sql('select * from testlinetopo where testlineid={};'.format(testlineid))
+        testline_info_list = []
+        if result == []:
+            return []
+        for info in result:
+            testline_info = {}
+            testline_info['testlineid'] = info.testlineid
+            testline_info['btsid'] = info.btsid
+            testline_info['entity'] = info.entity
+            testline_info['flag'] = info.flag
+            testline_info['btss1ip'] = info.btss1ip
+            testline_info['btspc'] = info.btspc
+            testline_info['pbinfo'] = info.pbinfo
+            testline_info['painfo'] = info.painfo
+            testline_info['papc'] = info.papc
+            testline_info['uetype'] = info.uetype
+            testline_info['uelist'] = info.uelist
+            testline_info['uepc'] = info.uepc
+            testline_info['mcsinfo'] = info.mcsinfo
+            testline_info['mcspc'] = info.mcspc
+            # testline_info['hwinfo'] = info.hwinfo
+            testline_info['hwinfo'] = info.hw_info if info.hw_info != '' else info.hwinfo
+            testline_info['owner'] = info.owner
+            testline_info['version'] = info.version
             if "other:"in info.uetype:
                 testline_info['other_uetype'] = info.uetype.split(":")[1]
             else:

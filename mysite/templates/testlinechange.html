@@ -46,6 +46,9 @@ label.required {
 .vTextField {
     width: 18em;
 }
+.vhwField, .vXMLLargeTextField {
+    width: 60em;
+}
 .vLargeTextField, .vXMLLargeTextField {
     width: 60em;
 }
@@ -250,7 +253,8 @@ fieldset {
 
     <div class="form-row">                       
         <label for="hwinfo">HW Info:</label>
-        <input class="vLargeTextField" id="hwinfo" name="hwinfo" type="text" value="{{info.hwinfo}}">           
+<!--         <input class="vLargeTextField" id="hwinfo" name="hwinfo" type="text" value="{{info.hwinfo}}">  -->
+        <textarea id="hwinfo" name="hwinfo" style="width:500px;height:60px;">{{info.hwinfo}}</textarea>        
     </div>
     <div class="form-row">                       
         <label for="owner">Owner:</label>

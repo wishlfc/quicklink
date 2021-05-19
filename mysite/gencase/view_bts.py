@@ -33,14 +33,10 @@ def view_bts(request):
         return search(request)
     elif 'getstatus' in request.POST:
         return getstatus(request)
-    elif 'hwinfo' in request.POST:
-        return get_hwinfo(request)
-    # elif 'savescf' in request.POST:
-    #     return save_scf(request)
-    # elif 'savesnapshot' in request.POST:
-    #     return save_snapshot(request)
-    # elif 'saveswconfig' in request.POST:
-    #     return save_swconfig(request)
+    elif 'savescf' in request.POST:
+        return save_scf(request)
+    elif 'saveswconfig' in request.POST:
+        return save_swconfig(request)
     elif 'block' in request.POST:
         return block(request)
     elif 'unblock' in request.POST:
@@ -442,58 +438,6 @@ def getstatus(request):
         change_refresh_info(btsid, powerstatus, version, btsstatus)
     return HttpResponse(json.dumps({"status": "ok", "btsstatus": btsstatus, "version":version, "powerstatus":powerstatus}), content_type="application/json")
 
-def get_hwinfo(request):    
-    btsid = str(request.POST['btsid'])
-    btsip = str(request.POST['btsip'])
-    powerstatus = "on"
-    if not ping_s1(btsip):
-        btsstatus = "S1 is not Reachable!"
-        powerstatus = "off"
-        version = "S1 is not Reachable!"
-        change_refresh_info(btsid, powerstatus, version, btsstatus)
-        return HttpResponse(json.dumps({"status": "nok"}), content_type="application/json")
-    print('get bts hw info...{}'.format(btsid))
-    bts = None
-    pnlist = []
-    snlist = []
-    statuslist = []
-    ownerlist = []
-    # try:
-    from lib_bts.pet_bts_c import c_pet_bts
-    from view_prdescription import hw_version
-    from onelab import OneLabC
-    import re
-    bts = c_pet_bts(btsid)
-    bts.load_config()
-    hw_info = str(hw_version(bts))
-    for info in hw_info.split('id:'):
-        for line in info.split('\n'):
-            if 'productName' in line:
-                pn = re.search('productName:(.*)', line).group(1)
-                if 'Flexi System Module Indoor' in pn:
-                    pn = pn.replace('Flexi System Module Indoor', '')
-                if 'BB Extension Indoor Sub-Module' in pn:
-                    pn = pn.replace('BB Extension Indoor Sub-Module', '')
-                pnlist.append(pn)
-            if 'serialNumber' in line:
-                sn = re.search('serialNumber:(.*)', line).group(1)
-                snlist.append(sn)
-    print('snlist:{},pnlist:{},btsid:{}'.format(snlist, pnlist, btsid))
-    # print('statuslist:{},ownerlist:{}'.format(statuslist, ownerlist))
-    # if len(snlist) > 0:
-    #     olc = OneLabC()
-    #     olc.login()
-    #     for sn in snlist:
-    #         olc.search(sn)
-    #         statuslist.append(olc.status)
-    #         ownerlist.append(olc.owner)
-    #         print('sn:{},status:{},owner:{}'.format(sn, olc.status, olc.owner))
-    # except Exception as E:
-    #     print('Error: {}'.format(E))
-    #     btsstatus = "Cannot get info!"
-    #     version = "Cannot get info!"
-    return HttpResponse(json.dumps({"status": "ok", "pnlist": pnlist, "snlist": snlist, "statuslist": statuslist, "ownerlist":ownerlist}), content_type="application/json")
-
 def refresh_bts_info():
     bts_info_list = get_btsinfo()
     for bts_info in bts_info_list[0]:
@@ -636,33 +580,6 @@ def get_alarm(request):
         if bts.admin_api != None:
             bts.admin_api.teardown()
     return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
-
-# def save_snapshot(request):
-#     btsid = str(request.POST['btsid'])
-#     btsip = str(request.POST['btsip'])
-#     if not ping_s1(btsip):
-#         info = "S1 is not Reachable!"
-#         change_powerstatus(btsid, "off")
-#         return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
-#     timestamp = get_time()
-#     local_filename = '/home/quicklink/mysite/temp/snapshot_bts{}_{}.zip'.format(btsid, timestamp)
-#     bts = None
-#     try:
-#         bts = admin_api_setup(btsid)
-#         bts.admin_api.capture_snapshot(local_filename)
-#         # bts.admin_api.teardown()
-#         remote_file = remote_folder + local_filename.split('/')[-1]
-#         os.system('sshpass -p root scp {} root@{}:{}'.format(local_filename, remote_ip, remote_file))
-#         info = 'http://{}/file/{}'.format(remote_ip, local_filename.split('/')[-1])
-#         print(local_filename)
-#         print(remote_file)
-#     except Exception as E:
-#         print('Error: {}'.format(E))
-#         info = "Cannot save snapshot!"
-#     finally:
-#         if bts and bts.admin_api != None:
-#             bts.admin_api.teardown()
-#     return HttpResponse(json.dumps({"status": "ok", "info": info}), content_type="application/json")
 
 def save_swconfig(request):   
     btsid = str(request.POST['btsid'])
@@ -950,12 +867,8 @@ def load_config(btsid):
     return bts
 
 def admin_api_setup(btsid):
-
     from lib_bts import c_pet_admin_api
-    # from pet_bts_c import c_pet_bts
-    # bts = c_pet_bts(btsid)
-    # bts.load_config()
-    bts = load_config(btsid)
+    bts = load_config2(btsid)
     bts.dire_snap = '/home/work/temp/bts/'
     bts.dire_admin = '/home/work/temp/bts/'
     bts.admin_api = c_pet_admin_api(bts)

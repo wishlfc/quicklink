@@ -1,11 +1,13 @@
 import os
 import sys
+import time
 
 sys.path.append('/home/work/tacase_dev/Resource')
+sys.path.append('/home/work/tacase_dev')
 from pet_ipalib import IpaMmlItem
 
 def ping_s1(btsip):
-    if btsip == 'NULL' or btsip == '' or  btsip == '0.0.0.0':
+    if btsip == 'NULL' or btsip == '' or btsip == '0.0.0.0':
         return False
     result = os.popen('ping -c 3 {}'.format(btsip)).read()
     print(result)
@@ -120,32 +122,43 @@ def get_hw_info():
     cursor = db.cursor()
     cursor.execute('SELECT btsid,btss1ip,flag FROM testlinetopo;')
     results = cursor.fetchall()
-    hwlist = []
-    output = []
-    for result in results:
-        # if result[0] in [1396, 2240, 13]:
-        info = {}
-        info['btsid'] = result[0]
-        info['btss1ip'] = result[1]
-        hwinfo, version = get_hw(result[0], result[1], result[2])
-        anainfo = anaysis_hw_info(hwinfo, result[0])
-        info['hwinfo'] = anainfo
-        hwlist.append(info)
-        line = 'btsid:{} hwinfo:{}'.format(info['btsid'], info['hwinfo'])
-        output.append(line)
-        if len(info) != 0:
-            update_hwinfo(info, version)
-        # break
-    return hwlist
+    # hwlist = []
+    noinfo_btslist = []
+    for i in range(1, 3):
+        print('=====================Time {} begin====================='.format(i))
+        for result in results:
+            # if result[0] in [6001]:
+            info = {}
+            info['btsid'] = result[0]
+            info['btss1ip'] = result[1]
+            hwinfo, version = get_hw(result[0], result[1], result[2])
+            anainfo = anaysis_hw_info(hwinfo, result[0])
+            info['hwinfo'] = anainfo
+            # hwlist.append(info)
+            if len(info) != 0:
+                update_hwinfo(info, version)
+                if info['btsid'] in noinfo_btslist:
+                    noinfo_btslist.remove(info['btsid'])
+            else:
+                if info['btsid'] not in noinfo_btslist:
+                    noinfo_btslist.append(info['btsid'])
+            # break
+        print('Cannot get info for btslist {}'.format(noinfo_btslist))
+        print('=====================Time {} end====================='.format(i))
+        time.sleep(300)
+    if len(noinfo_btslist) != 0:
+        print('Finally cannot get info for btslist {}'.format(noinfo_btslist))
+    # return hwlist
 
 def update_hwinfo(info, version):
     from getdata import run_sql
     data = ''
     for hw in info['hwinfo']:
         # data = data + hw['productName'] + '_' + hw['productCode'] + '_' + hw['serialNumber'] + ' ' 
-        data = data + hw['productName'] + '_' + hw['productCode'] + '_' + hw['serialNumber'] + '_' + hw['status'] + '_' + hw['owner'] + ' '
-    run_sql('update testlinetopo set `hw_info`="{}" where btsid={};'.format(data, int(info['btsid'])))
-    run_sql('update testlinetopo set `version`="{}" where btsid={};'.format(version, int(info['btsid'])))
+        if 'productName' in hw and 'productCode' in hw and 'serialNumber' in hw:
+            data = data + hw['productName'] + '_' + hw['productCode'] + '_' + hw['serialNumber'] + '_' + hw['status'] + '_' + hw['owner'] + ' '
+            run_sql('update testlinetopo set `hw_info`="{}" where btsid={};'.format(data, int(info['btsid'])))
+            run_sql('update testlinetopo set `version`="{}" where btsid={};'.format(version, int(info['btsid'])))
 
 def search_onelab_status(sn):
     import requests

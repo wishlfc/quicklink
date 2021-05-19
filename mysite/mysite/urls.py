@@ -23,7 +23,7 @@ from gencase import views
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     # new
-    url('btsmgmt/', views.btsmgmt),
+    # url('btsmgmt/', views.btsmgmt),
     url('whitelist/', views.whitelist),
     url('prdescription/', views.prdescription),
     url('login/', views.login),

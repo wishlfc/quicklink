@@ -279,9 +279,9 @@ function transf() {
         alert("7. Used Flags is NULL!");
         return
     }
-    var scenario_times = document.getElementById("scenario_times").value;
-    var reproduced_times = document.getElementById("reproduced_times").value;
-    var same_sites = document.getElementById("same_sites").value;
+    // var scenario_times = document.getElementById("scenario_times").value;
+    // var reproduced_times = document.getElementById("reproduced_times").value;
+    // var same_sites = document.getElementById("same_sites").value;
 
     var passed_info = document.getElementById("passed_info").value;
     var swversion_passed = document.getElementById("swversion_passed").value;
@@ -329,9 +329,9 @@ function transf() {
     // form.append("deploy", deploy); 
     form.append("hw_version", hw_version); 
     form.append("flags", flags);
-    form.append("scenario_times", scenario_times); 
-    form.append("reproduced_times", reproduced_times); 
-    form.append("same_sites", same_sites); 
+    // form.append("scenario_times", scenario_times); 
+    // form.append("reproduced_times", reproduced_times); 
+    // form.append("same_sites", same_sites); 
     form.append("passed_info", passed_info);
     form.append("swversion_passed", swversion_passed_all);
     form.append("changes_testline", changes_testline_all);
@@ -486,14 +486,14 @@ function check() {
         </li>
         <textarea id="flags" style="width:500px;height:160px;" ></textarea>
         
-        <p>[8. Fault Occurrence Rate:]</p>
+<!--         <p>[8. Fault Occurrence Rate:]</p>
         <li>How many times Test Scenario was run?<input id="scenario_times" style="width:20px;" value=" " type= text></li>        
         <li>How many times fault was reproduced?
         <input id="reproduced_times" style="width:20px;" value=" "></li>  
         <li>How many sites in the same live operation was run in case of customer fault?
-        <input id="same_sites" style="width:20px;" value=" "></li>
+        <input id="same_sites" style="width:20px;" value=" "></li> -->
         
-        <p>[9. Test Scenario History of Execution: (what was changed since it was tested successfully for the last time)]</p>
+        <p>[8. Test Scenario History of Execution: (what was changed since it was tested successfully for the last time)]</p>
         <li>Was Test Scenario passing before?
         <select id="passed_info">
           <option value ="Yes">Yes</option>
@@ -524,7 +524,7 @@ function check() {
         <input id="changes_scenario_value" style="display:inline;" value=" ">
         </li>
 
-        <p>[10. Test Case Reference: (QC, RP or UTE link)]</p>
+        <p>[9. Test Case Reference: (QC, RP or UTE link)]</p>
         <textarea id="reference" style="width:500px;height:60px;" value="not needed in documentation, specification made fault reports and customer made tickets"></textarea>
     </div>
     <div class = 'box-block'>

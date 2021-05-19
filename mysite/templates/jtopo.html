@@ -77,7 +77,7 @@
         console.log(Request)
         var testlineid = Request['testlineid'];  
         var btsid = Request['btsid'];  
-        var hwinfo = Request['hwinfo']; 
+        // var hwinfo = Request['hwinfo']; 
         var btss1ip = Request['btss1ip']; 
         var btspc = Request['btspc']; 
         var painfo = Request['painfo'];   
@@ -157,7 +157,13 @@
                 pb.fontColor = '0,0,0';
 
                 var bts = node(400, high, 'BTS.jpg');
-                bts.text='BTS'+ btsid +'-'+ btss1ip +'-'+ hwinfo;
+                // var hwstr = ''
+                // for(i=0;i<hwinfo.split(')').length-1; i++){
+                //      hwstr = hwstr + hwinfo.split(')')[i] + ')-'
+                // }
+                // console.log(hwstr)
+                // bts.text='BTS'+ btsid +'-'+ btss1ip +'-'+ hwstr;
+                bts.text='BTS'+ btsid +'-'+ btss1ip;
                 bts.textPosition = "Middle_Center";
                 bts.fontColor = '0,0,0';
                 bts.layout = {type: 'tree', width:100, height: 100};

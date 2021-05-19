@@ -6,6 +6,7 @@ from django.conf.urls import url
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from getdata import get_data_from_sql
 import json
 
 
@@ -18,17 +19,29 @@ def testlinechange(request):
 
 def view_testlinechange_get(request):  
     print('view testline info...')
-    from view_testline import search_testline
+    from view_testline import search_testline, search_testline2
     url = request.build_absolute_uri()
     print(url)
     if 'btsid' in url:
         btsid = url.split('btsid=')[1].split('&')[0]
         if btsid == '':
             testline_info = {}
-            newtestlineid = str(int(count_testline()) + 1)
+            newtestlineid = str(new_testlineid())
             testline_info['testlineid'] = newtestlineid
         else:
             testline_info = search_testline(btsid)[0]
+        context = {}
+        context['info'] = testline_info
+        print(testline_info)
+        return render(request, "testlinechange.html", context)
+    elif 'testlineid' in url:
+        testlineid = url.split('testlineid=')[1].split('&')[0]
+        if testlineid == '':
+            testline_info = {}
+            newtestlineid = str(new_testlineid())
+            testline_info['testlineid'] = newtestlineid
+        else:
+            testline_info = search_testline2(testlineid)[0]
         context = {}
         context['info'] = testline_info
         print(testline_info)
@@ -67,6 +80,12 @@ def count_testline():
     result = get_data_from_sql('select testlineid from testlinetopo order by testlineid desc limit 1;')
     return result[0]
 
+def new_testlineid():
+    from getdata import get_data_from_sql
+    result = get_data_from_sql('select testlineid from testlinetopo order by testlineid;')
+    for i in range(1,200):
+        if i not in result:
+            return i
 
 def update_testline(request):
     print('update testline info...')
@@ -114,3 +133,8 @@ def edit_testline(request):
     print(cmd)
     run_sql(cmd)
     return HttpResponse(json.dumps({"status": "ok"}), content_type="application/json")
+
+if __name__ == '__main__':
+    sys.path.append('/home/quicklink/mysite/')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+    new_testline()

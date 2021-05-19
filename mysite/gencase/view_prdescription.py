@@ -201,9 +201,9 @@ def transf(request):
     # deploy = str(request.POST['deploy'])
     hw_version = str(request.POST['hw_version'])
     flags = str(request.POST['flags'])
-    scenario_times = str(request.POST['scenario_times'])
-    reproduced_times = str(request.POST['reproduced_times'])
-    same_sites = str(request.POST['same_sites'])
+    # scenario_times = str(request.POST['scenario_times'])
+    # reproduced_times = str(request.POST['reproduced_times'])
+    # same_sites = str(request.POST['same_sites'])
     passed_info = str(request.POST['passed_info'])
     swversion_passed = str(request.POST['swversion_passed'])
     changes_testline = str(request.POST['changes_testline'])
@@ -244,13 +244,13 @@ def transf(request):
     output += "[7. Used Flags: (list here used R&D flags)]" + "\n"
     output += flags + "\n"
     output += '\n'
-    output += "[8. Fault Occurrence Rate:]\n"
-    output += "How many times Test Scenario was run?" + scenario_times + "\n"
-    output += "How many times fault was reproduced?" + reproduced_times + "\n"
-    output += "How many sites in the same live operation was run in case of customer fault?" + \
-            same_sites + "\n"
-    output += '\n'
-    output += "[9. Test Scenario History of Execution: (what was changed since it was tested successfully for the last time)]\n"
+    # output += "[8. Fault Occurrence Rate:]\n"
+    # output += "How many times Test Scenario was run?" + scenario_times + "\n"
+    # output += "How many times fault was reproduced?" + reproduced_times + "\n"
+    # output += "How many sites in the same live operation was run in case of customer fault?" + \
+    #         same_sites + "\n"
+    # output += '\n'
+    output += "[8. Test Scenario History of Execution: (what was changed since it was tested successfully for the last time)]\n"
     output += "Was Test Scenario passing before?" + passed_info + "\n"
     output += "What was the last SW version Test Scenario was passing?" + \
             swversion_passed + "\n"
@@ -259,7 +259,7 @@ def transf(request):
     output += "Were there any changes in Test Scenario since last run it passed?" + \
      changes_scenario + "\n"
     output += '\n'
-    output += "[10. Test Case Reference: (QC, RP or UTE link)]\n"
+    output += "[9. Test Case Reference: (QC, RP or UTE link)]\n"
     output += reference + "\n"
     print(output)
     return HttpResponse(json.dumps({"status": "ok", "output": output}), content_type="application/json")

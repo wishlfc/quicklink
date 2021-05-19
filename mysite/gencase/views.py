@@ -35,14 +35,14 @@ def prdescription(request):
     else:
         return render(request, "prdescription.html")
 
-def btsmgmt(request):
-    from view_bts import view_bts, view_bts_get
-    if request.method == 'POST':
-        return view_bts(request)
-    elif request.method == 'GET':
-        return view_bts_get(request)
-    else:
-        return render(request, "btsmgmt.html")
+# def btsmgmt(request):
+#     from view_bts import view_bts, view_bts_get
+#     if request.method == 'POST':
+#         return view_bts(request)
+#     elif request.method == 'GET':
+#         return view_bts_get(request)
+#     else:
+#         return render(request, "btsmgmt.html")
 
 def whitelist(request):
     if request.method == 'POST':
