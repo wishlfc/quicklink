@@ -145,6 +145,8 @@ def get_hw_info():
             # break
         print('Cannot get info for btslist {}'.format(noinfo_btslist))
         print('=====================Time {} end====================='.format(i))
+        if len(noinfo_btslist) == 0:
+            break
         time.sleep(300)
     if len(noinfo_btslist) != 0:
         print('Finally cannot get info for btslist {}'.format(noinfo_btslist))
@@ -189,9 +191,10 @@ filter=%5B%7B%22operator%22%3A%22in%22%2C%22value%22%3A%5B%222%22%2C%223%22%2C%2
         total = json.loads(response.text)["total"]
         if int(total) >= 1:
             result = json.loads(response.text)["result"][0]
-            owner = result["user_email"].split('@')[0]
-            status = re.findall(r'>(.*)</span>', result["status"])[0].replace(" ", "")
-            return owner, status
+            if "user_email" in result:
+                owner = result["user_email"].split('@')[0]
+                status = re.findall(r'>(.*)</span>', result["status"])[0].replace(" ", "")
+                return owner, status
     return owner, status
 
 

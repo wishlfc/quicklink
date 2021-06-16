@@ -5998,3 +5998,2645 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [19/May/2021 07:03:15] "GET /favicon.ico HTTP/1.1" 200 20544
 [19/May/2021 07:54:31] "GET / HTTP/1.1" 200 20544
 [19/May/2021 07:54:32] "GET /favicon.ico HTTP/1.1" 200 20544
+[19/May/2021 09:04:01] "GET /favicon.ico HTTP/1.1" 200 20544
+09:04:10,313 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+09:04:10,313 PET_TA [ INFO] Connect done.
+09:04:10,313 PET_TA [ INFO] Power off port 1 ...
+09:04:10,314 PET_TA [DEBUG] Send command: $TA,D,0100*
+09:04:10,314 PET_TA [DEBUG] Get Response : $TA,D,010102010301040105010601*
+
+09:04:10,314 PET_TA [ INFO] Power off port 1 done.
+[19/May/2021 09:04:10] "POST /testline/ HTTP/1.1" 200 49
+09:04:29,422 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+09:04:29,423 PET_TA [ INFO] Connect done.
+09:04:29,423 PET_TA [ INFO] Power off port 2 ...
+09:04:29,423 PET_TA [DEBUG] Send command: $TA,D,0200*
+09:04:29,423 PET_TA [DEBUG] Get Response : $TA,D,010002010301040105010601*
+
+09:04:29,424 PET_TA [ INFO] Power off port 2 done.
+[19/May/2021 09:04:29] "POST /testline/ HTTP/1.1" 200 49
+09:04:32,317 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+09:04:32,317 PET_TA [ INFO] Connect done.
+09:04:32,317 PET_TA [ INFO] Power on port 1 ...
+09:04:32,318 PET_TA [DEBUG] Send command: $TA,D,0101*
+09:04:32,318 PET_TA [DEBUG] Get Response : $TA,D,010002000301040105010601*
+
+09:04:32,318 PET_TA [ INFO] Power on port 1 done.
+[19/May/2021 09:04:32] "POST /testline/ HTTP/1.1" 200 48
+09:04:34,402 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+09:04:34,403 PET_TA [ INFO] Connect done.
+09:04:34,403 PET_TA [ INFO] Power on port 2 ...
+09:04:34,403 PET_TA [DEBUG] Send command: $TA,D,0201*
+09:04:34,404 PET_TA [DEBUG] Get Response : $TA,D,010102000301040105010601*
+
+09:04:34,404 PET_TA [ INFO] Power on port 2 done.
+[19/May/2021 09:04:34] "POST /testline/ HTTP/1.1" 200 48
+09:05:04,934 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+09:05:04,934 PET_TA [ INFO] Connect done.
+09:05:04,935 PET_TA [ INFO] Power on port 1 ...
+09:05:04,935 PET_TA [DEBUG] Send command: $TA,D,0101*
+09:05:04,935 PET_TA [DEBUG] Get Response : $TA,D,010102010301040105010601*
+
+09:05:04,936 PET_TA [ INFO] Power on port 1 done.
+[19/May/2021 09:05:04] "POST /testline/ HTTP/1.1" 200 48
+[20/May/2021 00:54:10] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 00:54:12] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 00:55:51] "GET / HTTP/1.1" 200 20544
+[20/May/2021 00:55:52] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[20/May/2021 00:55:57] "GET / HTTP/1.1" 200 20544
+[20/May/2021 00:55:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 00:56:00] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 00:56:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[20/May/2021 00:56:00] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[20/May/2021 00:56:00] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[20/May/2021 00:56:00] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[20/May/2021 00:56:00] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[20/May/2021 00:56:00] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[20/May/2021 00:56:00] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[20/May/2021 00:56:00] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 01:17:10] "GET / HTTP/1.1" 200 20544
+[20/May/2021 01:17:11] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 01:28:51] "GET / HTTP/1.1" 200 20544
+[20/May/2021 01:28:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 01:52:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 02:12:54] "GET / HTTP/1.1" 200 20544
+[20/May/2021 02:12:54] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[20/May/2021 02:12:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 02:14:14] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 02:14:14] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1793
+[20/May/2021 02:14:14] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 02:18:01] "GET / HTTP/1.1" 200 20544
+[20/May/2021 02:18:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 02:35:36] "GET / HTTP/1.1" 200 20544
+[20/May/2021 02:35:36] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[20/May/2021 02:35:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 02:44:36] "GET / HTTP/1.1" 200 20544
+[20/May/2021 02:44:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 02:44:38] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 02:44:38] "GET /favicon.ico HTTP/1.1" 200 20544
+02:44:43,410 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+02:44:43,411 PET_TA [ INFO] Connect done.
+02:44:43,411 PET_TA [ INFO] Power off port 1 ...
+02:44:43,411 PET_TA [DEBUG] Send command: $TA,D,0100*
+02:44:43,412 PET_TA [DEBUG] Get Response : $TA,D,010102010301040105010601*
+
+02:44:43,412 PET_TA [ INFO] Power off port 1 done.
+[20/May/2021 02:44:43] "POST /testline/ HTTP/1.1" 200 49
+02:44:47,852 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+02:44:47,853 PET_TA [ INFO] Connect done.
+02:44:47,853 PET_TA [ INFO] Power off port 2 ...
+02:44:47,853 PET_TA [DEBUG] Send command: $TA,D,0200*
+02:44:47,854 PET_TA [DEBUG] Get Response : $TA,D,010002010301040105010601*
+
+02:44:47,854 PET_TA [ INFO] Power off port 2 done.
+[20/May/2021 02:44:47] "POST /testline/ HTTP/1.1" 200 49
+02:44:50,907 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+02:44:50,908 PET_TA [ INFO] Connect done.
+02:44:50,908 PET_TA [ INFO] Power on port 1 ...
+02:44:50,908 PET_TA [DEBUG] Send command: $TA,D,0101*
+02:44:50,909 PET_TA [DEBUG] Get Response : $TA,D,010002000301040105010601*
+
+02:44:50,909 PET_TA [ INFO] Power on port 1 done.
+[20/May/2021 02:44:50] "POST /testline/ HTTP/1.1" 200 48
+02:44:52,685 PET_TA [ INFO] Connect to HBTE PB: 10.106.212.6:5000
+02:44:52,685 PET_TA [ INFO] Connect done.
+02:44:52,685 PET_TA [ INFO] Power on port 2 ...
+02:44:52,685 PET_TA [DEBUG] Send command: $TA,D,0201*
+02:44:52,686 PET_TA [DEBUG] Get Response : $TA,D,010102000301040105010601*
+
+02:44:52,686 PET_TA [ INFO] Power on port 2 done.
+[20/May/2021 02:44:52] "POST /testline/ HTTP/1.1" 200 48
+[20/May/2021 05:17:32] "GET / HTTP/1.1" 200 20544
+[20/May/2021 05:17:35] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 05:17:36] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 05:17:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:21:01] "GET / HTTP/1.1" 200 20544
+[20/May/2021 06:21:01] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[20/May/2021 06:21:01] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[20/May/2021 06:21:02] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[20/May/2021 06:21:02] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[20/May/2021 06:21:02] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[20/May/2021 06:21:02] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[20/May/2021 06:21:02] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[20/May/2021 06:21:02] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[20/May/2021 06:21:02] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[20/May/2021 06:21:02] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[20/May/2021 06:21:02] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[20/May/2021 06:21:02] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[20/May/2021 06:21:02] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[20/May/2021 06:21:02] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[20/May/2021 06:21:02] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[20/May/2021 06:21:02] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[20/May/2021 06:21:02] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[20/May/2021 06:21:02] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[20/May/2021 06:21:02] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[20/May/2021 06:21:02] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[20/May/2021 06:21:02] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[20/May/2021 06:21:02] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[20/May/2021 06:21:02] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[20/May/2021 06:21:02] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[20/May/2021 06:21:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:40:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:44:00] "GET / HTTP/1.1" 200 20544
+[20/May/2021 06:44:00] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[20/May/2021 06:44:00] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[20/May/2021 06:44:00] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[20/May/2021 06:44:00] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[20/May/2021 06:44:00] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[20/May/2021 06:44:00] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[20/May/2021 06:44:00] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[20/May/2021 06:44:00] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[20/May/2021 06:44:00] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[20/May/2021 06:44:00] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[20/May/2021 06:44:00] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[20/May/2021 06:44:00] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[20/May/2021 06:44:00] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[20/May/2021 06:44:00] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[20/May/2021 06:44:00] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[20/May/2021 06:44:00] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[20/May/2021 06:44:00] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[20/May/2021 06:44:00] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[20/May/2021 06:44:00] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[20/May/2021 06:44:00] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[20/May/2021 06:44:00] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[20/May/2021 06:44:00] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[20/May/2021 06:44:00] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[20/May/2021 06:44:00] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[20/May/2021 06:44:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:44:05] "GET / HTTP/1.1" 200 20544
+[20/May/2021 06:44:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:44:11] "GET / HTTP/1.1" 200 20544
+[20/May/2021 06:44:11] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[20/May/2021 06:44:11] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[20/May/2021 06:44:12] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:44:21] "GET / HTTP/1.1" 200 20544
+[20/May/2021 06:44:21] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[20/May/2021 06:44:21] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[20/May/2021 06:54:20] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 06:57:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 07:09:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 07:18:47] "GET / HTTP/1.1" 200 20544
+[20/May/2021 07:18:48] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 07:18:50] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 07:18:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:38:27] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:38:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:44] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:45:46] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:47] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 08:45:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:48] "GET /prdescription/ HTTP/1.1" 200 22776
+[20/May/2021 08:45:48] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:49] "GET /whitelist/ HTTP/1.1" 200 4739
+[20/May/2021 08:45:49] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:50] "GET /prdescription/ HTTP/1.1" 200 22776
+[20/May/2021 08:45:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:52] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 08:45:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:53] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:45:54] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:54] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 08:45:54] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:45:56] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:45:57] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:46:30] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:46:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:46:31] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 08:46:32] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:48:53] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:48:54] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:48:54] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 08:48:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:54:04] "GET /prdescription/ HTTP/1.1" 200 22776
+[20/May/2021 08:54:05] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:54:06] "GET /whitelist/ HTTP/1.1" 200 4739
+[20/May/2021 08:54:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:54:07] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:54:09] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:54:10] "GET /prdescription/ HTTP/1.1" 200 22776
+[20/May/2021 08:54:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:54:13] "GET / HTTP/1.1" 200 20544
+[20/May/2021 08:54:14] "GET /favicon.ico HTTP/1.1" 200 20544
+[20/May/2021 08:55:50] "GET /testline/ HTTP/1.1" 200 149956
+[20/May/2021 08:55:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 01:01:33] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 01:04:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 01:31:14] "GET / HTTP/1.1" 200 20544
+[21/May/2021 01:31:16] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 01:31:56] "GET /testline/ HTTP/1.1" 200 149911
+[21/May/2021 01:31:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 07:17:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 08:07:29] "GET /whitelist/ HTTP/1.1" 200 4739
+[21/May/2021 08:07:29] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[21/May/2021 08:07:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[21/May/2021 08:58:15] "GET /prdescription/ HTTP/1.1" 200 22776
+[21/May/2021 08:58:16] "GET /favicon.ico HTTP/1.1" 200 20544
+08:58:23,417 PET_TA [ INFO] Initialize bts object 136
+08:58:23,417 PET_TA [ INFO] Log config for BTS:136
+08:58:23,443 PET_TA [ INFO] Setup for S1 Interface of BTS: 136
+08:58:23,443 PET_TA [ INFO] Clear Host Key for S1.
+08:58:23,443 root [DEBUG] Clear host key for 10.69.68.4:22
+08:58:23,443 root [DEBUG] clean /root/.ssh/known_hosts file first.
+08:58:23,460 root [DEBUG] Re-generate host key.
+08:58:23,460 root [DEBUG] Execute Local Command: [ssh-keygen -R [10.69.68.4]:22]
+08:58:24,659 PET_TA [ INFO] XXXXXXXXXXXXXXXXXXXX  [>]
+08:58:24,660 RobotFramework [ INFO] Logging into '10.69.68.4:22' as 'toor4nsn'.
+08:58:24,937 RobotFramework [ INFO] Read output: Last login: Fri May 21 16:58:23 CST 2021 from 10.69.68.42 on pts/0
+root@fct-0a:~ >
+08:58:24,937 PET_TA [ INFO] Download BTS file: [sshpass -p oZPS0POrRieRtu scp -o "StrictHostKeyChecking no"  -r toor4nsn@10.69.68.4:/ffs/run/swconfig.txt /home/work/temp/bts/swconfig_20210521085824.txt 2>/dev/null] 
+08:58:25,165 PET_TA [ INFO] Teardown for S1 Interface of BTS: 136
+[21/May/2021 08:58:25] "POST /prdescription/ HTTP/1.1" 200 123
+[23/May/2021 02:29:19] "GET / HTTP/1.1" 200 20544
+[23/May/2021 02:29:20] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[23/May/2021 02:29:20] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[23/May/2021 02:29:20] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[23/May/2021 02:29:20] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[23/May/2021 02:29:20] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[23/May/2021 02:29:20] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[23/May/2021 02:29:20] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[23/May/2021 02:29:20] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[23/May/2021 02:29:20] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[23/May/2021 02:29:20] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[23/May/2021 02:29:20] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[23/May/2021 02:29:20] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[23/May/2021 02:29:20] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[23/May/2021 02:29:20] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[23/May/2021 02:29:20] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[23/May/2021 02:29:20] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[23/May/2021 02:29:20] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[23/May/2021 02:29:20] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[23/May/2021 02:29:20] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[23/May/2021 02:29:20] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[23/May/2021 02:29:20] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[23/May/2021 02:29:20] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[23/May/2021 02:29:20] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[23/May/2021 02:29:20] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[23/May/2021 02:29:21] "GET /favicon.ico HTTP/1.1" 200 20544
+[23/May/2021 07:27:37] "GET /testline/ HTTP/1.1" 200 149956
+[23/May/2021 07:27:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[23/May/2021 07:50:06] "GET / HTTP/1.1" 200 20544
+[23/May/2021 08:11:03] "GET / HTTP/1.1" 200 20544
+[23/May/2021 08:11:03] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:03] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[23/May/2021 08:11:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:04:08] "GET / HTTP/1.1" 200 20544
+[24/May/2021 01:04:08] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[24/May/2021 01:04:08] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[24/May/2021 01:04:08] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[24/May/2021 01:04:08] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:13:17] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:16:43] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 01:16:55] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 01:16:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[24/May/2021 01:16:55] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[24/May/2021 01:16:55] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[24/May/2021 01:16:55] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[24/May/2021 01:16:55] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[24/May/2021 01:16:55] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[24/May/2021 01:16:55] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[24/May/2021 01:16:55] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[24/May/2021 01:16:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:20:39] "GET / HTTP/1.1" 200 20544
+[24/May/2021 01:20:40] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[24/May/2021 01:20:40] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[24/May/2021 01:20:40] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[24/May/2021 01:20:41] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:23:03] "GET / HTTP/1.1" 200 20544
+[24/May/2021 01:23:03] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[24/May/2021 01:23:03] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[24/May/2021 01:23:03] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[24/May/2021 01:23:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:25:03] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 01:25:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:31:25] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:31:33] "GET / HTTP/1.1" 200 20544
+[24/May/2021 01:31:34] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[24/May/2021 01:31:34] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[24/May/2021 01:31:34] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[24/May/2021 01:31:35] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 01:31:35] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:31:37] "GET /prdescription/ HTTP/1.1" 200 22776
+[24/May/2021 01:31:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:31:38] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 01:31:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:36:40] "GET / HTTP/1.1" 200 20544
+[24/May/2021 01:36:40] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[24/May/2021 01:36:40] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[24/May/2021 01:36:40] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[24/May/2021 01:36:40] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[24/May/2021 01:36:40] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[24/May/2021 01:36:40] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[24/May/2021 01:36:40] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[24/May/2021 01:36:40] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[24/May/2021 01:36:40] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[24/May/2021 01:36:40] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[24/May/2021 01:36:40] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[24/May/2021 01:36:40] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[24/May/2021 01:36:40] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[24/May/2021 01:36:40] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[24/May/2021 01:36:40] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[24/May/2021 01:36:40] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[24/May/2021 01:36:40] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[24/May/2021 01:36:40] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[24/May/2021 01:36:40] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[24/May/2021 01:36:40] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[24/May/2021 01:36:40] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[24/May/2021 01:36:40] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[24/May/2021 01:36:40] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[24/May/2021 01:36:40] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[24/May/2021 01:53:56] "GET / HTTP/1.1" 200 20544
+[24/May/2021 01:53:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 01:59:01] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 01:59:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[24/May/2021 01:59:01] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[24/May/2021 01:59:01] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[24/May/2021 01:59:01] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[24/May/2021 01:59:01] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[24/May/2021 01:59:01] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[24/May/2021 01:59:01] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[24/May/2021 01:59:01] "GET /static/js/jquery.table2excel.js HTTP/1.1" 304 0
+[24/May/2021 01:59:01] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 02:00:22] "GET / HTTP/1.1" 200 20544
+[24/May/2021 02:00:22] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[24/May/2021 02:00:22] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[24/May/2021 02:00:22] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[24/May/2021 02:00:22] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[24/May/2021 02:00:22] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[24/May/2021 02:00:22] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[24/May/2021 02:00:22] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[24/May/2021 02:00:22] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[24/May/2021 02:00:22] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[24/May/2021 02:00:22] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[24/May/2021 02:00:22] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[24/May/2021 02:00:22] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[24/May/2021 02:00:22] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[24/May/2021 02:00:22] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[24/May/2021 02:00:22] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[24/May/2021 02:00:22] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[24/May/2021 02:00:22] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[24/May/2021 02:00:22] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[24/May/2021 02:00:22] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[24/May/2021 02:00:22] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[24/May/2021 02:00:23] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[24/May/2021 02:00:23] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[24/May/2021 02:00:23] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[24/May/2021 02:04:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 02:12:55] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 02:12:57] "GET /favicon.ico HTTP/1.1" 200 20544
+02:23:38,717 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[24/May/2021 02:23:39] "POST /testline/ HTTP/1.1" 200 48
+02:25:29,288 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[24/May/2021 02:25:29] "POST /testline/ HTTP/1.1" 200 47
+[24/May/2021 02:41:48] "GET / HTTP/1.1" 200 20544
+[24/May/2021 02:41:48] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[24/May/2021 02:41:48] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[24/May/2021 02:41:48] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[24/May/2021 02:41:48] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[24/May/2021 02:41:48] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[24/May/2021 02:41:48] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[24/May/2021 02:41:48] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[24/May/2021 02:41:48] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[24/May/2021 02:41:48] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[24/May/2021 02:41:48] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[24/May/2021 02:41:48] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[24/May/2021 02:41:48] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[24/May/2021 02:41:48] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[24/May/2021 02:41:48] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[24/May/2021 02:41:49] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[24/May/2021 02:41:49] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[24/May/2021 02:41:49] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[24/May/2021 02:41:49] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[24/May/2021 02:41:49] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[24/May/2021 02:41:49] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[24/May/2021 02:41:49] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[24/May/2021 02:41:49] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[24/May/2021 02:41:49] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[24/May/2021 02:41:49] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[24/May/2021 02:41:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 02:51:35] "GET / HTTP/1.1" 200 20544
+[24/May/2021 02:51:35] "GET / HTTP/1.1" 200 20544
+[24/May/2021 02:51:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 02:56:40] "GET / HTTP/1.1" 200 20544
+[24/May/2021 02:56:42] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 02:56:42] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 02:56:42] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 03:02:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 03:06:58] "GET / HTTP/1.1" 200 20544
+[24/May/2021 03:06:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 03:56:37] "GET / HTTP/1.1" 200 20544
+[24/May/2021 03:56:37] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[24/May/2021 03:56:37] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[24/May/2021 03:56:37] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[24/May/2021 03:56:37] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[24/May/2021 03:56:37] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[24/May/2021 03:56:37] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[24/May/2021 03:56:37] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[24/May/2021 03:56:37] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[24/May/2021 03:56:37] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[24/May/2021 03:56:37] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[24/May/2021 03:56:37] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[24/May/2021 03:56:37] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[24/May/2021 03:56:37] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[24/May/2021 03:56:37] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[24/May/2021 03:56:38] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[24/May/2021 03:56:38] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[24/May/2021 03:56:38] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[24/May/2021 03:56:38] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[24/May/2021 03:56:38] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[24/May/2021 03:56:38] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[24/May/2021 03:56:38] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[24/May/2021 03:56:38] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[24/May/2021 03:56:38] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[24/May/2021 03:56:38] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[24/May/2021 03:56:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 04:02:50] "GET / HTTP/1.1" 200 20544
+[24/May/2021 04:02:50] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[24/May/2021 04:02:50] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[24/May/2021 04:02:50] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[24/May/2021 04:02:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 04:02:53] "GET /whitelist/ HTTP/1.1" 200 4739
+[24/May/2021 04:02:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 04:02:56] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 04:02:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 05:08:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 05:14:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 05:18:09] "GET / HTTP/1.1" 200 20544
+[24/May/2021 05:18:09] "GET / HTTP/1.1" 200 20544
+[24/May/2021 05:18:09] "GET / HTTP/1.1" 200 20544
+[24/May/2021 06:57:35] "GET /prdescription/ HTTP/1.1" 200 22776
+[24/May/2021 07:02:48] "GET / HTTP/1.1" 200 20544
+[24/May/2021 07:02:48] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[24/May/2021 07:02:48] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[24/May/2021 07:02:48] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[24/May/2021 07:02:48] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[24/May/2021 07:02:48] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[24/May/2021 07:02:48] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[24/May/2021 07:02:48] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[24/May/2021 07:02:48] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[24/May/2021 07:02:48] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[24/May/2021 07:02:48] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[24/May/2021 07:02:48] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[24/May/2021 07:10:27] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 07:14:52] "GET / HTTP/1.1" 200 20544
+[24/May/2021 07:20:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[24/May/2021 07:20:58] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[24/May/2021 07:20:58] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[24/May/2021 07:20:58] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[24/May/2021 07:20:58] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[24/May/2021 07:20:58] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[24/May/2021 07:20:58] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[24/May/2021 07:20:58] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[24/May/2021 07:20:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 07:21:33] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 07:21:33] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 07:21:38] "GET / HTTP/1.1" 200 20544
+[24/May/2021 07:21:38] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[24/May/2021 07:21:38] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[24/May/2021 07:21:38] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[24/May/2021 07:21:38] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[24/May/2021 07:21:38] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[24/May/2021 07:21:38] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[24/May/2021 07:21:38] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[24/May/2021 07:21:38] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[24/May/2021 07:21:38] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[24/May/2021 07:21:38] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[24/May/2021 07:21:38] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[24/May/2021 07:21:38] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[24/May/2021 07:21:38] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[24/May/2021 07:21:38] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[24/May/2021 07:21:38] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[24/May/2021 07:21:38] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[24/May/2021 07:21:38] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[24/May/2021 07:21:38] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[24/May/2021 07:21:38] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[24/May/2021 07:21:38] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[24/May/2021 07:21:38] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[24/May/2021 07:21:38] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[24/May/2021 07:21:39] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[24/May/2021 07:21:41] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 07:23:33] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 07:23:34] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 08:02:10] "GET / HTTP/1.1" 200 20544
+[24/May/2021 08:02:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 08:02:11] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 08:02:11] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 08:02:12] "GET / HTTP/1.1" 200 20544
+[24/May/2021 08:02:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 08:02:48] "GET /testline/ HTTP/1.1" 200 149956
+[24/May/2021 08:02:48] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 08:20:06] "GET / HTTP/1.1" 200 20544
+[24/May/2021 08:20:07] "GET /favicon.ico HTTP/1.1" 200 20544
+[24/May/2021 09:09:23] "GET / HTTP/1.1" 200 20544
+[24/May/2021 09:09:24] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 00:55:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 02:32:45] "GET / HTTP/1.1" 200 20544
+[25/May/2021 02:32:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 02:32:48] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 02:32:48] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 02:53:03] "GET / HTTP/1.1" 200 20544
+[25/May/2021 02:53:03] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[25/May/2021 02:53:03] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[25/May/2021 02:53:03] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[25/May/2021 02:53:03] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[25/May/2021 02:53:03] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[25/May/2021 02:53:03] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[25/May/2021 02:53:03] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[25/May/2021 02:53:03] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[25/May/2021 02:53:03] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[25/May/2021 02:53:03] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[25/May/2021 02:53:03] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[25/May/2021 02:53:03] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[25/May/2021 02:53:03] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[25/May/2021 02:53:03] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[25/May/2021 02:53:03] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[25/May/2021 02:53:03] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[25/May/2021 02:53:03] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[25/May/2021 02:53:03] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[25/May/2021 02:53:03] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[25/May/2021 02:53:03] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[25/May/2021 02:53:03] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[25/May/2021 02:53:03] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[25/May/2021 02:53:03] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[25/May/2021 02:53:03] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[25/May/2021 02:53:05] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 03:45:08] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 03:45:09] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 03:45:26] "GET /testlinechange/?testlineid=1& HTTP/1.1" 200 12790
+[25/May/2021 03:45:27] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 03:45:30] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 05:02:15] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 05:13:01] "GET / HTTP/1.1" 200 20544
+[25/May/2021 05:13:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 05:19:36] "GET /prdescription/ HTTP/1.1" 200 22776
+[25/May/2021 05:19:36] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 05:19:36] "GET /favicon.ico HTTP/1.1" 200 20544
+05:19:59,176 PET_TA [ INFO] Initialize bts object 5385
+05:19:59,176 PET_TA [ INFO] Log config for BTS:5385
+05:19:59,201 PET_TA [ INFO] Setup for Admin API 5385
+05:19:59,201 PET_TA [ INFO] !!!!!! connect Admin API for BTS: 5385
+05:19:59,201 PET_TA [ INFO] Clear proxy...
+05:19:59,202 PET_TA [ INFO] Clean node...
+05:19:59,202 PET_TA [ INFO] ps -ef|grep node|grep host=10.108.231.167|grep "/admin_api/"|grep -v grep
+05:19:59,218 PET_TA [ INFO] This BTS is 5G COAM!!!
+05:20:03,255 PET_TA [ INFO] _admin_api: <taf.gnb.oam.coam.admin.legacy.ute_common_admin.api.AdminApi_v2 object at 0x7f1ab62ca780>
+05:20:03,256 PET_TA [ INFO] No specific logger for _admin_api
+05:20:03,256 PET_TA [ INFO] Setup for Admin API Done
+05:20:03,591 PET_TA [ INFO] Teardown for Admin API
+05:20:03,591 PET_TA [ INFO] Disconnect Admin API
+05:20:05,638 PET_TA [ INFO] Clean node...
+05:20:05,639 PET_TA [ INFO] ps -ef|grep node|grep host=10.108.231.167|grep "cli-port=40470"|grep -v grep
+[25/May/2021 05:20:05] "POST /prdescription/ HTTP/1.1" 200 741
+05:20:05,694 PET_TA [ INFO] Initialize bts object 5385
+05:20:05,694 PET_TA [ INFO] Log config for BTS:5385
+05:20:05,724 PET_TA [ INFO] Setup for S1 Interface of BTS: 5385
+05:20:05,724 PET_TA [ INFO] Clear Host Key for S1.
+05:20:06,889 PET_TA [ INFO] XXXXXXXXXXXXXXXXXXXX  [>]
+05:20:07, 30 PET_TA [ INFO] Download BTS file: [sshpass -p oZPS0POrRieRtu scp -o "StrictHostKeyChecking no"  -r toor4nsn@10.108.231.167:/ffs/run/swconfig.txt /home/work/temp/bts/swconfig_20210525052007.txt 2>/dev/null] 
+05:20:07,200 PET_TA [ INFO] Teardown for S1 Interface of BTS: 5385
+[25/May/2021 05:20:07] "POST /prdescription/ HTTP/1.1" 200 1924
+[25/May/2021 05:31:49] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 05:31:49] "GET /favicon.ico HTTP/1.1" 200 20544
+05:51:07,610 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[25/May/2021 05:51:08] "POST /testline/ HTTP/1.1" 200 48
+05:51:09,843 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[25/May/2021 05:51:10] "POST /testline/ HTTP/1.1" 200 47
+[25/May/2021 06:32:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 06:49:46] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 06:49:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 07:48:05] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 07:48:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 07:48:06] "GET / HTTP/1.1" 200 20544
+[25/May/2021 07:48:08] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 08:11:38] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 08:11:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 08:11:40] "GET / HTTP/1.1" 200 20544
+[25/May/2021 08:11:41] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 08:14:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 08:14:06] "GET /testline/ HTTP/1.1" 200 149881
+[25/May/2021 08:14:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[25/May/2021 08:38:51] "GET / HTTP/1.1" 200 20544
+[25/May/2021 08:38:52] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[25/May/2021 08:38:52] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[25/May/2021 08:38:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 00:40:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 01:36:48] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 01:36:48] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 01:36:55] "GET / HTTP/1.1" 200 20544
+[26/May/2021 01:36:57] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 01:36:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 02:03:05] "GET /whitelist/ HTTP/1.1" 200 4739
+[26/May/2021 02:03:06] "GET /prdescription/ HTTP/1.1" 200 22776
+[26/May/2021 02:03:06] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 02:04:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 03:01:25] "GET / HTTP/1.1" 200 20544
+[26/May/2021 03:01:25] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[26/May/2021 03:01:26] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:02:43] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:10:24] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:10:25] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:10:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:29:53] "GET / HTTP/1.1" 200 20544
+[26/May/2021 05:32:06] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 05:34:58] "GET / HTTP/1.1" 200 20544
+[26/May/2021 05:34:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:40:12] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[26/May/2021 05:40:12] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[26/May/2021 05:40:12] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[26/May/2021 05:40:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 05:50:26] "GET / HTTP/1.1" 200 20544
+[26/May/2021 06:06:15] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 06:06:15] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 06:17:26] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 07:32:38] "GET / HTTP/1.1" 200 20544
+[26/May/2021 07:32:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 08:05:43] "GET / HTTP/1.1" 200 20544
+[26/May/2021 08:05:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 08:22:25] "GET / HTTP/1.1" 200 20544
+[26/May/2021 08:22:25] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 08:29:13] "GET / HTTP/1.1" 200 20544
+[26/May/2021 08:29:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 08:37:27] "GET /testline/ HTTP/1.1" 200 150067
+[26/May/2021 08:37:27] "GET /static/pic/on.svg HTTP/1.1" 304 0
+[26/May/2021 08:37:27] "GET /static/pic/off.svg HTTP/1.1" 304 0
+[26/May/2021 08:37:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[26/May/2021 09:19:38] "GET / HTTP/1.1" 200 20544
+[26/May/2021 09:19:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 00:40:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 01:11:18] "GET / HTTP/1.1" 200 20544
+[27/May/2021 01:11:18] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[27/May/2021 01:11:19] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 01:46:34] "GET / HTTP/1.1" 200 20544
+[27/May/2021 01:46:34] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[27/May/2021 01:46:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 01:46:44] "GET /testline/ HTTP/1.1" 200 149818
+[27/May/2021 01:46:45] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 01:49:38] "GET / HTTP/1.1" 200 20544
+[27/May/2021 01:49:38] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[27/May/2021 01:49:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 03:08:59] "GET / HTTP/1.1" 200 20544
+[27/May/2021 03:09:00] "GET /testline/ HTTP/1.1" 200 149818
+[27/May/2021 03:09:01] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 03:47:21] "GET / HTTP/1.1" 200 20544
+[27/May/2021 03:47:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 03:57:00] "GET / HTTP/1.1" 200 20544
+[27/May/2021 03:57:00] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[27/May/2021 03:57:00] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[27/May/2021 03:57:00] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[27/May/2021 03:57:00] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[27/May/2021 03:57:00] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[27/May/2021 03:57:00] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[27/May/2021 03:57:00] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[27/May/2021 03:57:00] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[27/May/2021 03:57:00] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[27/May/2021 03:57:00] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[27/May/2021 03:57:00] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[27/May/2021 03:57:00] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[27/May/2021 03:57:00] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[27/May/2021 03:57:00] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[27/May/2021 03:57:00] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[27/May/2021 03:57:00] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[27/May/2021 03:57:00] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[27/May/2021 03:57:00] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[27/May/2021 03:57:00] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[27/May/2021 03:57:00] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[27/May/2021 03:57:00] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[27/May/2021 03:57:00] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[27/May/2021 03:57:00] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[27/May/2021 03:57:00] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[27/May/2021 03:57:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 04:13:19] "GET / HTTP/1.1" 200 20544
+[27/May/2021 04:13:19] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 05:34:44] "GET / HTTP/1.1" 200 20544
+[27/May/2021 05:34:44] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[27/May/2021 05:34:44] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[27/May/2021 05:34:44] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[27/May/2021 05:34:44] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[27/May/2021 05:34:44] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[27/May/2021 05:34:44] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[27/May/2021 05:34:44] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[27/May/2021 05:34:44] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[27/May/2021 05:34:44] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[27/May/2021 05:34:44] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[27/May/2021 05:34:44] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[27/May/2021 05:34:44] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[27/May/2021 05:34:44] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[27/May/2021 05:34:44] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[27/May/2021 05:34:44] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[27/May/2021 05:34:44] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[27/May/2021 05:34:44] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[27/May/2021 05:34:44] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[27/May/2021 05:34:44] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[27/May/2021 05:34:44] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[27/May/2021 05:34:44] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[27/May/2021 05:34:44] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[27/May/2021 05:34:44] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[27/May/2021 05:34:44] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[27/May/2021 05:34:45] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 05:39:29] "GET / HTTP/1.1" 200 20544
+[27/May/2021 05:39:30] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[27/May/2021 05:49:01] "GET / HTTP/1.1" 200 20544
+[27/May/2021 05:49:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 05:50:12] "GET /testline/ HTTP/1.1" 200 149818
+[27/May/2021 05:50:12] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[27/May/2021 05:50:12] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[27/May/2021 05:50:12] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[27/May/2021 05:50:12] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[27/May/2021 05:50:12] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[27/May/2021 05:50:12] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[27/May/2021 05:50:12] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[27/May/2021 05:50:12] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 06:53:39] "GET / HTTP/1.1" 200 20544
+[27/May/2021 06:53:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 06:53:48] "GET /testline/ HTTP/1.1" 200 149818
+[27/May/2021 06:53:48] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 07:48:58] "GET /testline/ HTTP/1.1" 200 149818
+[27/May/2021 07:48:58] "GET /static/pic/off.svg HTTP/1.1" 304 0
+[27/May/2021 07:48:58] "GET /static/pic/on.svg HTTP/1.1" 304 0
+[27/May/2021 07:48:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 07:58:31] "GET / HTTP/1.1" 200 20544
+[27/May/2021 07:58:32] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 08:29:34] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 08:29:52] "GET / HTTP/1.1" 200 20544
+[27/May/2021 08:29:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 08:42:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 10:14:13] "GET / HTTP/1.1" 200 20544
+[27/May/2021 10:14:15] "GET /favicon.ico HTTP/1.1" 200 20544
+[27/May/2021 10:14:16] "GET /testline/ HTTP/1.1" 200 149818
+[27/May/2021 10:14:16] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 01:01:51] "GET / HTTP/1.1" 200 20544
+[28/May/2021 01:01:51] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:51] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[28/May/2021 01:01:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 01:02:04] "GET / HTTP/1.1" 200 20544
+[28/May/2021 01:02:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 01:02:11] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 01:28:19] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 05:29:18] "GET / HTTP/1.1" 200 20544
+[28/May/2021 05:29:19] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 05:30:05] "GET / HTTP/1.1" 200 20544
+[28/May/2021 05:30:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 06:18:48] "GET / HTTP/1.1" 200 20544
+[28/May/2021 06:18:50] "GET /testline/ HTTP/1.1" 200 149947
+[28/May/2021 06:18:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 06:27:20] "GET / HTTP/1.1" 200 20544
+[28/May/2021 06:27:21] "GET /favicon.ico HTTP/1.1" 200 20544
+[28/May/2021 07:38:52] "GET / HTTP/1.1" 200 20544
+[28/May/2021 07:38:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[29/May/2021 07:35:13] "GET /whitelist/ HTTP/1.1" 200 4739
+[29/May/2021 07:35:16] "GET /testline/ HTTP/1.1" 200 150067
+07:35:37,157 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[29/May/2021 07:35:37] "POST /testline/ HTTP/1.1" 200 47
+[29/May/2021 13:18:35] "GET /testline/ HTTP/1.1" 200 150067
+[29/May/2021 13:18:35] "GET /testline/ HTTP/1.1" 200 150067
+[29/May/2021 13:18:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 00:54:57] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[31/May/2021 00:54:57] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[31/May/2021 00:54:57] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[31/May/2021 00:54:57] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 01:24:16] "GET / HTTP/1.1" 200 20544
+[31/May/2021 01:24:17] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 01:37:14] "GET / HTTP/1.1" 200 20544
+[31/May/2021 01:37:14] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[31/May/2021 01:37:14] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[31/May/2021 01:37:14] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[31/May/2021 01:37:15] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 01:46:52] "GET /testline/ HTTP/1.1" 200 150067
+[31/May/2021 01:46:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 01:56:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 02:15:24] "GET / HTTP/1.1" 200 20544
+[31/May/2021 02:15:24] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[31/May/2021 02:15:24] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[31/May/2021 02:15:24] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[31/May/2021 02:15:24] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[31/May/2021 02:15:24] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[31/May/2021 02:15:24] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[31/May/2021 02:15:24] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[31/May/2021 02:15:24] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[31/May/2021 02:15:24] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[31/May/2021 02:15:24] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[31/May/2021 02:15:24] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[31/May/2021 02:15:24] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[31/May/2021 02:15:24] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[31/May/2021 02:15:24] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[31/May/2021 02:15:24] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[31/May/2021 02:15:24] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[31/May/2021 02:15:24] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[31/May/2021 02:15:24] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[31/May/2021 02:15:24] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[31/May/2021 02:15:24] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[31/May/2021 02:15:24] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[31/May/2021 02:15:24] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[31/May/2021 02:15:24] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[31/May/2021 02:15:24] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[31/May/2021 02:17:53] "GET /whitelist/ HTTP/1.1" 200 4739
+[31/May/2021 02:17:54] "GET /prdescription/ HTTP/1.1" 200 22776
+[31/May/2021 02:17:55] "GET /testline/ HTTP/1.1" 200 150067
+[31/May/2021 02:17:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[31/May/2021 02:17:55] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[31/May/2021 02:17:55] "GET /static/js/jquery.table2excel.js HTTP/1.1" 304 0
+[31/May/2021 02:17:55] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[31/May/2021 02:17:55] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[31/May/2021 02:17:55] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[31/May/2021 02:17:55] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[31/May/2021 02:30:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 02:35:10] "GET / HTTP/1.1" 200 20544
+[31/May/2021 02:35:11] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 02:35:14] "GET /testline/ HTTP/1.1" 200 150067
+[31/May/2021 02:35:14] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 03:07:17] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 03:16:35] "GET / HTTP/1.1" 200 20544
+[31/May/2021 03:16:36] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[31/May/2021 03:16:36] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[31/May/2021 03:16:36] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[31/May/2021 03:16:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 05:20:54] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 05:47:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 05:48:12] "GET / HTTP/1.1" 200 20544
+[31/May/2021 05:48:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 05:53:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 05:58:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 07:08:17] "GET /testline/ HTTP/1.1" 200 150067
+[31/May/2021 07:09:19] "GET /testline/ HTTP/1.1" 200 150067
+[31/May/2021 07:09:20] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 07:20:33] "GET /testline/ HTTP/1.1" 200 150067
+[31/May/2021 07:20:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[31/May/2021 08:16:26] "GET / HTTP/1.1" 200 20544
+[31/May/2021 08:16:26] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[31/May/2021 08:16:26] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[31/May/2021 08:16:26] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[31/May/2021 08:16:26] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[31/May/2021 08:16:26] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[31/May/2021 08:16:26] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[31/May/2021 08:16:26] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[31/May/2021 08:16:26] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[31/May/2021 08:16:26] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[31/May/2021 08:16:26] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[31/May/2021 08:16:27] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[31/May/2021 08:16:27] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[31/May/2021 08:16:27] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[31/May/2021 08:16:27] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[31/May/2021 08:16:27] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[31/May/2021 08:16:27] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[31/May/2021 08:16:27] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[31/May/2021 08:16:27] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[31/May/2021 08:16:27] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[31/May/2021 08:16:27] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[31/May/2021 08:16:27] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[31/May/2021 08:16:27] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[31/May/2021 08:16:27] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[01/Jun/2021 00:48:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 00:53:53] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 00:53:54] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 01:19:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 01:27:24] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 01:27:35] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 01:27:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 01:38:49] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 01:38:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 01:47:51] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 01:55:00] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 01:55:00] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[01/Jun/2021 01:55:00] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[01/Jun/2021 01:55:00] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[01/Jun/2021 02:46:25] "GET /prdescription/ HTTP/1.1" 200 22776
+[01/Jun/2021 02:46:25] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[01/Jun/2021 02:46:25] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 02:46:28] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 02:46:28] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[01/Jun/2021 02:46:28] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[01/Jun/2021 02:46:28] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[01/Jun/2021 02:46:28] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[01/Jun/2021 02:46:28] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[01/Jun/2021 02:46:28] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[01/Jun/2021 02:46:28] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[01/Jun/2021 02:46:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 02:46:57] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 02:46:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 02:52:50] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 02:52:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 03:06:05] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 03:06:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 04:08:28] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 04:08:28] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[01/Jun/2021 04:08:28] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[01/Jun/2021 04:08:28] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[01/Jun/2021 04:08:30] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 05:27:29] "GET /static/pic/on.svg HTTP/1.1" 304 0
+[01/Jun/2021 05:27:29] "GET /static/pic/off.svg HTTP/1.1" 304 0
+[01/Jun/2021 05:27:29] "GET /favicon.ico HTTP/1.1" 200 20544
+05:57:24,766 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.184:5000
+[01/Jun/2021 05:57:25] "POST /testline/ HTTP/1.1" 200 48
+[01/Jun/2021 06:09:29] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 06:09:29] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[01/Jun/2021 06:09:29] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[01/Jun/2021 06:09:29] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[01/Jun/2021 06:09:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 06:11:22] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 06:11:23] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 06:27:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 06:53:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 07:24:37] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 07:24:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 07:24:51] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 07:24:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 07:31:52] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 07:31:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 08:23:30] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 08:23:31] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[01/Jun/2021 08:23:31] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[01/Jun/2021 08:23:31] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[01/Jun/2021 09:20:24] "GET / HTTP/1.1" 200 20544
+[01/Jun/2021 09:20:25] "GET /favicon.ico HTTP/1.1" 200 20544
+[01/Jun/2021 09:20:27] "GET /testline/ HTTP/1.1" 200 149968
+[01/Jun/2021 09:20:27] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 01:16:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 01:31:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 02:27:23] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 02:27:23] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[02/Jun/2021 02:27:23] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[02/Jun/2021 02:27:23] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[02/Jun/2021 02:27:23] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[02/Jun/2021 02:27:23] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[02/Jun/2021 03:02:40] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 03:02:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 03:05:32] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 03:05:33] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[02/Jun/2021 03:05:33] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[02/Jun/2021 03:05:33] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[02/Jun/2021 03:05:33] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[02/Jun/2021 03:05:33] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[02/Jun/2021 03:05:33] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[02/Jun/2021 03:05:33] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[02/Jun/2021 03:05:33] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[02/Jun/2021 03:05:33] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[02/Jun/2021 03:05:33] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[02/Jun/2021 03:05:33] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[02/Jun/2021 03:05:33] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[02/Jun/2021 03:05:33] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[02/Jun/2021 03:05:33] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[02/Jun/2021 03:05:33] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[02/Jun/2021 03:05:33] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[02/Jun/2021 03:05:33] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[02/Jun/2021 03:05:33] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[02/Jun/2021 03:05:33] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[02/Jun/2021 03:05:33] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[02/Jun/2021 03:05:33] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[02/Jun/2021 03:05:33] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[02/Jun/2021 03:05:33] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[02/Jun/2021 03:31:48] "GET /prdescription/ HTTP/1.1" 200 22776
+[02/Jun/2021 03:31:48] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[02/Jun/2021 04:49:50] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 04:49:50] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 05:11:53] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 05:11:53] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[02/Jun/2021 05:11:53] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[02/Jun/2021 05:11:53] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[02/Jun/2021 05:11:54] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 05:11:57] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 05:11:57] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[02/Jun/2021 05:11:57] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[02/Jun/2021 05:11:57] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[02/Jun/2021 05:11:57] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[02/Jun/2021 05:11:57] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[02/Jun/2021 05:11:57] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[02/Jun/2021 05:11:57] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[02/Jun/2021 05:11:57] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 06:05:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 06:18:26] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 06:18:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 06:18:29] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 06:18:30] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 06:24:13] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 06:24:15] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 06:24:17] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 06:24:18] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 07:18:29] "GET / HTTP/1.1" 200 20544
+[02/Jun/2021 07:18:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 07:46:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 07:47:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 08:30:01] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 08:30:01] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 08:30:08] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 08:30:08] "GET /favicon.ico HTTP/1.1" 200 20544
+[02/Jun/2021 08:30:10] "GET /testline/ HTTP/1.1" 200 149872
+[02/Jun/2021 08:30:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 01:59:51] "GET / HTTP/1.1" 200 20544
+[03/Jun/2021 01:59:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 05:05:31] "GET /favicon.ico HTTP/1.1" 200 20544
+05:05:36,747 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 05:05:36] "POST /testline/ HTTP/1.1" 200 48
+05:05:39,824 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 05:05:39] "POST /testline/ HTTP/1.1" 200 47
+[03/Jun/2021 05:14:53] "GET /testline/ HTTP/1.1" 200 150037
+[03/Jun/2021 05:14:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 05:24:31] "GET /favicon.ico HTTP/1.1" 200 20544
+05:36:10, 24 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[03/Jun/2021 05:36:10] "POST /testline/ HTTP/1.1" 200 48
+05:36:12,562 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[03/Jun/2021 05:36:12] "POST /testline/ HTTP/1.1" 200 47
+05:56:19,262 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 05:56:19] "POST /testline/ HTTP/1.1" 200 48
+05:56:22,739 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 05:56:22] "POST /testline/ HTTP/1.1" 200 47
+[03/Jun/2021 05:57:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 05:57:48] "GET /testline/ HTTP/1.1" 200 150037
+[03/Jun/2021 05:57:48] "GET /favicon.ico HTTP/1.1" 200 20544
+05:59:30,403 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 05:59:30] "POST /testline/ HTTP/1.1" 200 48
+05:59:35,872 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 05:59:35] "POST /testline/ HTTP/1.1" 200 47
+[03/Jun/2021 06:06:19] "GET / HTTP/1.1" 200 20544
+[03/Jun/2021 06:06:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 06:06:22] "GET /testline/ HTTP/1.1" 200 150037
+[03/Jun/2021 06:06:23] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 06:26:20] "GET /testline/ HTTP/1.1" 200 150037
+[03/Jun/2021 06:26:20] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 06:28:24] "GET /prdescription/ HTTP/1.1" 200 22776
+[03/Jun/2021 06:28:25] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[03/Jun/2021 06:28:25] "GET /favicon.ico HTTP/1.1" 200 20544
+07:26:27,461 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 07:26:27] "POST /testline/ HTTP/1.1" 200 48
+07:26:30,995 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[03/Jun/2021 07:26:30] "POST /testline/ HTTP/1.1" 200 47
+[03/Jun/2021 08:12:03] "GET / HTTP/1.1" 200 20544
+[03/Jun/2021 08:12:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[03/Jun/2021 08:50:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 02:48:20] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 02:48:22] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 02:48:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 03:12:07] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 03:12:08] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 04:55:25] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:06:26] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 05:06:26] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[04/Jun/2021 05:06:26] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[04/Jun/2021 05:06:26] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[04/Jun/2021 05:06:26] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[04/Jun/2021 05:06:26] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[04/Jun/2021 05:06:26] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:09:27] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[04/Jun/2021 05:09:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:18:09] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 05:18:09] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:18:31] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 05:18:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:32:50] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 05:32:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:34:56] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 05:34:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:34:58] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 05:34:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 05:40:02] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 05:40:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 06:14:28] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 06:14:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 06:14:30] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 06:14:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 08:32:25] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 08:32:25] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[04/Jun/2021 08:32:25] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[04/Jun/2021 08:32:25] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[04/Jun/2021 08:32:25] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[04/Jun/2021 08:32:25] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[04/Jun/2021 08:32:25] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[04/Jun/2021 08:32:25] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[04/Jun/2021 08:32:25] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[04/Jun/2021 08:32:25] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[04/Jun/2021 08:32:25] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[04/Jun/2021 08:32:25] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[04/Jun/2021 08:32:25] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[04/Jun/2021 08:32:25] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[04/Jun/2021 08:32:25] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[04/Jun/2021 08:32:25] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[04/Jun/2021 08:32:26] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[04/Jun/2021 08:32:26] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[04/Jun/2021 08:32:26] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[04/Jun/2021 08:32:26] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[04/Jun/2021 08:32:26] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[04/Jun/2021 08:32:26] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[04/Jun/2021 08:32:26] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[04/Jun/2021 08:32:26] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[04/Jun/2021 08:52:55] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 08:52:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 08:53:21] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 08:53:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 08:55:56] "GET /testline/ HTTP/1.1" 200 150151
+[04/Jun/2021 08:55:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[04/Jun/2021 08:55:57] "GET / HTTP/1.1" 200 20544
+[04/Jun/2021 08:55:57] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[04/Jun/2021 08:55:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 01:39:34] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 01:39:34] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[07/Jun/2021 01:39:34] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[07/Jun/2021 01:39:35] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 01:39:36] "GET /testline/ HTTP/1.1" 200 150019
+[07/Jun/2021 01:39:36] "GET /favicon.ico HTTP/1.1" 200 20544
+01:39:48,476 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[07/Jun/2021 01:39:48] "POST /testline/ HTTP/1.1" 200 48
+01:39:50,982 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[07/Jun/2021 01:39:51] "POST /testline/ HTTP/1.1" 200 47
+[07/Jun/2021 01:40:25] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 01:40:25] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[07/Jun/2021 01:40:25] "GET /favicon.ico HTTP/1.1" 200 20544
+01:41:07,  5 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[07/Jun/2021 01:41:07] "POST /testline/ HTTP/1.1" 200 48
+01:41:10, 33 PET_TA [ INFO] Connect to HBTE PB: 10.69.66.178:5000
+[07/Jun/2021 01:41:10] "POST /testline/ HTTP/1.1" 200 47
+[07/Jun/2021 01:42:42] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 01:42:43] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 01:49:51] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 01:49:51] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[07/Jun/2021 01:49:51] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[07/Jun/2021 01:49:51] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[07/Jun/2021 01:49:51] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[07/Jun/2021 01:49:51] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[07/Jun/2021 01:49:51] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[07/Jun/2021 01:49:51] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[07/Jun/2021 01:49:51] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[07/Jun/2021 01:49:51] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[07/Jun/2021 01:49:51] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[07/Jun/2021 01:49:51] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[07/Jun/2021 01:49:51] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[07/Jun/2021 01:49:51] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[07/Jun/2021 01:49:51] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[07/Jun/2021 01:49:51] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[07/Jun/2021 01:49:51] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[07/Jun/2021 01:49:51] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[07/Jun/2021 01:49:51] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[07/Jun/2021 01:49:51] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[07/Jun/2021 01:49:51] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[07/Jun/2021 01:49:51] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[07/Jun/2021 01:49:51] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[07/Jun/2021 01:49:51] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[07/Jun/2021 01:49:51] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[07/Jun/2021 01:49:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 01:54:29] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 01:54:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 02:41:15] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 02:41:15] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[07/Jun/2021 02:41:17] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 02:41:19] "GET /testline/ HTTP/1.1" 200 150019
+[07/Jun/2021 02:41:19] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 05:20:21] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 05:20:21] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[07/Jun/2021 05:20:21] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[07/Jun/2021 05:20:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 05:20:57] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 05:20:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 05:21:51] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 05:21:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 05:31:57] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 05:31:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 05:37:05] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 05:37:06] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[07/Jun/2021 05:37:06] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[07/Jun/2021 05:37:06] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[07/Jun/2021 05:37:06] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[07/Jun/2021 05:37:06] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[07/Jun/2021 05:37:06] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[07/Jun/2021 05:37:06] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[07/Jun/2021 05:37:06] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[07/Jun/2021 05:37:06] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[07/Jun/2021 05:37:06] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[07/Jun/2021 05:37:06] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[07/Jun/2021 05:37:06] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[07/Jun/2021 05:37:06] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[07/Jun/2021 05:37:06] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[07/Jun/2021 05:37:06] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[07/Jun/2021 05:37:06] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[07/Jun/2021 05:37:06] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[07/Jun/2021 05:37:06] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[07/Jun/2021 05:37:06] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[07/Jun/2021 05:37:06] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[07/Jun/2021 05:37:06] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[07/Jun/2021 05:37:06] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[07/Jun/2021 05:37:06] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[07/Jun/2021 05:37:06] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[07/Jun/2021 05:37:08] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 06:21:15] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 06:21:15] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[07/Jun/2021 06:21:15] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[07/Jun/2021 06:21:15] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[07/Jun/2021 06:38:45] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 06:53:23] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 06:56:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 06:56:07] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 07:16:46] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 07:16:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 07:21:04] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 07:21:04] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[07/Jun/2021 07:21:04] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[07/Jun/2021 07:21:04] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[07/Jun/2021 07:21:04] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[07/Jun/2021 07:21:04] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[07/Jun/2021 07:21:04] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[07/Jun/2021 07:21:04] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[07/Jun/2021 07:21:04] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[07/Jun/2021 07:21:04] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[07/Jun/2021 07:21:04] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[07/Jun/2021 07:21:04] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[07/Jun/2021 07:21:04] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[07/Jun/2021 07:21:04] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[07/Jun/2021 07:21:04] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[07/Jun/2021 07:21:04] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[07/Jun/2021 07:21:04] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[07/Jun/2021 07:21:04] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[07/Jun/2021 07:21:04] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[07/Jun/2021 07:21:04] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[07/Jun/2021 07:21:04] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[07/Jun/2021 07:21:04] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[07/Jun/2021 07:21:04] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[07/Jun/2021 07:21:04] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[07/Jun/2021 07:21:04] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[07/Jun/2021 07:21:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 08:12:02] "GET /whitelist/ HTTP/1.1" 200 4739
+[07/Jun/2021 08:12:04] "GET /testline/ HTTP/1.1" 200 150019
+[07/Jun/2021 08:12:04] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[07/Jun/2021 08:12:04] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[07/Jun/2021 08:12:04] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[07/Jun/2021 08:12:04] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[07/Jun/2021 08:12:04] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[07/Jun/2021 08:12:04] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[07/Jun/2021 08:12:04] "GET /static/js/jquery.table2excel.js HTTP/1.1" 304 0
+[07/Jun/2021 08:20:28] "GET / HTTP/1.1" 200 20544
+[07/Jun/2021 08:20:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[07/Jun/2021 08:24:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 01:02:26] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 01:02:27] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 01:38:09] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 01:38:09] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[08/Jun/2021 01:38:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 01:48:53] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 01:48:54] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[08/Jun/2021 01:48:54] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[08/Jun/2021 01:48:54] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[08/Jun/2021 01:48:54] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[08/Jun/2021 01:48:54] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[08/Jun/2021 01:48:54] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[08/Jun/2021 01:48:54] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[08/Jun/2021 01:48:54] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[08/Jun/2021 01:48:54] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[08/Jun/2021 01:48:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 01:49:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 02:07:17] "GET /topo/?testlineid=13&btsid=6230&flag=4g&btspc=10.106.164.119&btss1ip=10.69.82.232&pbinfo=10.106.212.192:7&painfo=&papc=&uetype=cpe&uelist=192.168.0.101/102/6/8/10/12/14/16&uepc=10.106.164.118&mcsinfo=192.168.113.78(LOCAL%20IP)&mcspc=10.106.164.118& HTTP/1.1" 200 11039
+[08/Jun/2021 02:07:17] "GET /testlinechange/?testlineid=13& HTTP/1.1" 200 12910
+[08/Jun/2021 02:07:17] "GET /static/js/jtopo-0.4.8-min.js HTTP/1.1" 200 78475
+[08/Jun/2021 02:07:18] "GET /static/pic/topo/PB.jpg HTTP/1.1" 200 4439
+[08/Jun/2021 02:07:18] "GET /static/pic/topo/BTS.jpg HTTP/1.1" 200 4478
+[08/Jun/2021 02:07:18] "GET /static/pic/topo/PC.jpg HTTP/1.1" 200 2069
+[08/Jun/2021 02:07:18] "GET /static/pic/topo/PA.jpg HTTP/1.1" 200 5194
+[08/Jun/2021 02:07:18] "GET /static/pic/topo/MCS.jpg HTTP/1.1" 200 5266
+[08/Jun/2021 02:07:18] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 02:07:18] "GET /static/pic/topo/UE.jpg HTTP/1.1" 200 3326
+[08/Jun/2021 02:07:21] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 02:07:23] "GET /testlinechange/?testlineid=13& HTTP/1.1" 200 12910
+[08/Jun/2021 02:07:23] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 02:07:33] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 02:30:46] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 02:30:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 03:10:45] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 03:48:52] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 03:59:06] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 03:59:07] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[08/Jun/2021 03:59:08] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[08/Jun/2021 03:59:08] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[08/Jun/2021 03:59:08] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 05:13:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 05:14:00] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 06:35:38] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 06:35:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 07:07:18] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 07:22:28] "GET /testline/ HTTP/1.1" 200 149881
+[08/Jun/2021 07:22:28] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[08/Jun/2021 07:22:28] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[08/Jun/2021 07:22:28] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[08/Jun/2021 07:22:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 08:14:32] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 08:40:45] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 08:40:45] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[08/Jun/2021 08:40:45] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[08/Jun/2021 08:40:45] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[08/Jun/2021 08:40:45] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[08/Jun/2021 08:40:45] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[08/Jun/2021 08:40:45] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[08/Jun/2021 08:40:46] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[08/Jun/2021 08:40:46] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[08/Jun/2021 08:40:46] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[08/Jun/2021 08:40:46] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[08/Jun/2021 08:40:46] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[08/Jun/2021 08:40:46] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[08/Jun/2021 08:40:46] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[08/Jun/2021 08:40:46] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[08/Jun/2021 08:40:46] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[08/Jun/2021 08:40:46] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[08/Jun/2021 08:40:46] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[08/Jun/2021 08:40:46] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[08/Jun/2021 08:40:47] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[08/Jun/2021 08:40:47] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[08/Jun/2021 08:40:47] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[08/Jun/2021 08:40:47] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[08/Jun/2021 08:40:47] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[08/Jun/2021 08:40:47] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[08/Jun/2021 08:40:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 08:47:33] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 08:47:34] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 09:21:29] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 09:21:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 09:24:02] "GET /testline/ HTTP/1.1" 200 149881
+[08/Jun/2021 09:24:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jun/2021 09:24:02] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[08/Jun/2021 09:24:02] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[08/Jun/2021 09:24:02] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[08/Jun/2021 09:24:02] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[08/Jun/2021 09:24:02] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[08/Jun/2021 09:24:02] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[08/Jun/2021 09:24:02] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[08/Jun/2021 09:24:03] "GET /testline/ HTTP/1.1" 200 149881
+[08/Jun/2021 09:24:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jun/2021 09:24:03] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[08/Jun/2021 09:24:03] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[08/Jun/2021 09:24:03] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[08/Jun/2021 09:24:03] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[08/Jun/2021 09:24:03] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[08/Jun/2021 09:24:03] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[08/Jun/2021 09:24:03] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[08/Jun/2021 09:24:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 09:26:41] "GET / HTTP/1.1" 200 20544
+[08/Jun/2021 09:26:41] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[08/Jun/2021 09:26:41] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[08/Jun/2021 09:26:41] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[08/Jun/2021 09:26:41] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[08/Jun/2021 09:26:41] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[08/Jun/2021 09:26:41] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[08/Jun/2021 09:26:41] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[08/Jun/2021 09:26:41] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[08/Jun/2021 09:26:41] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[08/Jun/2021 09:26:41] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[08/Jun/2021 09:26:41] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[08/Jun/2021 09:26:41] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[08/Jun/2021 09:26:41] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[08/Jun/2021 09:26:41] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[08/Jun/2021 09:26:41] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[08/Jun/2021 09:26:41] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[08/Jun/2021 09:26:41] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[08/Jun/2021 09:26:41] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[08/Jun/2021 09:26:41] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[08/Jun/2021 09:26:41] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[08/Jun/2021 09:26:41] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[08/Jun/2021 09:26:41] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[08/Jun/2021 09:26:41] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[08/Jun/2021 09:26:43] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 09:34:01] "GET /testline/ HTTP/1.1" 200 149881
+[08/Jun/2021 09:34:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jun/2021 09:34:02] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[08/Jun/2021 09:34:02] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[08/Jun/2021 09:34:02] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[08/Jun/2021 09:34:02] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[08/Jun/2021 09:34:02] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[08/Jun/2021 09:34:02] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[08/Jun/2021 09:34:02] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[08/Jun/2021 09:34:02] "GET /testline/ HTTP/1.1" 200 149881
+[08/Jun/2021 09:34:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jun/2021 09:34:02] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[08/Jun/2021 09:34:02] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[08/Jun/2021 09:34:02] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[08/Jun/2021 09:34:02] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[08/Jun/2021 09:34:02] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[08/Jun/2021 09:34:02] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[08/Jun/2021 09:34:02] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[08/Jun/2021 09:34:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[08/Jun/2021 09:56:31] "GET /prdescription/ HTTP/1.1" 200 22776
+[08/Jun/2021 09:56:31] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[09/Jun/2021 01:39:45] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 01:39:45] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[09/Jun/2021 01:39:45] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[09/Jun/2021 01:39:45] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[09/Jun/2021 01:39:45] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[09/Jun/2021 01:39:45] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[09/Jun/2021 01:39:45] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[09/Jun/2021 01:39:45] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[09/Jun/2021 01:39:45] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[09/Jun/2021 01:39:45] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[09/Jun/2021 01:39:45] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[09/Jun/2021 01:39:45] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[09/Jun/2021 01:39:45] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[09/Jun/2021 01:39:45] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[09/Jun/2021 01:39:45] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[09/Jun/2021 01:39:45] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[09/Jun/2021 01:39:45] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[09/Jun/2021 01:39:45] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[09/Jun/2021 01:39:45] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[09/Jun/2021 01:39:45] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[09/Jun/2021 01:39:45] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[09/Jun/2021 01:39:45] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[09/Jun/2021 01:39:45] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[09/Jun/2021 01:39:45] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[09/Jun/2021 01:39:45] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[09/Jun/2021 01:39:47] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 01:40:43] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 01:40:43] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 01:53:57] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 01:53:57] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[09/Jun/2021 01:53:57] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[09/Jun/2021 01:53:57] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[09/Jun/2021 01:53:57] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[09/Jun/2021 01:53:57] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[09/Jun/2021 01:53:57] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[09/Jun/2021 01:53:57] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[09/Jun/2021 01:53:57] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 02:09:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 02:44:37] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 02:44:39] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[09/Jun/2021 02:52:04] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 02:52:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 02:53:06] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 02:53:06] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 02:53:06] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 02:53:06] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[09/Jun/2021 02:53:06] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[09/Jun/2021 02:53:06] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[09/Jun/2021 02:53:06] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[09/Jun/2021 02:53:06] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[09/Jun/2021 02:53:06] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[09/Jun/2021 02:53:06] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[09/Jun/2021 02:53:07] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[09/Jun/2021 02:53:07] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 03:34:27] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 03:34:27] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 03:34:29] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 03:34:29] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[09/Jun/2021 03:34:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[09/Jun/2021 03:34:29] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[09/Jun/2021 03:34:29] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[09/Jun/2021 03:34:29] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[09/Jun/2021 03:34:29] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[09/Jun/2021 03:34:29] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[09/Jun/2021 03:34:29] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 03:41:55] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 03:41:55] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[09/Jun/2021 03:41:55] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[09/Jun/2021 03:41:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 04:34:50] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 05:49:14] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 05:49:14] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:08:32] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 07:08:32] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[09/Jun/2021 07:08:32] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[09/Jun/2021 07:08:32] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[09/Jun/2021 07:08:32] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[09/Jun/2021 07:08:32] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[09/Jun/2021 07:08:32] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[09/Jun/2021 07:08:32] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[09/Jun/2021 07:08:32] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[09/Jun/2021 07:08:33] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:08:36] "GET /testline/ HTTP/1.1" 200 149881
+[09/Jun/2021 07:08:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:12:04] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 07:12:04] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[09/Jun/2021 07:12:04] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[09/Jun/2021 07:12:04] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[09/Jun/2021 07:12:04] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[09/Jun/2021 07:12:04] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[09/Jun/2021 07:12:04] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[09/Jun/2021 07:12:04] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[09/Jun/2021 07:12:04] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[09/Jun/2021 07:12:04] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[09/Jun/2021 07:12:04] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[09/Jun/2021 07:12:04] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[09/Jun/2021 07:12:04] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[09/Jun/2021 07:12:04] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[09/Jun/2021 07:12:04] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[09/Jun/2021 07:12:04] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[09/Jun/2021 07:12:04] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[09/Jun/2021 07:12:04] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[09/Jun/2021 07:12:04] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[09/Jun/2021 07:12:04] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[09/Jun/2021 07:12:04] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[09/Jun/2021 07:12:04] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[09/Jun/2021 07:12:04] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[09/Jun/2021 07:12:04] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[09/Jun/2021 07:12:06] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:35:22] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[09/Jun/2021 07:35:22] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[09/Jun/2021 07:35:22] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[09/Jun/2021 07:35:22] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[09/Jun/2021 07:35:22] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:36:32] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 07:36:32] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[09/Jun/2021 07:36:32] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[09/Jun/2021 07:36:34] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:36:34] "GET /testline/ HTTP/1.1" 200 149752
+[09/Jun/2021 07:36:34] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:38:45] "GET /testline/ HTTP/1.1" 200 149200
+[09/Jun/2021 07:38:46] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:39:21] "GET /testline/ HTTP/1.1" 200 149203
+[09/Jun/2021 07:39:21] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:40:26] "GET /testline/ HTTP/1.1" 200 149203
+[09/Jun/2021 07:40:26] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:40:27] "GET /testline/ HTTP/1.1" 200 149203
+[09/Jun/2021 07:40:27] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:41:15] "GET /testline/ HTTP/1.1" 200 149206
+[09/Jun/2021 07:41:16] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:41:17] "GET /testline/ HTTP/1.1" 200 149206
+[09/Jun/2021 07:41:17] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 07:50:19] "GET /prdescription/ HTTP/1.1" 200 22776
+[09/Jun/2021 08:25:12] "GET /whitelist/ HTTP/1.1" 200 4739
+[09/Jun/2021 08:25:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 08:28:33] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 08:29:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 08:31:17] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 08:33:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:02] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:02] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:02] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:02] "POST /whitelist/ HTTP/1.1" 200 64
+[09/Jun/2021 09:06:02] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:02] "GET / HTTP/1.1" 200 20544
+[09/Jun/2021 09:06:03] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[09/Jun/2021 09:06:03] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[09/Jun/2021 09:06:03] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[09/Jun/2021 09:06:03] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[09/Jun/2021 09:06:03] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[09/Jun/2021 09:06:03] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[09/Jun/2021 09:06:03] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[09/Jun/2021 09:06:03] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[09/Jun/2021 09:06:03] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[09/Jun/2021 09:06:03] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[09/Jun/2021 09:06:03] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[09/Jun/2021 09:06:03] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[09/Jun/2021 09:06:03] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[09/Jun/2021 09:06:03] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[09/Jun/2021 09:06:03] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[09/Jun/2021 09:06:03] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[09/Jun/2021 09:06:03] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[09/Jun/2021 09:06:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 01:04:25] "GET /testline/ HTTP/1.1" 200 149206
+[10/Jun/2021 01:04:26] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[10/Jun/2021 01:04:26] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[10/Jun/2021 01:04:26] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[10/Jun/2021 01:04:26] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[10/Jun/2021 01:04:26] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[10/Jun/2021 01:04:26] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[10/Jun/2021 01:04:26] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[10/Jun/2021 01:04:26] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[10/Jun/2021 01:04:27] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 01:56:00] "GET /testline/ HTTP/1.1" 200 149206
+[10/Jun/2021 01:56:00] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 05:14:08] "GET / HTTP/1.1" 200 20544
+[10/Jun/2021 05:14:09] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 06:33:20] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 06:37:15] "GET / HTTP/1.1" 200 20544
+[10/Jun/2021 06:37:15] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[10/Jun/2021 06:37:16] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 07:36:53] "GET / HTTP/1.1" 200 20544
+[10/Jun/2021 07:36:54] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[10/Jun/2021 07:36:54] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[10/Jun/2021 07:36:54] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[10/Jun/2021 07:36:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 07:37:35] "GET /testline/ HTTP/1.1" 200 149206
+[10/Jun/2021 07:37:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 07:45:14] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 07:45:15] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 07:58:42] "GET /favicon.ico HTTP/1.1" 200 20544
+[10/Jun/2021 07:58:45] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 01:58:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[11/Jun/2021 01:58:10] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[11/Jun/2021 01:58:10] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[11/Jun/2021 01:58:10] "GET /static/js/jquery.table2excel.js HTTP/1.1" 304 0
+[11/Jun/2021 01:58:10] "GET /static/pic/pencil.png HTTP/1.1" 304 0
+[11/Jun/2021 01:58:10] "GET /static/pic/trash.png HTTP/1.1" 304 0
+[11/Jun/2021 01:58:10] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 04:48:45] "GET /whitelist/ HTTP/1.1" 200 4739
+[11/Jun/2021 04:48:45] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 04:48:46] "GET /testline/ HTTP/1.1" 200 149086
+[11/Jun/2021 04:48:46] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[11/Jun/2021 04:48:46] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[11/Jun/2021 04:48:46] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[11/Jun/2021 04:48:46] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[11/Jun/2021 04:48:46] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[11/Jun/2021 05:01:40] "GET / HTTP/1.1" 200 20544
+[11/Jun/2021 05:01:41] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 05:35:00] "GET /testline/ HTTP/1.1" 200 149086
+[11/Jun/2021 05:35:01] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 05:46:55] "GET /testlinechange/?testlineid=18& HTTP/1.1" 200 12428
+[11/Jun/2021 05:46:56] "GET /favicon.ico HTTP/1.1" 200 20544
+/home/quicklink/mysite
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 21, 2021 - 01:31:14
+Django version 3.0.3, using settings 'mysite.settings'
+Starting development server at http://10.69.68.42:80/
+Quit the server with CONTROL-C.
+view testline get...
+Current DB Server is:10.69.68.42
+pr description init...
+getflag init...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+testline init...
+poweroff bts id...1676
+poweroff bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...1676
+poweron bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline info...
+http://10.69.68.42/testlinechange/?testlineid=1&
+search testline 1
+{'testlineid': '1', 'btsid': '1001', 'entity': 'MRT', 'flag': '5g', 'btss1ip': '10.108.231.17', 'btspc': '10.108.183.117', 'pbinfo': '10.69.67.185:2', 'painfo': '', 'papc': '', 'uetype': 'qualcom', 'uelist': 'Qualcomm SDM8250', 'uepc': '10.69.69.19', 'mcsinfo': '', 'mcspc': '', 'hwinfo': 'ASIK_474021A.101_L1184709163_InUse_anan.liu ABIL_474020A.102_L1184607672_InUse_anan.liu AEQA_474212A.202_6Q191715748_InUse_anan.liu FYGD_472802A_174400253_InUse_yongjie.liu ', 'owner': 'Zhang Dacheng', 'version': '5G21A_GNB_0011_000800_000957', 'other_uetype': ''}
+view testline get...
+pr description init...
+gethw init...
+11111
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/SMOD_R-1
+productCode:473764A.102
+productName:ASIB AirScale Common
+serialNumber:L1190804951
+
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/BBMOD_R-1
+productCode:474723A.101
+productName:ABIC AirScale Capacity
+serialNumber:6Q191229835
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/BBMOD_R-2
+productCode:474723A.101
+productName:ABIC AirScale Capacity
+serialNumber:6Q191229913
+
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/RMOD_R-1
+productCode:475124B.101
+productName:AEHC
+serialNumber:L1202407667
+buildVersion:None
+hwVersion:101
+l3Protocol:ECPRI_MPLANE
+
+22222
+pr description init...
+getflag init...
+view testline get...
+testline init...
+poweroff bts id...1676
+poweroff bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...1676
+poweron bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+testline init...
+poweron bts id...1676
+poweron bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+testline init...
+poweroff bts id...2188
+poweroff bts pb info...10.69.67.184:5
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+testline init...
+poweroff bts id...2165
+poweroff bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...2165
+poweron bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+view testline get...
+testline init...
+poweroff bts id...1676
+poweroff bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...1676
+poweron bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweroff bts id...2165
+poweroff bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...2165
+poweron bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+view testline get...
+testline init...
+poweroff bts id...2165
+poweroff bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...2165
+poweron bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+testline init...
+poweroff bts id...2165
+poweroff bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...2165
+poweron bts pb info...10.69.67.181:6
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+testline init...
+poweroff bts id...1676
+poweroff bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...1676
+poweron bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweroff bts id...1676
+poweroff bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+testline init...
+poweron bts id...1676
+poweron bts pb info...10.69.66.178:2
+Error: [Errno 111] Connection refused
+view testline get...
+view testline get...
+view testline info...
+http://10.69.68.42/testlinechange/?testlineid=13&
+search testline 13
+{'testlineid': '13', 'btsid': '6230', 'entity': 'CRT', 'flag': '4g', 'btss1ip': '10.69.82.232', 'btspc': '10.106.164.119', 'pbinfo': '10.106.212.192:7', 'painfo': '', 'papc': '', 'uetype': 'cpe', 'uelist': '192.168.0.101/102/6/8/10/12/14/16', 'uepc': '10.106.164.118', 'mcsinfo': '192.168.113.78(LOCAL IP)', 'mcspc': '10.106.164.118', 'hwinfo': 'ASIB_473764A.101_L1182811253_InUse_wennan.deng ABIC_474723A.101_6Q191229879_InUse_wennan.deng ABIC_474723A.101_6Q191510075_InUse_yahong.liu AAHF_474715A.101_6Q184029809_InUse_wennan.deng FYGD_472802A_-1__ ', 'owner': 'Dong Feng', 'version': 'SBTS21B_ENB_9999_210526_000019', 'other_uetype': ''}
+view testline info...
+http://10.69.68.42/testlinechange/?testlineid=13&
+search testline 13
+{'testlineid': '13', 'btsid': '6230', 'entity': 'CRT', 'flag': '4g', 'btss1ip': '10.69.82.232', 'btspc': '10.106.164.119', 'pbinfo': '10.106.212.192:7', 'painfo': '', 'papc': '', 'uetype': 'cpe', 'uelist': '192.168.0.101/102/6/8/10/12/14/16', 'uepc': '10.106.164.118', 'mcsinfo': '192.168.113.78(LOCAL IP)', 'mcspc': '10.106.164.118', 'hwinfo': 'ASIB_473764A.101_L1182811253_InUse_wennan.deng ABIC_474723A.101_6Q191229879_InUse_wennan.deng ABIC_474723A.101_6Q191510075_InUse_yahong.liu AAHF_474715A.101_6Q184029809_InUse_wennan.deng FYGD_472802A_-1__ ', 'owner': 'Dong Feng', 'version': 'SBTS21B_ENB_9999_210526_000019', 'other_uetype': ''}
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+check btslog init...
+check init...
+
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline info...
+http://10.69.68.42/testlinechange/?testlineid=18&
+search testline 18
+{'testlineid': '18', 'btsid': '6228', 'entity': 'NF', 'flag': '5g', 'btss1ip': '10.108.233.34', 'btspc': '10.108.183.113', 'pbinfo': '', 'painfo': '', 'papc': '', 'uetype': 'qualcom', 'uelist': '', 'uepc': '', 'mcsinfo': '', 'mcspc': '', 'hwinfo': 'ASIK+ABIL+AEHC', 'owner': 'Cai Jianhui', 'version': '', 'other_uetype': ''}
+testline change init...
+update testline info...
+edit testline info...
+update testlinetopo set btsid="6228",flag="5g",entity="NF",btss1ip="10.108.233.34",btspc="10.108.183.113",pbinfo="",painfo="",papc="",uetype="qualcom",uelist="",uepc="",mcsinfo="",mcspc="",hwinfo="ASIK+ABIL+AEHC #Notuse",owner="Cai Jianhui" where testlineid=18;[11/Jun/2021 05:47:38] "POST /testlinechange/?testlineid=18& HTTP/1.1" 200 16
+[11/Jun/2021 05:49:01] "GET /testline/ HTTP/1.1" 200 149110
+[11/Jun/2021 05:49:02] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:00:07] "GET / HTTP/1.1" 200 20544
+[11/Jun/2021 06:00:07] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:00:09] "GET /testline/ HTTP/1.1" 200 149110
+[11/Jun/2021 06:00:10] "GET /favicon.ico HTTP/1.1" 200 20544
+06:00:19,143 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[11/Jun/2021 06:00:19] "POST /testline/ HTTP/1.1" 200 48
+06:00:22, 80 PET_TA [ INFO] Connect to HBTE PB: 10.69.67.181:5000
+[11/Jun/2021 06:00:22] "POST /testline/ HTTP/1.1" 200 47
+[11/Jun/2021 06:01:20] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:02:39] "GET /testlinechange/?testlineid=28& HTTP/1.1" 200 12758
+[11/Jun/2021 06:02:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:29:57] "GET /whitelist/ HTTP/1.1" 200 4739
+[11/Jun/2021 06:29:57] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[11/Jun/2021 06:29:57] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:31:54] "GET / HTTP/1.1" 200 20544
+[11/Jun/2021 06:31:54] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[11/Jun/2021 06:31:54] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[11/Jun/2021 06:31:54] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[11/Jun/2021 06:31:54] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[11/Jun/2021 06:31:54] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[11/Jun/2021 06:31:54] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[11/Jun/2021 06:31:54] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[11/Jun/2021 06:31:54] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[11/Jun/2021 06:31:54] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[11/Jun/2021 06:31:54] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[11/Jun/2021 06:31:54] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[11/Jun/2021 06:31:54] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[11/Jun/2021 06:31:54] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[11/Jun/2021 06:31:54] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[11/Jun/2021 06:31:54] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[11/Jun/2021 06:31:54] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[11/Jun/2021 06:31:54] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[11/Jun/2021 06:31:54] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[11/Jun/2021 06:31:54] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[11/Jun/2021 06:31:54] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[11/Jun/2021 06:31:54] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[11/Jun/2021 06:31:54] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[11/Jun/2021 06:31:54] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[11/Jun/2021 06:31:56] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:32:39] "GET /whitelist/ HTTP/1.1" 200 4739
+[11/Jun/2021 06:32:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:58:57] "GET / HTTP/1.1" 200 20544
+[11/Jun/2021 06:58:57] "GET /testline/ HTTP/1.1" 200 149110
+[11/Jun/2021 06:58:58] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:59:11] "GET /testline/ HTTP/1.1" 200 149110
+[11/Jun/2021 06:59:11] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:59:19] "GET /testlinechange/?testlineid=15& HTTP/1.1" 200 13208
+[11/Jun/2021 06:59:19] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:59:39] "POST /testlinechange/?testlineid=15& HTTP/1.1" 200 16
+[11/Jun/2021 06:59:39] "GET /testline/ HTTP/1.1" 200 149106
+[11/Jun/2021 06:59:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:59:51] "GET /prdescription/ HTTP/1.1" 200 22776
+[11/Jun/2021 06:59:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 06:59:58] "POST /prdescription/ HTTP/1.1" 200 45
+07:00:02,137 PET_TA [ INFO] Initialize bts object 2165
+07:00:02,137 PET_TA [ INFO] Log config for BTS:2165
+07:00:02,160 PET_TA [ INFO] Setup for S1 Interface of BTS: 2165
+07:00:02,160 PET_TA [ INFO] Clear Host Key for S1.
+07:00:03,401 PET_TA [ INFO] XXXXXXXXXXXXXXXXXXXX  [>]
+07:00:03,678 PET_TA [ INFO] Download BTS file: [sshpass -p oZPS0POrRieRtu scp -o "StrictHostKeyChecking no"  -r toor4nsn@10.69.66.156:/ffs/run/swconfig.txt /home/work/temp/bts/swconfig_20210611070003.txt 2>/dev/null] 
+07:00:03,910 PET_TA [ INFO] Teardown for S1 Interface of BTS: 2165
+[11/Jun/2021 07:00:03] "POST /prdescription/ HTTP/1.1" 200 2045
+07:02:50,257 PET_TA [ INFO] Initialize bts object 2165
+07:02:50,257 PET_TA [ INFO] Log config for BTS:2165
+07:02:50,281 PET_TA [ INFO] Setup for S1 Interface of BTS: 2165
+07:02:50,281 PET_TA [ INFO] Clear Host Key for S1.
+07:02:51,499 PET_TA [ INFO] XXXXXXXXXXXXXXXXXXXX  [>]
+07:02:51,787 PET_TA [ INFO] Download BTS file: [sshpass -p oZPS0POrRieRtu scp -o "StrictHostKeyChecking no"  -r toor4nsn@10.69.66.156:/ffs/run/swconfig.txt /home/work/temp/bts/swconfig_20210611070251.txt 2>/dev/null] 
+07:02:52, 20 PET_TA [ INFO] Teardown for S1 Interface of BTS: 2165
+[11/Jun/2021 07:02:52] "POST /prdescription/ HTTP/1.1" 200 164
+[11/Jun/2021 07:49:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 08:21:17] "GET / HTTP/1.1" 200 20544
+[11/Jun/2021 08:21:17] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[11/Jun/2021 08:21:18] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 08:21:19] "GET /testline/ HTTP/1.1" 200 149106
+[11/Jun/2021 08:21:20] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 08:51:31] "GET / HTTP/1.1" 200 20544
+[11/Jun/2021 08:51:31] "GET /testline/ HTTP/1.1" 200 149106
+[11/Jun/2021 08:51:32] "GET /favicon.ico HTTP/1.1" 200 20544
+[11/Jun/2021 09:16:49] "GET /prdescription/ HTTP/1.1" 200 22776
+[14/Jun/2021 23:27:09] "GET / HTTP/1.1" 200 20544
+[14/Jun/2021 23:27:09] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[14/Jun/2021 23:27:09] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[14/Jun/2021 23:27:09] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[14/Jun/2021 23:27:09] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[14/Jun/2021 23:27:09] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[14/Jun/2021 23:27:09] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[14/Jun/2021 23:27:09] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[14/Jun/2021 23:27:09] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[14/Jun/2021 23:27:09] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[14/Jun/2021 23:27:09] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[14/Jun/2021 23:27:09] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[14/Jun/2021 23:27:09] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[14/Jun/2021 23:27:10] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[14/Jun/2021 23:27:10] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[14/Jun/2021 23:27:10] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[14/Jun/2021 23:27:10] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[14/Jun/2021 23:27:10] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[14/Jun/2021 23:27:10] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[14/Jun/2021 23:27:10] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[14/Jun/2021 23:27:10] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[14/Jun/2021 23:27:10] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[15/Jun/2021 01:13:38] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 01:13:38] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 01:13:38] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[15/Jun/2021 01:13:38] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[15/Jun/2021 01:13:43] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 01:19:05] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 01:28:59] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 01:28:59] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:28:59] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[15/Jun/2021 01:28:59] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[15/Jun/2021 01:28:59] "GET /static/js/jquery.table2excel.js HTTP/1.1" 304 0
+[15/Jun/2021 01:28:59] "GET /static/pic/pencil.png HTTP/1.1" 304 0
+[15/Jun/2021 01:28:59] "GET /static/pic/trash.png HTTP/1.1" 304 0
+[15/Jun/2021 01:28:59] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 01:44:00] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 01:44:00] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:00] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[15/Jun/2021 01:44:03] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 01:44:41] "GET /whitelist/ HTTP/1.1" 200 4739
+[15/Jun/2021 01:44:41] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 01:44:43] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 01:44:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 02:14:23] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 02:14:24] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 02:35:41] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 02:35:41] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:41] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[15/Jun/2021 02:35:42] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 02:35:44] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 02:35:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[15/Jun/2021 02:35:44] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[15/Jun/2021 02:35:44] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[15/Jun/2021 02:35:44] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[15/Jun/2021 02:35:44] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[15/Jun/2021 02:35:44] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[15/Jun/2021 02:35:44] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[15/Jun/2021 02:35:44] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 03:01:33] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 03:01:33] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 03:01:35] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 04:32:51] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 04:32:51] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 04:32:52] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 05:11:30] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 05:11:30] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 05:11:31] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 05:11:32] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 05:17:19] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 05:17:20] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[15/Jun/2021 05:17:20] "GET /static/pic/logo.jpg HTTP/1.1" 200 12291
+[15/Jun/2021 05:17:21] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[15/Jun/2021 05:17:21] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[15/Jun/2021 05:17:21] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[15/Jun/2021 05:17:21] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[15/Jun/2021 05:17:21] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[15/Jun/2021 05:17:21] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[15/Jun/2021 05:17:24] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 06:26:20] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 06:26:21] "GET /static/pic/coop.jpg HTTP/1.1" 200 1628
+[15/Jun/2021 06:26:21] "GET /static/pic/wft.png HTTP/1.1" 200 3156
+[15/Jun/2021 06:26:21] "GET /static/pic/ss.png HTTP/1.1" 200 70464
+[15/Jun/2021 06:26:21] "GET /static/pic/config.jpg HTTP/1.1" 200 2867
+[15/Jun/2021 06:26:21] "GET /static/pic/workflow.jpg HTTP/1.1" 200 4121
+[15/Jun/2021 06:26:21] "GET /static/pic/rp.jpg HTTP/1.1" 200 4471
+[15/Jun/2021 06:26:21] "GET /static/pic/csrd.png HTTP/1.1" 200 6192
+[15/Jun/2021 06:26:21] "GET /static/pic/aj.jpg HTTP/1.1" 200 1245
+[15/Jun/2021 06:26:21] "GET /static/pic/qc.jpg HTTP/1.1" 200 3753
+[15/Jun/2021 06:26:21] "GET /static/pic/pb.jpg HTTP/1.1" 200 7326
+[15/Jun/2021 06:26:21] "GET /static/pic/nidd.png HTTP/1.1" 200 122394
+[15/Jun/2021 06:26:21] "GET /static/pic/collab.png HTTP/1.1" 200 1556
+[15/Jun/2021 06:26:21] "GET /static/pic/scout.png HTTP/1.1" 200 6604
+[15/Jun/2021 06:26:21] "GET /static/pic/ptc.jpg HTTP/1.1" 200 2234
+[15/Jun/2021 06:26:22] "GET /static/pic/uc.jpg HTTP/1.1" 200 2526
+[15/Jun/2021 06:26:22] "GET /static/pic/webnei.png HTTP/1.1" 200 19213
+[15/Jun/2021 06:26:22] "GET /static/pic/cfam.png HTTP/1.1" 200 1342
+[15/Jun/2021 06:26:22] "GET /static/pic/doors.png HTTP/1.1" 200 1910
+[15/Jun/2021 06:26:22] "GET /static/pic/learn.png HTTP/1.1" 200 13231
+[15/Jun/2021 06:26:22] "GET /static/pic/ac.jpg HTTP/1.1" 200 3527
+[15/Jun/2021 06:26:22] "GET /static/pic/ei.jpg HTTP/1.1" 200 1137
+[15/Jun/2021 06:26:22] "GET /static/pic/5gu.png HTTP/1.1" 200 11086
+[15/Jun/2021 06:26:22] "GET /static/pic/5gt.png HTTP/1.1" 200 9172
+[15/Jun/2021 06:40:02] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 06:40:03] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 06:40:03] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[15/Jun/2021 06:40:03] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[15/Jun/2021 06:40:04] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 07:26:26] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 07:26:28] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 07:33:35] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 07:33:35] "GET /static/pic/coop.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/wft.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/ss.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/config.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/rp.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/workflow.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/csrd.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/pb.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/qc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/collab.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/nidd.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/aj.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/ptc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/uc.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/webnei.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/cfam.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/doors.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/learn.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/ac.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:35] "GET /static/pic/ei.jpg HTTP/1.1" 304 0
+[15/Jun/2021 07:33:36] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:36] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[15/Jun/2021 07:33:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 07:33:55] "GET /btsmgmt/ HTTP/1.1" 200 20544
+[15/Jun/2021 07:33:55] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 07:34:00] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 07:34:00] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 07:34:01] "GET /prdescription/ HTTP/1.1" 200 22776
+[15/Jun/2021 07:34:01] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 07:57:35] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[15/Jun/2021 07:57:35] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[15/Jun/2021 07:57:35] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[15/Jun/2021 07:57:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 08:11:51] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 08:11:51] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 08:11:52] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 08:11:53] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 08:32:12] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 08:32:13] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 08:32:14] "GET /testline/ HTTP/1.1" 200 149925
+[15/Jun/2021 08:32:14] "GET /favicon.ico HTTP/1.1" 200 20544
+[15/Jun/2021 08:47:43] "GET / HTTP/1.1" 200 20544
+[15/Jun/2021 08:47:43] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 01:34:36] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 01:34:36] "GET /static/pic/5gu.png HTTP/1.1" 304 0
+[16/Jun/2021 01:34:36] "GET /static/pic/5gt.png HTTP/1.1" 304 0
+[16/Jun/2021 01:34:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 01:52:07] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:33] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:33] "GET /static/pic/scout.png HTTP/1.1" 304 0
+[16/Jun/2021 02:43:35] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:36] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:36] "GET /testline/ HTTP/1.1" 200 149934
+[16/Jun/2021 02:43:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:38] "GET /prdescription/ HTTP/1.1" 200 22776
+[16/Jun/2021 02:43:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:38] "GET /testline/ HTTP/1.1" 200 149934
+[16/Jun/2021 02:43:39] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:39] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:40] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:43:41] "GET /testline/ HTTP/1.1" 200 149934
+[16/Jun/2021 02:43:41] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:48:35] "GET /testline/ HTTP/1.1" 200 149934
+[16/Jun/2021 02:48:36] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:48:37] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 02:48:37] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 02:48:38] "GET /testline/ HTTP/1.1" 200 149934
+[16/Jun/2021 02:48:38] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 04:34:31] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 04:34:31] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 04:34:32] "GET /testline/ HTTP/1.1" 200 149934
+[16/Jun/2021 04:34:32] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[16/Jun/2021 04:34:32] "GET /static/pic/pencil.png HTTP/1.1" 200 659
+[16/Jun/2021 04:34:32] "GET /static/js/jquery.js HTTP/1.1" 200 89476
+[16/Jun/2021 04:34:32] "GET /static/js/jquery.table2excel.js HTTP/1.1" 200 10139
+[16/Jun/2021 04:34:32] "GET /static/pic/trash.png HTTP/1.1" 200 358
+[16/Jun/2021 04:34:32] "GET /static/pic/on.svg HTTP/1.1" 200 2213
+[16/Jun/2021 04:34:32] "GET /static/pic/off.svg HTTP/1.1" 200 2505
+[16/Jun/2021 04:34:33] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 04:34:33] "GET /prdescription/ HTTP/1.1" 200 22776
+[16/Jun/2021 04:34:33] "GET /favicon.ico HTTP/1.1" 200 20544
+04:35:45,956 PET_TA [ INFO] Initialize bts object 5385
+04:35:45,956 PET_TA [ INFO] Log config for BTS:5385
+04:35:45,990 PET_TA [ INFO] Setup for Admin API 5385
+04:35:45,990 PET_TA [ INFO] !!!!!! connect Admin API for BTS: 5385
+04:35:45,990 PET_TA [ INFO] Clear proxy...
+04:35:45,990 PET_TA [ INFO] Clean node...
+04:35:45,990 PET_TA [ INFO] ps -ef|grep node|grep host=10.108.231.167|grep "/admin_api/"|grep -v grep
+04:35:46,  6 PET_TA [ INFO] This BTS is 5G COAM!!!
+04:35:46, 26 taf.internal.aliasing.stores [DEBUG] Initialized store: <AliasStore at 0x7ff1078e5c50>.
+04:35:50,  4 taf.internal.aliasing.stores [DEBUG] Binding <taf.gnb.oam.coam.admin.facade.AdminConnection object at 0x7ff1078db320> to alias 'default' in <AliasStore at 0x7ff1078e5c50>.
+04:35:50,  4 PET_TA [ INFO] _admin_api: <taf.gnb.oam.coam.admin.legacy.ute_common_admin.api.AdminApi_v2 object at 0x7ff1078dba58>
+04:35:50,  4 PET_TA [ INFO] No specific logger for _admin_api
+04:35:50,  4 PET_TA [ INFO] Setup for Admin API Done
+04:35:50,  4 taf.internal.aliasing.stores [DEBUG] Resolved alias 'default' to <taf.gnb.oam.coam.admin.facade.AdminConnection object at 0x7ff1078db320> from <AliasStore at 0x7ff1078e5c50>.
+04:35:50,304 taf.internal.aliasing.stores [DEBUG] Resolved alias 'default' to <taf.gnb.oam.coam.admin.facade.AdminConnection object at 0x7ff1078db320> from <AliasStore at 0x7ff1078e5c50>.
+04:35:50,311 taf.internal.aliasing.stores [DEBUG] Resolved alias 'default' to <taf.gnb.oam.coam.admin.facade.AdminConnection object at 0x7ff1078db320> from <AliasStore at 0x7ff1078e5c50>.
+04:35:50,327 PET_TA [ INFO] Teardown for Admin API
+04:35:50,327 PET_TA [ INFO] Disconnect Admin API
+04:35:50,327 taf.internal.aliasing.stores [DEBUG] Resolved alias 'default' to <taf.gnb.oam.coam.admin.facade.AdminConnection object at 0x7ff1078db320> from <AliasStore at 0x7ff1078e5c50>.
+04:35:52,345 PET_TA [ INFO] Clean node...
+04:35:52,346 PET_TA [ INFO] ps -ef|grep node|grep host=10.108.231.167|grep "cli-port=38458"|grep -v grep
+[16/Jun/2021 04:35:52] "POST /prdescription/ HTTP/1.1" 200 749
+04:36:51, 16 PET_TA [ INFO] Initialize bts object 5385
+04:36:51, 17 PET_TA [ INFO] Log config for BTS:5385
+04:36:51, 41 PET_TA [ INFO] Setup for S1 Interface of BTS: 5385
+04:36:51, 41 PET_TA [ INFO] Clear Host Key for S1.
+04:36:51, 41 root [DEBUG] Clear host key for 10.108.231.167:22
+04:36:51, 41 root [DEBUG] clean /root/.ssh/known_hosts file first.
+04:36:51, 96 root [DEBUG] Re-generate host key.
+04:36:51, 96 root [DEBUG] Execute Local Command: [ssh-keygen -R [10.108.231.167]:22]
+04:36:52,257 PET_TA [ INFO] XXXXXXXXXXXXXXXXXXXX  [>]
+04:36:52,404 PET_TA [ INFO] Download BTS file: [sshpass -p oZPS0POrRieRtu scp -o "StrictHostKeyChecking no"  -r toor4nsn@10.108.231.167:/ffs/run/swconfig.txt /home/work/temp/bts/swconfig_20210616043652.txt 2>/dev/null] 
+04:36:52,574 PET_TA [ INFO] Teardown for S1 Interface of BTS: 5385
+[16/Jun/2021 04:36:52] "POST /prdescription/ HTTP/1.1" 200 1924
+[16/Jun/2021 04:58:46] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 04:58:46] "GET /favicon.ico HTTP/1.1" 200 20544
+[16/Jun/2021 05:02:19] "GET /prdescription/ HTTP/1.1" 200 22776
+[16/Jun/2021 05:02:19] "GET /favicon.ico HTTP/1.1" 200 20544
+/home/quicklink/mysite
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 11, 2021 - 08:20:04
+Django version 3.0.3, using settings 'mysite.settings'
+Starting development server at http://10.69.68.42:80/
+Quit the server with CONTROL-C.
+view testline get...
+Current DB Server is:10.69.68.42
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+view testline get...
+pr description init...
+gethw init...
+11111
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/SMOD_R-1
+productCode:473764A.102
+productName:ASIB AirScale Common
+serialNumber:L1190804951
+
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/BBMOD_R-1
+productCode:474723A.101
+productName:ABIC AirScale Capacity
+serialNumber:6Q191229835
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/BBMOD_R-2
+productCode:474723A.101
+productName:ABIC AirScale Capacity
+serialNumber:6Q191229913
+
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/RMOD_R-1
+productCode:475124B.101
+productName:AEHC
+serialNumber:L1202407667
+buildVersion:CHB01.06.R01
+hwVersion:101
+l3Protocol:ECPRI_MPLANE
+
+22222
+pr description init...
+getflag init...
+pr description init...
+transf init...
+[1. Detail Test Steps:]
+Scenario/Step:
+1.upgrade to  SBTS21B_ENB_0000_000215_000000 and on air
+2.attach 1 UE and start DL/UL traffic
+
+[2. Expected Result:]
+1. UL and DL Tput are both passed
+2. no more WRN/ERR abnormal printing
+
+[3. Actual Result:]
+Many abnormal WRN/ printing related to RX PHY
+
+[4. Tester analysis:]
+Analysis of Logs:
+from the syslogs, we can found many WRN/RX PHY...related to ecpriTddSrsProcessing 
+	Line 567333: 283667 16.06 11:40:03.758  [192.168.255.129]  42 ASP-1288-CEVA <2021-06-16T03:40:03.912198Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:719,kSrs:0
+	Line 567883: 283942 16.06 11:40:04.915  [192.168.255.129]  43 ASP-1288-CEVA <2021-06-16T03:40:05.072202Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:835,kSrs:0
+	Line 567885: 283943 16.06 11:40:04.915  [192.168.255.129]  44 ASP-1288-CEVA <2021-06-16T03:40:05.092198Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:837,kSrs:0
+	Line 568405: 284203 16.06 11:40:06.87  [192.168.255.129]  45 ASP-1288-CEVA <2021-06-16T03:40:06.252201Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:953,kSrs:0
+	Line 568407: 284204 16.06 11:40:06.87  [192.168.255.129]  46 ASP-1288-CEVA <2021-06-16T03:40:06.272199Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:955,kSrs:0
+	Line 568823: 284412 16.06 11:40:07.352  [192.168.255.129]  47 ASP-1288-CEVA <2021-06-16T03:40:07.432201Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:47,kSrs:0
+	Line 568825: 284413 16.06 11:40:07.352  [192.168.255.129]  48 ASP-1288-CEVA <2021-06-16T03:40:07.452198Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:49,kSrs:0
+	Line 569021: 284511 16.06 11:40:08.414  [192.168.255.129]  49 ASP-1288-CEVA <2021-06-16T03:40:08.612203Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:165,kSrs:0
+	Line 569023: 284512 16.06 11:40:08.414  [192.168.255.129]  4a ASP-1288-CEVA <2021-06-16T03:40:08.632199Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:167,kSrs:0
+	Line 569603: 284802 16.06 11:40:09.587  [192.168.255.129]  4c ASP-1288-CEVA <2021-06-16T03:40:09.792201Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:283,kSrs:0
+	Line 569605: 284803 16.06 11:40:09.587  [192.168.255.129]  4d ASP-1288-CEVA <2021-06-16T03:40:09.812198Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:285,kSrs:0
+	Line 569913: 284957 16.06 11:40:10.743  [192.168.255.129]  4e ASP-1288-CEVA <2021-06-16T03:40:10.972202Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:401,kSrs:0
+	Line 569915: 284958 16.06 11:40:10.743  [192.168.255.129]  4f ASP-1288-CEVA <2021-06-16T03:40:10.992199Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:403,kSrs:0
+	Line 570279: 285140 16.06 11:40:11.915  [192.168.255.129]  50 ASP-1288-CEVA <2021-06-16T03:40:12.152203Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:519,kSrs:0
+	Line 570335: 285168 16.06 11:40:12.09  [192.168.255.129]  51 ASP-1288-CEVA <2021-06-16T03:40:12.172199Z> 8-CEVA WRN/RX PHY: 2075 LteFeEcpriTddSrsProcessing: Suspicious Event lost from LTEFE.Previous SRS symbol is lost.Received event bit:0x2,current frame:521,kSrs:0
+
+SWBOT information:
+null
+
+[5. Log(s) file name containing a fault: (clear indication (exact file name) and timestamp where fault can be found in attached logs)]
+\\eseefsn50.emea.nsn-net.net\rotta4internal\LTE_2\zyj_RRM6\WRN_printing_0616
+
+[6. Test-Line Reference/used HW/configuration/tools/SW version]
+HW: 1*ASIB+ ABIC+AEHC
+SW: SBTS21B_ENB_0000_000215_000000
+UL/DL sub-Frame Configuration:2/7
+UE Type:cellphone
+Cell Type: 
+HW versions:
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/SMOD_R-1
+productCode:473764A.102
+productName:ASIB AirScale Common
+serialNumber:L1190804951
+
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/BBMOD_R-1
+productCode:474723A.101
+productName:ABIC AirScale Capacity
+serialNumber:6Q191229835
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/CABINET_R-1/BBMOD_R-2
+productCode:474723A.101
+productName:ABIC AirScale Capacity
+serialNumber:6Q191229913
+
+id:/MRBTS-1/RAT-1/RUNTIME_VIEW-1/MRBTS_R-1/EQM_R-1/APEQM_R-1/RMOD_R-1
+productCode:475124B.101
+productName:AEHC
+serialNumber:L1202407667
+buildVersion:CHB01.06.R01
+hwVersion:101
+l3Protocol:ECPRI_MPLANE
+
+
+[7. Used Flags: (list here used R&D flags)]
+#ERadCcs_AaSysLogOutputMode, /**< Output mode which devices prints are forwarded: 0 = none 1 = all 2 = udp 3 = sic 4 = standard output 5 = local 6 = remote 7 = not valid */
+0x10041=5
+#ERadCcs_AaSysLogUdpPort, /**< IP port where prints are forwarded */
+#0x10043=51000
+#ERadCcs_AaSysLogOutputLevel, /**< Prints forwarded to output devices: 0 = disable 1 = debug 2 = info 3 = warning 4 = error 5 = vip 6 = disable */
+0x10040=1
+#ERadCcs_AaSysLogInputLevel, /**< Prints stored to RAM (postmortem): 0 = disable 1 = debug 2 = info 3 = warning 4 = error 5 = vip 6 = disable */
+0x1003F=1
+####mMIMO Debug####
+#UE SRS/correlation print
+0x1d0143 = 0x303
+#DLPHY PRB50 print for sector Beam profile
+0x170012 = 1
+#ULPHY debut
+#0x00160013=1
+#PBCH Print
+#0x16000F = 1
+#enable RRUlog output to SYSLOG
+#0x200A6=1
+#Enable ssh even with TRS
+0x1A0020=1
+0x30000F=1
+#Enable SSH connection automatically in every startup
+0x19012=1
+#Disable feature LTE2647 (Linux system account perfmissions)
+#0x4f0031=0
+#MCRTL debug log
+#0x300001=1
+# RROM Debug logs:
+#0x120006 = 1 # TRromRadDebugLogEnabledCommon
+#0x120004 = 1 # TRromRadDebugLogEnabledGlobal
+#0x120005 = 1 # TRromRadDebugLogEnabledRrom
+# UEC Debug logs:
+#0x130020 = 1 # TUecRadDebugLogEnabledGlobal
+#0x130021 = 1 # TUecRadDebugLogEnabledUec
+#0x13001E = 1 # TUecRadDebugLogEnabledCommon
+#0x13001F = 1 # TUecRadDebugLogEnabledCommonCodec
+# CELLC Debug logs:
+#0xf0010 = 1 # TCellcRadDebugLogEnabledCommon
+#0xf0011 = 1 # TCellcRadDebugLogEnabledCommonCodec
+#0xf000e = 1 # TCellcRadDebugLogEnabledGlobal
+#0xf000f = 1 # TCellcRadDebugLogEnabledCellc
+#0x340000 = 5
+0x1003f=1
+0x10040=1
+0x10072=1
+#0x500001=0 # BTS Recovery count (default value = 3) 
+#0x500002=0 # BBU recovery count (default value = 3) 
+#0x500003=0 # Fault4001 reset count (default value = 5) - NEW 
+#0x50000F=0 # Radio reset count (default value = 3) - NEW 
+
+
+[8. Test Scenario History of Execution: (what was changed since it was tested successfully for the last time)]
+Was Test Scenario passing before?Yes
+What was the last SW version Test Scenario was passing? SBTS21B_ENB_0000_000106_000000
+Were there any differences between test-lines since last time Test Scenario was passing?No
+Were there any changes in Test Scenario since last run it passed?No
+
+[9. Test Case Reference: (QC, RP or UTE link)]
+null
+[16/Jun/2021 05:02:29] "POST /prdescription/ HTTP/1.1" 200 8089
+[16/Jun/2021 05:03:49] "GET / HTTP/1.1" 200 20544
+[16/Jun/2021 05:03:50] "GET /static/pic/logo.jpg HTTP/1.1" 304 0
+[16/Jun/2021 05:03:50] "GET /favicon.ico HTTP/1.1" 200 20544
+05:08:24,592 urllib3.connectionpool [DEBUG] Starting new HTTPS connection (1): golden-standard.dynamic.nsn-net.net:443
+Internal Server Error: /prdescription/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7ff10761e898>: Failed to establish a new connection: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='golden-standard.dynamic.nsn-net.net', port=443): Max retries exceeded with url: /api/validator (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ff10761e898>: Failed to establish a new connection: [Errno 110] Connection timed out',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/quicklink/mysite/gencase/views.py", line 34, in prdescription
+    return pr_description(request)
+  File "/home/quicklink/mysite/gencase/view_prdescription.py", line 21, in pr_description
+    return goldencheck(request)
+  File "/home/quicklink/mysite/gencase/view_prdescription.py", line 337, in goldencheck
+    rn = requests.post(url=valid_url, data=json.dumps(payload), verify=False, headers=headers)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='golden-standard.dynamic.nsn-net.net', port=443): Max retries exceeded with url: /api/validator (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ff10761e898>: Failed to establish a new connection: [Errno 110] Connection timed out',))
+05:10:32,146 django.request [ERROR] Internal Server Error: /prdescription/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 376, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 994, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 334, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7ff10761e898>: Failed to establish a new connection: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='golden-standard.dynamic.nsn-net.net', port=443): Max retries exceeded with url: /api/validator (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ff10761e898>: Failed to establish a new connection: [Errno 110] Connection timed out',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/quicklink/mysite/gencase/views.py", line 34, in prdescription
+    return pr_description(request)
+  File "/home/quicklink/mysite/gencase/view_prdescription.py", line 21, in pr_description
+    return goldencheck(request)
+  File "/home/quicklink/mysite/gencase/view_prdescription.py", line 337, in goldencheck
+    rn = requests.post(url=valid_url, data=json.dumps(payload), verify=False, headers=headers)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='golden-standard.dynamic.nsn-net.net', port=443): Max retries exceeded with url: /api/validator (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ff10761e898>: Failed to establish a new connection: [Errno 110] Connection timed out',))
+[16/Jun/2021 05:10:32] "POST /prdescription/ HTTP/1.1" 500 214620
+[16/Jun/2021 05:13:44] "GET /prdescription/ HTTP/1.1" 200 22775
+[16/Jun/2021 05:13:44] "GET /favicon.ico HTTP/1.1" 200 20544
